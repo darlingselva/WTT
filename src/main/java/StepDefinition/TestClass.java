@@ -4,12 +4,22 @@ import java.io.File;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 
+
 import io.cucumber.java.After;
 import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 import org.apache.commons.io.FileUtils;
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
 import org.junit.AfterClass;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
+
+import org.apache.log4j.LogManager;
+import org.apache.log4j.Logger;
+
+import io.cucumber.java.Before;
+import io.cucumber.java.Scenario;
 
 
 import base.CommonPaths;
@@ -19,13 +29,17 @@ import base.DriverInitialisation;
 public class TestClass extends DriverInitialisation{
 
 	Commonmethods commonmethod=new Commonmethods(driver,wait);
-
+	private static final Logger LOG = LogManager.getLogger(TestClass.class);
 	@Before
-	public void setUp() throws Exception{
+	public void testStart(Scenario scenario) throws Exception{
 
 		initialization();
 
 		commonmethod.startRecording();
+
+		LOG.info("*****************************************************************************************");
+		LOG.info("	Scenario: "+scenario.getName());
+		LOG.info("*****************************************************************************************");
 	}
 
 /*
@@ -62,5 +76,8 @@ public class TestClass extends DriverInitialisation{
 	public void destroyDriver() throws Exception{
 		commonmethod.stopRecording();
 		driver.quit();
+
+
+
 	}
 }

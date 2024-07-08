@@ -26,12 +26,15 @@ public class Admin_login_page_Elements {
 	public WebElement ittf_username;
 
 	@FindBy(xpath = "//input[@name='password']")
+	@ElementName("ittf_password")
 	public WebElement ittf_password;
 
 	@FindBy(xpath = "//span[text()='Sign In']")
+	@ElementName("ittf_Sign_button")
 	public WebElement ittf_Sign_button;
 
 	@FindBy(xpath = "//div[text()='Logout']")
+	@ElementName("ittf_logout_button")
 	public WebElement ittf_logout_button;
 
 
