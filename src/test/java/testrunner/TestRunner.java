@@ -1,4 +1,5 @@
 package testrunner;
+import io.cucumber.messages.internal.com.google.common.reflect.ClassPath;
 import org.junit.runner.RunWith;
 
 import io.cucumber.junit.Cucumber;
@@ -13,12 +14,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"src/test/resources/features/OESPlayerEntryDetailsClosedSubevents.feature"}
+		,features= {"classpath:features/"}
 		,glue = {"StepDefinition"}
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = ""
+		,tags = "@OES"
 		//,publish = true
 		)
 //@SpringBootTest
