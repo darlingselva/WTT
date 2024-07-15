@@ -20,7 +20,7 @@ public class EventpublishtoOESSnippet extends DriverInitialisation {
 		Commonmethods base=new Commonmethods(driver,wait);
 
 		base.wait(3);
-		String static_eventid="2773";
+		String static_eventid="3565";
 		event.tab_event.click();
 		base.wait(2);
 		if (EventCreationSnippet.eventid!= null) {

@@ -38,7 +38,7 @@ public class SubEventCreationSnippet extends DriverInitialisation {
 			Object cellvalue = null;
 			Cell cell1;
 			base.wait(3);
-			String static_eventid="3504";
+			String static_eventid="3565";
 			event.tab_event.click();
 			base.wait(2);
 			if (EventCreationSnippet.eventid!= null) {
@@ -58,7 +58,7 @@ public class SubEventCreationSnippet extends DriverInitialisation {
 				case "tab":
 					b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 					base.checkelementvisibility(b);
-					base.wait(3);
+					base.wait(5);
 					b.click();
 					base.wait(1);
 					break;			 
@@ -67,13 +67,13 @@ public class SubEventCreationSnippet extends DriverInitialisation {
 						b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 						base.checkelementvisibility(b);
 						b.click();
-						base.wait(1);
+						base.wait(3);
 					}
 					catch(Exception e) {
 						b=(WebElement) SubEventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(subevent);
 						base.checkelementvisibility(b);
 						base.jclick(b);
-						base.wait(1);
+						base.wait(3);
 					}
 					break;
 				case "text":

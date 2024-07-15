@@ -26,8 +26,8 @@ public class OESPlayerentrydetails extends DriverInitialisation {
 	public static void OEs_playerentrydetails() throws Exception {
 
 		//EventCreationSnippet.eventname="Event_nameFONTIZG";
-		//SubEventCreationSnippet.subeventype1="Open";
-		 String eventname="Event_nameUAWMMDS";
+		 //SubEventCreationSnippet.subeventype1="Closed";
+		 String eventname="Event_nameBLTXRGW";
 		OES_Home_page_Elements OEs_home =  PageFactory.initElements(driver,OES_Home_page_Elements.class);
 		OES_event_page_Elements OEs_event =  PageFactory.initElements(driver,OES_event_page_Elements.class);
 		OES_Playerentries_page_Elements OEs_player =  PageFactory.initElements(driver,OES_Playerentries_page_Elements.class);
