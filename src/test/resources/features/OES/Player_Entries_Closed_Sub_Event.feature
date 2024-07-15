@@ -14,3 +14,6 @@ Feature: Create OES Player Entry Details Closed Sub events
     Given Login the OES Application
     When OEs player entry details
     Then Logout the OES Application
+    Given Login the OES Application
+    When EVent Publish OES into OVR
+    Then Logout the OES Application

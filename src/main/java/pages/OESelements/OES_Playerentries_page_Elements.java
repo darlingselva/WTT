@@ -59,4 +59,10 @@ public class OES_Playerentries_page_Elements {
 	@FindBy(xpath = "//mat-dialog-container//button//span[text()='Import Records ']")
 	public WebElement button_OEs_event_playerentries_Actions_ImportRecords_ImportRecords;
 
+	@FindBy(xpath = "//button[text()='Accept Entries']")
+	public WebElement button_OEs_event_playerentries_Actions_AcceptEntries;
+
+	@FindBy(xpath = "//button[text()='Global Status : ']//span")
+	public WebElement text_OEs_event_playerentries_status;
+
 }

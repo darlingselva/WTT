@@ -38,4 +38,13 @@ public class OES_event_page_Elements {
 	@FindBy(xpath = "//div[text()='Non-MA Entries']")
 	public WebElement button_OEs_event_NonMAEntries;
 
+	@FindBy(xpath = "//button[contains(text(),'Actions')]")
+	public WebElement button_OEs_event_Actions;
+
+	@FindBy(xpath = "//button[text()='(Step 2) OVR - Send Participant Details']")
+	public WebElement button_OEs_event_Action_Step2;
+
+	@FindBy(xpath = "//button[text()='(Step 3) OVR - Transfer Control To OVR']")
+	public WebElement button_OEs_event_Action_Step3;
+
 }

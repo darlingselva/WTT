@@ -86,6 +86,12 @@ public class OESPlayerentrydetails extends DriverInitialisation {
 				base.wait(1);
 				driver.switchTo().alert().accept();
 				base.wait(16);
+				OEs_player.button_OEs_event_playerentries_Actions.click();
+				base.wait(2);
+				OEs_player.button_OEs_event_playerentries_Actions_AcceptEntries.click();
+				base.wait(5);
+				Assert.assertEquals("Published",OEs_player.text_OEs_event_playerentries_status.getText());
+				base.wait(2);
 				base.takescreenshoot(EventCreationSnippet.eventname+subevent_name+"_playerdetailsentry");
 				OEs_player.button_OEs_event_playerentries_Back.click();
 				base.wait(8);
@@ -147,6 +153,12 @@ public class OESPlayerentrydetails extends DriverInitialisation {
 				Assert.assertEquals( driver.switchTo().alert().getText(), "All old entries will be deleted. Can proceed?");
 				driver.switchTo().alert().accept();
 				base.wait(8);
+				OEs_player.button_OEs_event_playerentries_Actions.click();
+				base.wait(2);
+				OEs_player.button_OEs_event_playerentries_Actions_AcceptEntries.click();
+				base.wait(5);
+				Assert.assertEquals("Published",OEs_player.text_OEs_event_playerentries_status.getText());
+				base.wait(2);
 				base.takescreenshoot(EventCreationSnippet.eventname+subevent_name+"_playerdetailsentry");
 				OEs_player.button_OEs_event_playerentries_Back.click();
 				base.wait(8);

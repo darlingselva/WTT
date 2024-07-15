@@ -1,12 +1,12 @@
-Feature: Create OES Player Entry Details Open Sub events
+Feature: OVR portal - Switch WTT event feature
 
-  @OES @player_entries @open_sub_events_player_entries
-  Scenario: To Create OES Player Entry Details Open Sub events
+  @OVR
+  Scenario: To verify the OVR Switch WTT Event with Closed sub Events
     Given Login the admin Application
     And Admin portal event creation
     And Logout admin portal application
     When Login the admin Application
-    And create the subevent 'Open' in the admin portal
+    And create the subevent 'Closed' in the admin portal
     And Logout admin portal application
     Then Login the admin Application
     And Event publish into the admin portal to OES
@@ -17,3 +17,6 @@ Feature: Create OES Player Entry Details Open Sub events
     Given Login the OES Application
     When EVent Publish OES into OVR
     Then Logout the OES Application
+    Given Login the OVR Application
+    When Switch WTT event
+    Then Logout the OVR Application

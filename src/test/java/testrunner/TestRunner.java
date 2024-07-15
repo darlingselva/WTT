@@ -14,12 +14,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/"}
+		,features= {"classpath:features/OVR/"}
 		,glue = {"StepDefinition"}
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@OES"
+		,tags = ""
 		//,publish = true
 		)
 //@SpringBootTest
