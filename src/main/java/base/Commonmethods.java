@@ -5,13 +5,15 @@ import java.awt.GraphicsEnvironment;
 import java.io.File;
 
 
-
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.IOException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
@@ -54,14 +56,32 @@ public class Commonmethods {
 
 	public static String properties_file="null";
 
+	public static String Properties_file_value;
+
+	public static Properties prop;
+
 
 	public static String setpropertiesname(String properties_file1) {
 		return properties_file=properties_file1;
 	}
 
-	public static String getvaluefrompropertiesfile(String value) {
+	public static String getvaluefrompropertiesfileusingresource(String value) {
 		resource=ResourceBundle.getBundle(properties_file);
 		return resource.getObject(value).toString();
+	}
+
+	public static String getvaluefrompropertiesfile(String value) {
+		try {
+			 prop = new Properties();
+			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + properties_file+".properties");
+			prop.load(ip);
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
+		Properties_file_value=prop.getProperty(value);
+		return Properties_file_value;
 	}
 
 
@@ -928,10 +948,10 @@ public class Commonmethods {
 		}
 	}
 
-	//	public static void main(String[] args) {
-	//		ResourceBundle resource = ResourceBundle.getBundle("config");
-	//		
-	//		//resource.getStringArray("url");
-	//		System.out.println(resource.getObject("username"));
-	//	}
+//		public static void main(String[] args) {
+//			ResourceBundle resource = ResourceBundle.getBundle("config");
+//
+//			//resource.getStringArray("url");
+//			System.out.println(resource.getObject("username"));
+//		}
 }

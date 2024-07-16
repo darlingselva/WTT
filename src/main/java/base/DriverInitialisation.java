@@ -44,10 +44,10 @@ public class DriverInitialisation {
 	public static void initialization() {
 
 
-		//String browserName = prop.getProperty("browser");
-		resource1=ResourceBundle.getBundle(properties_file1);
+		String browserName = prop.getProperty("browser");
+		//resource1=ResourceBundle.getBundle(properties_file1);
 		//String browserName = base.Commonmethods.getvaluefrompropertiesfile("browser");
-		String browserName = resource1.getObject("browser").toString();
+		//String browserName = resource1.getObject("browser").toString();
 
 
 		//String url=base.Commonmethods.getvaluefrompropertiesfile("url");
