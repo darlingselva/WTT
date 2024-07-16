@@ -948,10 +948,9 @@ public class Commonmethods {
 		}
 	}
 
-//		public static void main(String[] args) {
-//			ResourceBundle resource = ResourceBundle.getBundle("config");
-//
-//			//resource.getStringArray("url");
-//			System.out.println(resource.getObject("username"));
-//		}
+		public static void main(String[] args) {
+			String event_list_index="2";
+
+			System.out.println("//li["+event_list_index+"]");
+		}
 }

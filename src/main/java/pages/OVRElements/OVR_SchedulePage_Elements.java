@@ -94,4 +94,18 @@ public class OVR_SchedulePage_Elements {
     @ElementName("OVR_fromTable")
     public WebElement OVR_fromTable;
 
+    @FindBy(xpath = "//a[contains(@class,'unit-icon')]")
+    @ElementName("OVR_unitsBoard")
+    public WebElement OVR_unitsBoard;
+
+    @FindBy(xpath = "//label[text()='Day']/parent::div/div/ejs-dropdownlist")
+    @ElementName("OVR_unitsDayDD")
+    public WebElement OVR_unitsDayDD;
+
+    @FindBy(xpath = "(//ul[@id='ddlelement_options']/li)[last()-1]")
+    @ElementName("OVR_unitsSelDate")
+    public WebElement OVR_unitsSelDate;
+
+    //table[@id='main-table']/tbody/tr/td[contains(@class,'schedule') and contains(@data-schedule,"Scheduled")]//b[@data-toggle='tooltip']
+
 }
