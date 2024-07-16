@@ -24,7 +24,7 @@ public class DriverInitialisation {
 	public static Properties prop;
 	public static EventFiringWebDriver e_driver;
 
-	public static String properties_file1="App_config";
+	public static String properties_file1="WTT_App_Config";
 	public static ResourceBundle resource1;
 
 
@@ -32,7 +32,7 @@ public class DriverInitialisation {
 	public DriverInitialisation() {
 		try {
 			prop = new Properties();
-			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + "App_config.properties");
+			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + "WTT_App_Config.properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();

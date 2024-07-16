@@ -17,6 +17,9 @@ public class OVR_Home_page_Elements {
     @FindBy(xpath = "//*[@class='theme-switch']//a")
     public WebElement button_OVR_Homepage_SwitchEvent;
 
+    @FindBy(xpath = "//b[@class='text-white']")
+    public WebElement button_OVR_Homepage_eventname;
+
     @FindBy(xpath = "(//div[@id='discipineSwitchModal']//table)[1]//tbody")
     public WebElement button_OVR_Homepage_SwitchEvent_ITTF;
 

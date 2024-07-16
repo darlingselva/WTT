@@ -14,7 +14,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/OVR/Switch_WTT_Event_With_Closed_Subevents.feature"}
+		,features= {"classpath:features/OVR/OVR_Schedule.feature"}
 		,glue = {"StepDefinition"}
 		//,dryRun = true
 		,monochrome = true
