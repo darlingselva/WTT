@@ -108,7 +108,7 @@ public class Commonmethods {
 
 	public void doubleClick(WebElement Webelement) {
 
-		wait.until(ExpectedConditions.elementToBeClickable(Webelement));
+		//wait.until(ExpectedConditions.elementToBeClickable(Webelement));
 		Actions action = new Actions(driver);
 		//WebElement element = driver.findElement(elementLocation);
 		action.doubleClick(Webelement).perform();

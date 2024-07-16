@@ -35,7 +35,7 @@ public class OVR_Home_page_Elements {
     @FindBy(className = "event-icon")
     public WebElement button_OVR_Homepage_RightMenu_event;
 
-    @FindBy(className = "modality-icon active")
+    @FindBy(xpath = "//a[contains(@class,'modality-icon')]")
     public WebElement button_OVR_Homepage_RightMenu_modality;
 
     @FindBy(className = "schedule-icon")

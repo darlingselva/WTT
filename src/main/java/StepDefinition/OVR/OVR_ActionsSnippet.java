@@ -43,8 +43,12 @@ public class OVR_ActionsSnippet extends DriverInitialisation {
 
             System.out.println("eventname="+text);
             if (text.equals(EventCreationSnippet.eventname)){
-                OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]")).click();
-
+                //OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]")).click();
+                base.wait(1);
+                WebElement switch_button=OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]//button"));
+                base.scrollToView(switch_button);
+                base.wait(1);
+                switch_button.click();
             }
 
 
@@ -64,12 +68,12 @@ public class OVR_ActionsSnippet extends DriverInitialisation {
         OVR_Home.button_OVR_Homepage_SwitchEvent.click();
         base.wait(5);
         //String eventname="Event_nameBLTXRGW";
-        if (EventCreationSnippet.eventid!= null) {
-            EventCreationSnippet.eventname=EventCreationSnippet.eventname;
-        }
-        else {
-            EventCreationSnippet.eventname=eventname;
-        }
+//        if (EventCreationSnippet.eventid!= null) {
+//            EventCreationSnippet.eventname=EventCreationSnippet.eventname;
+//        }
+//        else {
+//            EventCreationSnippet.eventname=eventname;
+//        }
 
         List<WebElement> rws = OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElements(By.tagName("tr"));
         int rws_cnt = rws.size();
@@ -81,9 +85,17 @@ public class OVR_ActionsSnippet extends DriverInitialisation {
 
             //String text=rws.get(i).findElement(By.xpath("//td[contains(text(),'"+EventCreationSnippet.eventname.toString()+"')]")).getText().trim();
 
-           // System.out.println("eventname="+text);
-            if (text.equals(EventCreationSnippet.eventname)){
-                OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]")).click();
+           //System.out.println("eventname="+text);
+            if (text.equals(eventname)){
+                //System.out.println("=============================================");
+                //System.out.println("eventname="+i);
+                base.wait(1);
+                WebElement switch_button=OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]//button"));
+                base.scrollToView(switch_button);
+                base.wait(1);
+                switch_button.click();
+                //OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElement(By.xpath("//tr["+i+"]//td[6]")).click();
+                break;
 
             }
 

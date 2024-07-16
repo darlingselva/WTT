@@ -14,7 +14,7 @@ public class OVR_Modalities_page_Elements {
         PageFactory.initElements(driver, this);
     }
 
-    @FindBy(xpath = "//app-modality//div[@class='treeViewScroll']//ul[@class='tree mt-2']//li")
+    @FindBy(xpath = "//app-modality//div[@class='treeViewScroll']//ul[@class='tree mt-2']")
     public WebElement text_OVR_Modalities_eventlist;
 
 
