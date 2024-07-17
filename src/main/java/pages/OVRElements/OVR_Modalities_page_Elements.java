@@ -17,6 +17,87 @@ public class OVR_Modalities_page_Elements {
     @FindBy(xpath = "//app-modality//div[@class='treeViewScroll']//ul[@class='tree mt-2']")
     public WebElement text_OVR_Modalities_eventlist;
 
+    @FindBy(id = "isMainDraw")
+    public WebElement checkbox_OVR_Modalities_Knockout_maindraw;
+
+    @FindBy(id = "autoDraw")
+    public WebElement radio_OVR_Modalities_Knockout_autoDraw;
+
+    @FindBy(id = "liveDraw")
+    public WebElement radio_OVR_Modalities_Knockout_liveDraw;
+
+    @FindBy(xpath = "//label[text()='Selection Mode']//following-sibling::ejs-dropdownlist")
+    public WebElement dropdown_OVR_Modalities_Knockout_SelectionMode;
+
+    @FindBy(xpath = "//button[contains(text(),'Publish')]")
+    public WebElement button_OVR_Modalities_Knockout_Publish;
+
+    @FindBy(xpath = "//button[contains(text(),'Push to On-Premise')]")
+    public WebElement button_OVR_Modalities_Knockout_PushtoOnPremise;
+
+    @FindBy(xpath = "//button[contains(text(),'Export Athletes List')]")
+    public WebElement button_OVR_Modalities_Knockout_ExportAthletesList;
+
+    @FindBy(xpath = "//button[contains(text(),'Export Athletes List')]//following-sibling::input[@type='file']")
+    public WebElement button_OVR_Modalities_Knockout_choosefile;
+
+    @FindBy(xpath = "//button[contains(text(),'Import Draw List')]")
+    public WebElement button_OVR_Modalities_Knockout_ImportDrawList;
+
+    @FindBy(xpath = "//a[contains(text(),'Back')]")
+    public WebElement button_OVR_Modalities_Knockout_Back;
+
+    @FindBy(xpath = "//label[text()='Winner of Phase']//following-sibling::ejs-dropdownlist")
+    public WebElement dropdown_OVR_Modalities_Knockout_WinnerofPhase;
+
+    @FindBy(xpath = "//label[text()='Winner of Unit']//following-sibling::ejs-dropdownlist")
+    public WebElement dropdown_OVR_Modalities_Knockout_WinnerofUnit;
+
+    @FindBy(xpath = "(//label[contains(text(),'Seed')]//following-sibling::input[@type='text'])[1]")
+    public WebElement text_OVR_Modalities_Knockout_Filterby_Seed;
+
+    @FindBy(xpath = "(//label[contains(text(),'Bk Number')]//following-sibling::input[@type='text'])[1]")
+    public WebElement text_OVR_Modalities_Knockout_Filterby_BkNumber;
+
+    @FindBy(xpath = "//label[contains(text(),'Rk in Group')]//following-sibling::ejs-multiselect")
+    public WebElement dropdown_OVR_Modalities_Knockout_Filterby_RkinGroup;
+
+    @FindBy(xpath = "//button[contains(text(),'Assign Seeds')]")
+    public WebElement button_OVR_Modalities_Knockout_Filterby_AssignSeeds;
+
+    @FindBy(xpath = "//b[contains(text(),'Draw')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_Knockout_Draw_Draw;
+
+    @FindBy(xpath = "//b[contains(text(),'Draw')]//following-sibling::button[@type='button' and contains(text(),'Add Qualifiers')]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_AddQualifiers;
+
+    @FindBy(xpath = "//label[text()=' Add']//parent::div//input[@type='checkbox']")
+    public WebElement checkbox_OVR_Modalities_Knockout_Draw_Add;
+
+    @FindBy(xpath = "//label[text()='From Seed']//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_Knockout_Draw_FromSeed;
+
+    @FindBy(xpath = "(//button[text()=' Draw '])[1]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_Draw;
+
+    @FindBy(xpath = "//button[contains(text(),'Clear')]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_Clear;
+
+    @FindBy(xpath = "//button[contains(text(),'Progression')]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_Progression;
+
+    @FindBy(xpath = "//button[contains(text(),'Remove Qualifier')]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_RemoveQualifier;
+
+    @FindBy(xpath = "//button[contains(text(),'Brackets Definition')]")
+    public WebElement button_OVR_Modalities_Knockout_Draw_BracketsDefinition;
+
+    @FindBy(xpath = "//b[text()='Byes']//following-sibling::button[contains(text(),'Add')]")
+    public WebElement button_OVR_Modalities_Knockout_Byes_Add;
+
+    @FindBy(xpath = "//b[text()='Byes']//following-sibling::button[contains(text(),'Delete')]")
+    public WebElement button_OVR_Modalities_Knockout_Byes_Delete;
+
     //sudha
 
 
@@ -145,7 +226,22 @@ public class OVR_Modalities_page_Elements {
 
     //sudha end
 
+//load modality
 
+    @FindBy(xpath = "//button[contains(text(),'Load Modality')]")
+    public WebElement button_OVR_Modalities_LoadModality_Loadmodality;
+
+    @FindBy(xpath = "//button[contains(text(),'Cancel')]")
+    public WebElement button_OVR_Modalities_LoadModality_Cancel;
+
+    @FindBy(xpath = "(//app-confirmation-popup//div[@class='modal-body']//div[contains(@class,'text-center')])[1]")
+    public WebElement text_OVR_Modalities_popup_Body;
+
+    @FindBy(xpath = "(//app-confirmation-popup//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'Yes')])[1]")
+    public WebElement button_OVR_Modalities_popup_Yes;
+
+    @FindBy(xpath = "(//app-confirmation-popup//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'No')])[1]")
+    public WebElement button_OVR_Modalities_popup_No;
 
 
 
