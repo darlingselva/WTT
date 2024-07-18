@@ -20,16 +20,16 @@ public class OVR_ActionsSnippet extends DriverInitialisation {
 
     @When("^Switch WTT event$")
     public void Switch_WTT_Event() throws Exception{
-        base.wait(5);
+        base.wait(12);
         OVR_Home.button_OVR_Homepage_SwitchEvent.click();
         base.wait(5);
-//        String eventname="Event_nameBLTXRGW";
-//        if (EventCreationSnippet.eventid!= null) {
-//            EventCreationSnippet.eventname=EventCreationSnippet.eventname;
-//        }
-//        else {
-//            EventCreationSnippet.eventname=eventname;
-//        }
+        String eventname="Event_nameBLTXRGW";
+        if (EventCreationSnippet.eventid!= null) {
+            EventCreationSnippet.eventname=EventCreationSnippet.eventname;
+        }
+        else {
+            EventCreationSnippet.eventname=eventname;
+        }
 
         List<WebElement> rws = OVR_Home.button_OVR_Homepage_SwitchEvent_WTT.findElements(By.tagName("tr"));
         int rws_cnt = rws.size();

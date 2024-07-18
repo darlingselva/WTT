@@ -21,6 +21,7 @@ public class ScheduleCreation extends DriverInitialisation {
     public static void createSchedule(String subEvent, String noOfMatch, String startTime, String duration, String fTable, String tTable) throws Exception {
         OVR_SchedulePage_Elements ovrSch =  PageFactory.initElements(driver,OVR_SchedulePage_Elements.class);
         Commonmethods base=new Commonmethods(driver,wait);
+        Actions act = new Actions(driver);
 
         ovrSch.OVR_ScheduleBtn.click();
         ovrSch.OVR_CrtScheduleBtn.click();
@@ -42,12 +43,15 @@ public class ScheduleCreation extends DriverInitialisation {
         ovrSch.OVR_StartTime.clear();
         base.wait(1);
         ovrSch.OVR_StartTime.sendKeys(startTime);
-        ovrSch.OVR_fromTable.click();
+        act.moveToElement(driver.findElement(By.xpath("//ejs-dropdownlist[@id='from']"))).click().perform();
+//        ovrSch.OVR_fromTable.click();
         base.wait(2);
         int i=Integer.parseInt(fTable);
         int fromTable = i+1;
         driver.findElement(By.xpath("(//div[@id='from_popup']/div/ul/li)["+fromTable+"]")).click();
-        ovrSch.OVR_ToTable.click();
+//        ovrSch.OVR_ToTable.click();
+        base.wait(1);
+        act.moveToElement(driver.findElement(By.xpath("//ejs-dropdownlist[@id='to']"))).click().perform();
         base.wait(2);
         int j=Integer.parseInt(tTable);
         int toTable = j+1;

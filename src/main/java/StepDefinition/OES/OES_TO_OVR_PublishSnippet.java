@@ -18,7 +18,7 @@ public class OES_TO_OVR_PublishSnippet extends DriverInitialisation {
 
     @Given("^EVent Publish OES into OVR$")
     public void OES_To_OVR_Publish()throws Exception{
-        String eventname="Event_nameBLTXRGW";
+        String eventname="EVENT_NAMEWEOIRPG";
         OES_Home_page_Elements OEs_home =  PageFactory.initElements(driver,OES_Home_page_Elements.class);
         OES_event_page_Elements OEs_event =  PageFactory.initElements(driver,OES_event_page_Elements.class);
         OES_Playerentries_page_Elements OEs_player =  PageFactory.initElements(driver,OES_Playerentries_page_Elements.class);
