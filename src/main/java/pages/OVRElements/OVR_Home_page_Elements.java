@@ -44,7 +44,7 @@ public class OVR_Home_page_Elements {
     @FindBy(className = "umpire-icon")
     public WebElement button_OVR_Homepage_RightMenu_umpire;
 
-    @FindBy(className = "result-icon")
+    @FindBy(xpath = "//a[contains(@class,'result-icon') and @href='/resultManagement']")
     public WebElement button_OVR_Homepage_RightMenu_result;
 
     @FindBy(className = "match-icon")

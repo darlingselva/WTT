@@ -62,6 +62,18 @@ public class OVR_Modalities_page_Elements {
     @FindBy(xpath = "//label[contains(text(),'Rk in Group')]//following-sibling::ejs-multiselect")
     public WebElement dropdown_OVR_Modalities_Knockout_Filterby_RkinGroup;
 
+    @FindBy(xpath = "//div[@class='e-content e-dropdownbase']//li[text()='1']")
+    public WebElement dropdownoption_OVR_Modalities_Knockout_Filterby_RkinGroup_1;
+
+    @FindBy(xpath = "//div[@class='e-content e-dropdownbase']//li[text()='2']")
+    public WebElement dropdownoption_OVR_Modalities_Knockout_Filterby_RkinGroup_2;
+
+    @FindBy(xpath = "//div[@class='e-content e-dropdownbase']//li[text()='3']")
+    public WebElement dropdownoption_OVR_Modalities_Knockout_Filterby_RkinGroup_3;
+
+    @FindBy(xpath = "//div[@class='e-content e-dropdownbase']//li[text()='4']")
+    public WebElement dropdownoption_OVR_Modalities_Knockout_Filterby_RkinGroup_4;
+
     @FindBy(xpath = "//button[contains(text(),'Assign Seeds')]")
     public WebElement button_OVR_Modalities_Knockout_Filterby_AssignSeeds;
 
@@ -97,6 +109,12 @@ public class OVR_Modalities_page_Elements {
 
     @FindBy(xpath = "//b[text()='Byes']//following-sibling::button[contains(text(),'Delete')]")
     public WebElement button_OVR_Modalities_Knockout_Byes_Delete;
+
+    @FindBy(xpath = "(//span[contains(text(),'Seed')])[1]//ancestor::ejs-grid//div[@class='e-gridcontent']//table//tbody")
+    public WebElement table_OVR_Modalities_Knockout_playerlist;
+
+    @FindBy(xpath = "(//span[contains(text(),'Pos')])[1]//ancestor::ejs-grid//div[@class='e-gridcontent']//table//tbody")
+    public WebElement table_OVR_Modalities_Knockout_playerpositionlist;
 
     //sudha
 
@@ -242,6 +260,19 @@ public class OVR_Modalities_page_Elements {
 
     @FindBy(xpath = "(//app-confirmation-popup//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'No')])[1]")
     public WebElement button_OVR_Modalities_popup_No;
+
+    @FindBy(xpath = "(//app-confirmation-popup)[2]//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'Yes')]")
+    public WebElement button_OVR_Modalities_popup_Yes1;
+
+
+    @FindBy(xpath = "(//app-confirmation-popup)[2]//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'No')]")
+    public WebElement button_OVR_Modalities_popup_No1;
+
+    @FindBy(xpath = "(//app-confirmation-popup)[4]//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'Yes')]")
+    public WebElement button_OVR_Modalities_popup_Yes2;
+
+    @FindBy(xpath = "(//app-confirmation-popup)[4]//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'No')]")
+    public WebElement button_OVR_Modalities_popup_No2;
 
 //pool page
     @FindBy(xpath = "//label[text()=' Entries ']//following-sibling::input[@type='text']")

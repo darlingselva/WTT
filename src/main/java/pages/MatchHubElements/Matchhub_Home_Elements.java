@@ -78,6 +78,20 @@ public class Matchhub_Home_Elements {
     @ElementName("MH_Decconfirm")
     public WebElement MH_Decconfirm;
 
+    @FindBy(xpath = "//div[@id='div-tables']")
+    @ElementName("list_matchhub_tablelist")
+    public WebElement list_matchhub_tablelist;
+
+    @FindBy(xpath = "//div[@id='bestOf' and contains(text(),'Best of')]")
+    @ElementName("text_matchhub_scoreboard_bestof")
+    public WebElement text_matchhub_scoreboard_bestof;
+
+    @FindBy(xpath = "//div[@id='main_back_btn' and contains(text(),'Back')]")
+    @ElementName("button_matchhub_table_back")
+    public WebElement button_matchhub_table_back;
+
+
+
 
 
 }

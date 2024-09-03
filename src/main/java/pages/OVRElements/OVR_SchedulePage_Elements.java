@@ -81,13 +81,25 @@ public class OVR_SchedulePage_Elements {
     @ElementName("OVR_StatusDD_Board")
     public WebElement OVR_StatusDD_Board;
 
+    @FindBy(xpath = "//div[@class='modal-content']//label[normalize-space()='Status']/parent::div//ejs-dropdownlist[contains(@id,'ej2_dropdownlist_')]//span")
+    @ElementName("OVR_StatusDD_Board1")
+    public WebElement OVR_StatusDD_Board1;
+
     @FindBy(xpath = "//li[@data-value='Start List']")
     @ElementName("OVR_SelStartList_Board")
     public WebElement OVR_SelStartList_Board;
 
+    @FindBy(xpath = "//div[@class='e-content e-dropdownbase']//li[@data-value='Start List']")
+    @ElementName("OVR_SelStartList_Board1")
+    public WebElement OVR_SelStartList_Board1;
+
     @FindBy(xpath = "//button[normalize-space()='Update']")
     @ElementName("OVR_UpdateBtn_Board")
     public WebElement OVR_UpdateBtn_Board;
+
+    @FindBy(xpath = "//div[@class='modal-content']//button[normalize-space()='Update']")
+    @ElementName("OVR_UpdateBtn_Board1")
+    public WebElement OVR_UpdateBtn_Board1;
 
     @FindBy(xpath = "//ejs-dropdownlist[@id='to']")
     @ElementName("OVR_ToTable")
@@ -164,6 +176,75 @@ public class OVR_SchedulePage_Elements {
     @FindBy(xpath = "(//h5[contains(text(),'Confirmation')])[2]//parent::div//parent::div[@class='modal-content']//button[contains(text(),'No')]")
     @ElementName("button_OVR_scedule_RemoveSelectedLine_confirmation_No")
     public WebElement button_OVR_scedule_RemoveSelectedLine_confirmation_No;
+
+    @FindBy(xpath = "//b[contains(text(),'Board')]")
+    @ElementName("button_OVR_scedule_Boardtab")
+    public WebElement button_OVR_scedule_Boardtab;
+
+    @FindBy(xpath = "//b[contains(text(),'List')]")
+    @ElementName("button_OVR_scedule_Listtab")
+    public WebElement button_OVR_scedule_Listtab;
+
+    @FindBy(xpath = "//label[contains(text(),'Days') and @for='filterDay']//following-sibling::ejs-dropdownlist//span")
+    @ElementName("button_OVR_scedule_Listtab_Days")
+    public WebElement button_OVR_scedule_Listtab_Days;
+
+    @FindBy(xpath = "//div[contains(@id,'ej2_dropdownlist')]//ul")
+    @ElementName("dropdown_OVR_scedule_Listtab_Days")
+    public WebElement dropdown_OVR_scedule_Listtab_Days;
+
+    @FindBy(xpath = "//div[contains(@id,'ej2_dropdownlist')]//input[@type='text']")
+    @ElementName("text_OVR_scedule_Listtab_Days")
+    public WebElement text_OVR_scedule_Listtab_Days;
+
+    @FindBy(xpath = "(//span[contains(text(),'Description')]//ancestor::ejs-grid//table[@class='e-table']//tbody)[1]")
+    @ElementName("table_OVR_scedule_Listtab_matchsceduledlist")
+    public WebElement table_OVR_scedule_Listtab_matchsceduledlist;
+
+    @FindBy(xpath = "(//span[contains(text(),'Description')]//ancestor::ejs-grid//table[@class='e-table']//tbody)[2]")
+    @ElementName("table_OVR_scedule_Listtab_matchsceduledlist1")
+    public WebElement table_OVR_scedule_Listtab_matchsceduledlist1;
+
+    @FindBy(xpath = "//button[contains(text(),' Publish ')]")
+    @ElementName("button_OVR_scedule_Listtab_Publish")
+    public WebElement button_OVR_scedule_Listtab_Publish;
+
+    @FindBy(xpath = "//label[contains(text(),'Show Advanced filters')]//parent::div//input[@type='checkbox' and @id='isShowAdvancedfilter']")
+    @ElementName("button_OVR_scedule_Listtab_ShowAdvancedfilters")
+    public WebElement button_OVR_scedule_Listtab_ShowAdvancedfilters;
+
+    @FindBy(xpath = "//label[contains(text(),'Scheduled')]//parent::div//ejs-dropdownlist//span")
+    @ElementName("button_OVR_scedule_Listtab_ShowAdvancedfilters_Scheduled")
+    public WebElement button_OVR_scedule_Listtab_ShowAdvancedfilters_Scheduled;
+
+    @FindBy(xpath = "//span[@class='e-filter-parent']//input[@type='text']")
+    @ElementName("text_OVR_scedule_Listtab_ShowAdvancedfilters_optionpopupdropdown_inputfield")
+    public WebElement text_OVR_scedule_Listtab_ShowAdvancedfilters_optionpopupdropdown_inputfield;
+
+
+    @FindBy(xpath = "//span[contains(text(),'Show filters')]//parent::div//img")
+    @ElementName("button_OVR_scedule_Boardtab_Showfilters")
+    public WebElement button_OVR_scedule_Boardtab_Showfilters;
+
+    @FindBy(xpath = "//label[contains(text(),'Days') and @for='filterDay']//following-sibling::ejs-dropdownlist//span")
+    @ElementName("button_OVR_scedule_Boardtab_Days")
+    public WebElement button_OVR_scedule_Boardtab_Days;
+
+    @FindBy(xpath = "//div[contains(@id,'ej2_dropdownlist')]//input[@type='text']")
+    @ElementName("text_OVR_scedule_Boardtab_Days")
+    public WebElement text_OVR_scedule_Boardtab_Days;
+
+    @FindBy(xpath = "//label[contains(text(),'Show Advanced filters')]//parent::div//input[@type='checkbox' and @id='isShowAdvancedfilter']")
+    @ElementName("button_OVR_scedule_Listtab_ShowAdvancedfilters")
+    public WebElement button_OVR_scedule_Boardtab_ShowAdvancedfilters;
+
+    @FindBy(xpath = "//label[contains(text(),'Scheduled')]//parent::div//ejs-dropdownlist//span")
+    @ElementName("button_OVR_scedule_Listtab_ShowAdvancedfilters_Scheduled")
+    public WebElement button_OVR_scedule_Boardtab_ShowAdvancedfilters_Scheduled;
+
+    @FindBy(xpath = "//label[contains(text(),'Status')]//parent::div//ejs-dropdownlist//span")
+    @ElementName("button_OVR_scedule_Listtab_ShowAdvancedfilters_Status")
+    public WebElement button_OVR_scedule_Boardtab_ShowAdvancedfilters_Status;
 
 
 }
