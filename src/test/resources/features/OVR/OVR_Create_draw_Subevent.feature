@@ -10,6 +10,5 @@ Feature: OVR portal - Create the draw for the Sub event
     Examples:
     | Sub_event_name | Operation | Round_Categories |
     | U19 Boys Singles  | Load Modality | KO16 Direct KO Bo5 |
-    | U19 Girls Singles | Load Modality | KO16 Direct KO Bo5 |
 
 

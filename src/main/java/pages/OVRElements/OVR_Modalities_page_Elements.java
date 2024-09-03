@@ -243,11 +243,157 @@ public class OVR_Modalities_page_Elements {
     @FindBy(xpath = "(//app-confirmation-popup//div[@class='modal-body']//div[contains(@class,'text-center')]//button[contains(text(),'No')])[1]")
     public WebElement button_OVR_Modalities_popup_No;
 
+//pool page
+    @FindBy(xpath = "//label[text()=' Entries ']//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_Entries;
 
+    @FindBy(xpath = "//label[contains(text(),'Group Entries')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_GroupEntries;
 
+    @FindBy(xpath = "//label[contains(text(),'Seeded')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_Seeded;
 
+    @FindBy(xpath = "//label[contains(text(),'Group Priority')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_GroupPriority;
 
+    @FindBy(xpath = "//label[contains(text(),'Groups')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_Groups;
 
+    @FindBy(xpath = "//label[contains(text(),'Best of')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_Bestof;
 
+    @FindBy(xpath = "//label[contains(text(),'Loser Rank')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_LoserRank;
 
+    @FindBy(xpath = "//button[contains(text(),'Create Pools')]")
+    public WebElement button_OVR_Modalities_pool_CreatePools;
+
+    @FindBy(xpath = "//button[contains(text(),'Remove Pools')]")
+    public WebElement button_OVR_Modalities_pool_RemovePools;
+
+    @FindBy(xpath = "//span[contains(text(),'Phase')]//ancestor::ejs-grid//div[@class='e-content']//table//tbody")
+    public WebElement table_OVR_Modalities_pool_grouptable;
+
+    @FindBy(xpath = "//button[contains(text(),'Update')]")
+    public WebElement button_OVR_Modalities_pool_grouptable_update;
+
+    @FindBy(xpath = "//label[contains(text(),'Basic Snake System')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_BasicSnakeSystem;
+
+    @FindBy(xpath = "//label[contains(text(),'Modified Snake System')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_ModifiedSnakeSystem;
+
+    @FindBy(xpath = "//label[contains(text(),'Random by Seed System')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_RandombySeedSystem;
+
+    @FindBy(xpath = "//label[contains(text(),'Position')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_GroupLocation_Position;
+
+    @FindBy(xpath = "//label[contains(text(),'Group')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_GroupLocation_Group;
+
+    @FindBy(xpath = "//a[@title='Switch 2 competitors']")
+    public WebElement button_OVR_Modalities_pool_GroupLocation_Switch2competitors;
+
+    @FindBy(xpath = "//a[@title='Remove selected competitor in pool']")
+    public WebElement button_OVR_Modalities_pool_GroupLocation_Removeselectedcompetitorinpool;
+
+    @FindBy(xpath = "//div[@title='Draw selected competitor in pool']")
+    public WebElement button_OVR_Modalities_pool_GroupLocation_Drawselectedcompetitorinpool;
+
+    @FindBy(xpath = "//button[@title='Assign Seeds']")
+    public WebElement button_OVR_Modalities_pool_AssignSeeds;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'All')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_AssignSeeds_All;
+
+    @FindBy(xpath = "(//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'Seeded')]//parent::div//input[@type='radio'])[1]")
+    public WebElement radio_OVR_Modalities_pool_AssignSeeds_Seeded;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'Without Seeded')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_AssignSeeds_WithoutSeeded;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'Qualifier Draw')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_AssignSeeds_QualifierDraw;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'Clear All')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_AssignSeeds_ClearAll;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'From')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_AssignSeeds_seeds_From;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//label[contains(text(),'To')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_AssignSeeds_seeds_To;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//button[contains(text(),' Assign ')]")
+    public WebElement button_OVR_Modalities_pool_AssignSeeds_Assign;
+
+    @FindBy(xpath = "//h5[contains(text(),'Draw Seeds')]//ancestor::div[@class='modal-content']//button[contains(text(),'Cancel')]")
+    public WebElement button_OVR_Modalities_pool_AssignSeeds_Cancel;
+
+    @FindBy(xpath = "//button[@title='Draw Pools']")
+    public WebElement button_OVR_Modalities_pool_DrawPools;
+
+    @FindBy(xpath = "//button[@title='Remove Competitors in Pools']")
+    public WebElement button_OVR_Modalities_pool_RemoveCompetitorsinPools;
+
+    @FindBy(xpath = "//button[contains(text(),'Presentation Groups')]")
+    public WebElement button_OVR_Modalities_pool_PresentationGroups;
+
+    @FindBy(xpath = "//button[contains(text(),'Detailed Group Information')]")
+    public WebElement button_OVR_Modalities_pool_DetailedGroupInformation;
+
+    @FindBy(xpath = "//h5[contains(text(),'Pools Definition')]//ancestor::div[@class='modal-content']//label[contains(text(),'Groups')]//parent::div//ejs-dropdownlist//span")
+    public WebElement dropdown_OVR_Modalities_pool_DetailedGroupInformation_groups;
+
+    @FindBy(xpath = "//h5[contains(text(),'Pools Definition')]//ancestor::div[@class='modal-content']//label[contains(text(),'Gr1')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_DetailedGroupInformation_groups_Gr1;
+
+    @FindBy(xpath = "//h5[contains(text(),'Pools Definition')]//ancestor::div[@class='modal-content']//label[contains(text(),'Gr2>')]//following-sibling::input[@type='text']")
+    public WebElement text_OVR_Modalities_pool_DetailedGroupInformation_groups_Gr2;
+
+    @FindBy(xpath = "//input[@id='all1' and @type='radio']")
+    public WebElement radio_OVR_Modalities_pool_all;
+
+    @FindBy(xpath = "//input[@id='seeded1' and @type='radio']")
+    public WebElement radio_OVR_Modalities_pool_seeded;
+
+    @FindBy(xpath = "//input[@id='wseeded' and @type='radio']")
+    public WebElement radio_OVR_Modalities_pool_WithoutSeeded;
+
+    @FindBy(xpath = "(//input[@id='qdraw' and @type='radio'])[1]")
+    public WebElement radio_OVR_Modalities_pool_QualifierDraw;
+
+    @FindBy(xpath = "//span[contains(text(),'Seed')]//ancestor::ejs-grid//div[@class='e-content']//table//tbody")
+    public WebElement table_OVR_Modalities_pool_pooldrawplayertable;
+
+    @FindBy(xpath = "(//button[contains(text(),'Update')])[2]")
+    public WebElement button_OVR_Modalities_pool_pooldrawplayertable_update;
+
+    @FindBy(xpath = "//button[contains(text(),'Publish')]")
+    public WebElement button_OVR_Modalities_pool_Publish;
+
+    @FindBy(xpath = "//a[contains(text(),'Back')]")
+    public WebElement button_OVR_Modalities_pool_Back;
+
+    @FindBy(xpath = "//label[contains(text(),'Option A')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_DrawPools_OptionA;
+
+    @FindBy(xpath = "//label[contains(text(),'Option B')]//parent::div//input[@type='radio']")
+    public WebElement radio_OVR_Modalities_pool_DrawPools_OptionB;
+
+    @FindBy(xpath = "//label[contains(text(),'Draw All')]//parent::div//input[@type='checkbox']")
+    public WebElement checkbox_OVR_Modalities_pool_DrawPools_DrawAll;
+
+    @FindBy(xpath = "//button[contains(text(),'Draw')]")
+    public WebElement button_OVR_Modalities_pool_DrawPools_Draw;
+
+    @FindBy(xpath = "//button[contains(text(),'Clear')]")
+    public WebElement button_OVR_Modalities_pool_DrawPools_Clear;
+
+    @FindBy(xpath = "//button[contains(text(),'Save')]")
+    public WebElement button_OVR_Modalities_pool_DrawPools_Save;
+
+    @FindBy(xpath = "//button[contains(text(),'Cancel')]")
+    public WebElement button_OVR_Modalities_pool_DrawPools_Cancel;
 }

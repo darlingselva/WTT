@@ -9,6 +9,9 @@ public class OVR_SchedulePage_Elements {
     @FindBy(xpath = "//a[@href='/schedule']")
     @ElementName("OVR_ScheduleBtn")
     public WebElement OVR_ScheduleBtn;
+    @FindBy(xpath = "//b[contains(text(),'Create')]")
+    @ElementName("OVR_Schedule_createtab")
+    public WebElement OVR_Schedule_createtab;
 
     @FindBy(xpath = "//button[@class='btn btn-primary btn-sm ml-4 p-0']")
     @ElementName("OVR_CrtScheduleBtn")
@@ -38,7 +41,7 @@ public class OVR_SchedulePage_Elements {
     @ElementName("OVR_Duration")
     public WebElement OVR_Duration;
 
-    @FindBy(xpath = "//a[normalize-space()='Create Schedule']")
+    @FindBy(xpath = "//a[contains(text(),'Create Schedule')]")
     @ElementName("OVR_CreateScdl")
     public WebElement OVR_CreateScdl;
 
@@ -106,6 +109,61 @@ public class OVR_SchedulePage_Elements {
     @ElementName("OVR_unitsSelDate")
     public WebElement OVR_unitsSelDate;
 
-    //table[@id='main-table']/tbody/tr/td[contains(@class,'schedule') and contains(@data-schedule,"Scheduled")]//b[@data-toggle='tooltip']
+    @FindBy(xpath = "//div[@id='select_unit']//ejs-dropdownlist")
+    @ElementName("dropdown_OVR_scedule_selectunit_date")
+    public WebElement dropdown_OVR_scedule_selectunit_date;
+
+    @FindBy(xpath = "//input[@id='showAllCheck' and @type='checkbox']")
+    @ElementName("checkbox_OVR_scedule_selectunit_all")
+    public WebElement checkbox_OVR_scedule_selectunit_all;
+
+    @FindBy(xpath = "//div[@id='select_unit']//input[@id='searchText' and @type='text']")
+    @ElementName("text_OVR_scedule_selectunit_select_unit")
+    public WebElement text_OVR_scedule_selectunit_select_unit;
+
+    @FindBy(xpath = "//div[@id='select_unit']//ul[@class='tree']")
+    @ElementName("list_OVR_scedule_selectunit_subevents")
+    public WebElement list_OVR_scedule_selectunit_subevents;
+
+    @FindBy(xpath = "//div[@id='select_unit']//label[@for='allSelectCheck']//parent::div//input[@type='checkbox' and @id='allSelectCheck']")
+    @ElementName("checkbox_OVR_scedule_selectunit_subevents_matches_selectedall")
+    public WebElement checkbox_OVR_scedule_selectunit_subevents_matches_selectedall;
+
+    @FindBy(xpath = "//div[@id='select_unit']//label[@for='allSelectCheck']//ancestor::ul")
+    @ElementName("list_OVR_scedule_selectunit_subevents_matches")
+    public WebElement list_OVR_scedule_selectunit_subevents_matches;
+
+    @FindBy(xpath = "//div[@id='select_unit']//button[contains(text(),'Add Units')]")
+    @ElementName("button_OVR_scedule_selectunit_AddUnits")
+    public WebElement button_OVR_scedule_selectunit_AddUnits;
+
+    @FindBy(xpath = "//div[@id='select_unit']//button[contains(text(),'Cancel')]")
+    @ElementName("button_OVR_scedule_selectunit_Cancel")
+    public WebElement button_OVR_scedule_selectunit_Cancel;
+
+    @FindBy(xpath = "//div[@id='select_unit']//button[@class='close btn' and @type='button']")
+    @ElementName("button_OVR_scedule_selectunit_closebutton")
+    public WebElement button_OVR_scedule_selectunit_closebutton;
+
+    @FindBy(xpath = "//ejs-grid//div[@class='e-gridcontent']//tbody")
+    @ElementName("table_OVR_scedule_table")
+    public WebElement table_OVR_scedule_table;
+
+    @FindBy(xpath = "//button[@title='Remove Selected Line']")
+    @ElementName("button_OVR_scedule_RemoveSelectedLine")
+    public WebElement button_OVR_scedule_RemoveSelectedLine;
+
+    @FindBy(xpath = "(//h5[contains(text(),'Confirmation')])[2]//parent::div//parent::div[@class='modal-content']//button[contains(text(),'Yes')]")
+    @ElementName("button_OVR_scedule_RemoveSelectedLine_confirmation_yes")
+    public WebElement button_OVR_scedule_RemoveSelectedLine_confirmation_yes;
+
+    @FindBy(xpath = "(//h5[contains(text(),'Confirmation')]//parent::div//parent::div[@class='modal-content']//button[contains(text(),'Yes')])[1]")
+    @ElementName("button_OVR_scedule_RemoveSelectedLine_confirmation_yes1")
+    public WebElement button_OVR_scedule_RemoveSelectedLine_confirmation_yes1;
+
+    @FindBy(xpath = "(//h5[contains(text(),'Confirmation')])[2]//parent::div//parent::div[@class='modal-content']//button[contains(text(),'No')]")
+    @ElementName("button_OVR_scedule_RemoveSelectedLine_confirmation_No")
+    public WebElement button_OVR_scedule_RemoveSelectedLine_confirmation_No;
+
 
 }

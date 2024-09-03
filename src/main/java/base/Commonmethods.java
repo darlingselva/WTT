@@ -54,7 +54,7 @@ public class Commonmethods {
 	public ScreenRecorder screenRecorder;
 	public static ResourceBundle resource;
 
-	public static String properties_file="null";
+	public static String properties_file = "null";
 
 	public static String Properties_file_value;
 
@@ -62,25 +62,25 @@ public class Commonmethods {
 
 
 	public static String setpropertiesname(String properties_file1) {
-		return properties_file=properties_file1;
+		return properties_file = properties_file1;
 	}
 
 	public static String getvaluefrompropertiesfileusingresource(String value) {
-		resource=ResourceBundle.getBundle(properties_file);
+		resource = ResourceBundle.getBundle(properties_file);
 		return resource.getObject(value).toString();
 	}
 
 	public static String getvaluefrompropertiesfile(String value) {
 		try {
-			 prop = new Properties();
-			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + properties_file+".properties");
+			prop = new Properties();
+			FileInputStream ip = new FileInputStream(CommonPaths.Configuration_path + properties_file + ".properties");
 			prop.load(ip);
 		} catch (FileNotFoundException e) {
 			e.printStackTrace();
 		} catch (IOException e) {
 			e.printStackTrace();
 		}
-		Properties_file_value=prop.getProperty(value);
+		Properties_file_value = prop.getProperty(value);
 		return Properties_file_value;
 	}
 
@@ -114,6 +114,7 @@ public class Commonmethods {
 		action.doubleClick(Webelement).perform();
 
 	}
+
 	public void click(WebElement webElement) {
 
 		//		wait.until(ExpectedConditions.elementToBeClickable(webElement));
@@ -241,7 +242,7 @@ public class Commonmethods {
 	public void dragAndDrop(By elementLocationFrom, By elementLocationTo) {
 		Actions act = new Actions(driver);
 		act.dragAndDrop(driver.findElement(elementLocationFrom), driver.findElement(elementLocationTo)).build()
-		.perform();
+				.perform();
 	}
 
 	public void dragAndDrop(WebElement from, WebElement to) {
@@ -327,7 +328,7 @@ public class Commonmethods {
 	}
 
 	public void searchDropdownByFilter(By elementLocation, String elementName, By dropdownElementClass,
-			By filterLocation) {
+									   By filterLocation) {
 		click(elementLocation);
 		wait.until(ExpectedConditions.numberOfElementsToBeMoreThan(dropdownElementClass, 0));
 		writeText(filterLocation, elementName);
@@ -779,7 +780,7 @@ public class Commonmethods {
 	public void clickOnTabElement(String xpathLocaton) {
 		// Switch to tab
 		String originalHandle = driver.getWindowHandle();
-		System.out.println(originalHandle+"originalHandle");
+		System.out.println(originalHandle + "originalHandle");
 		for (String handle : driver.getWindowHandles()) {
 			if (!handle.equals(originalHandle)) {
 				driver.switchTo().window(handle);
@@ -790,45 +791,45 @@ public class Commonmethods {
 	}
 
 	public String exeScript(String script) {
-		JavascriptExecutor jse = (JavascriptExecutor) driver;		
-		String psudoCssValue =jse.executeScript(script).toString();
+		JavascriptExecutor jse = (JavascriptExecutor) driver;
+		String psudoCssValue = jse.executeScript(script).toString();
 		return psudoCssValue;
-	}	
+	}
 
 	public void takescreenshoot() throws IOException {
-		TakesScreenshot scrShot =((TakesScreenshot)driver);
-		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-		LocalDateTime now = LocalDateTime.now();  
-		File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
-		if (!f1.exists()){
+		TakesScreenshot scrShot = ((TakesScreenshot) driver);
+		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy");
+		LocalDateTime now = LocalDateTime.now();
+		File f1 = new File(CommonPaths.Screenshot_path + dtf.format(now).toString());
+		if (!f1.exists()) {
 			f1.mkdirs();
 		}
 
-		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
-		LocalDateTime now1 = LocalDateTime.now();  
-		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+dtf1.format(now1).toString()+".png");
+		DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");
+		LocalDateTime now1 = LocalDateTime.now();
+		File DestFile = new File(CommonPaths.Screenshot_path + dtf.format(now).toString() + "/" + dtf1.format(now1).toString() + ".png");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 
 	public void takescreenshoot(String screenshotname) throws IOException {
-		TakesScreenshot scrShot =((TakesScreenshot)driver);
-		File SrcFile=scrShot.getScreenshotAs(OutputType.FILE);
-		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy"); 
-		LocalDateTime now = LocalDateTime.now();  
-		File f1 = new File(CommonPaths.Screenshot_path+dtf.format(now).toString()); 
-		if (!f1.exists()){
+		TakesScreenshot scrShot = ((TakesScreenshot) driver);
+		File SrcFile = scrShot.getScreenshotAs(OutputType.FILE);
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("ddMMyyyy");
+		LocalDateTime now = LocalDateTime.now();
+		File f1 = new File(CommonPaths.Screenshot_path + dtf.format(now).toString());
+		if (!f1.exists()) {
 			f1.mkdirs();
 		}
 
 		// DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("yyyyMMddHHmmss");  
 		// LocalDateTime now1 = LocalDateTime.now();  
-		File DestFile=new File(CommonPaths.Screenshot_path+dtf.format(now).toString()+"/"+screenshotname.toString()+".png");
+		File DestFile = new File(CommonPaths.Screenshot_path + dtf.format(now).toString() + "/" + screenshotname.toString() + ".png");
 		FileUtils.copyFile(SrcFile, DestFile);
 	}
 
 
-	public void Sendkey(WebElement  objName,String key) throws Exception {
+	public void Sendkey(WebElement objName, String key) throws Exception {
 
 		wait.until(ExpectedConditions.visibilityOf(objName));
 
@@ -866,21 +867,20 @@ public class Commonmethods {
 	}
 	 */
 	public void wait(int waittime) throws InterruptedException {
-		TimeUnit time=TimeUnit.SECONDS;
+		TimeUnit time = TimeUnit.SECONDS;
 		time.sleep(waittime);
 
 	}
 
 
-	public  void startRecording() throws Exception
-	{
+	public void startRecording() throws Exception {
 		File srcfile = new File(CommonPaths.Video_recording_path);
 
 		Dimension screenSize = Toolkit.getDefaultToolkit().getScreenSize();
 		int width = screenSize.width;
 		int height = screenSize.height;
 
-		Rectangle captureSize = new Rectangle(0,0, width, height);
+		Rectangle captureSize = new Rectangle(0, 0, width, height);
 
 		GraphicsConfiguration gc = GraphicsEnvironment
 				.getLocalGraphicsEnvironment()
@@ -914,39 +914,45 @@ public class Commonmethods {
 	}
 
 	public void scrolldown(WebElement element) {
-		JavascriptExecutor je = (JavascriptExecutor)driver;
+		JavascriptExecutor je = (JavascriptExecutor) driver;
 		je.executeScript("window.scrollBy(0,document.body.scrollHeight)");
 	}
 
-	public void stopRecording() throws Exception
-	{
+	public void stopRecording() throws Exception {
 		this.screenRecorder.stop();
 	}
 
 	public void jclick(WebElement element) {
-		JavascriptExecutor executor = (JavascriptExecutor)driver;
+		JavascriptExecutor executor = (JavascriptExecutor) driver;
 		executor.executeScript("arguments[0].click();", element);
 	}
 
 
 	public void checkelementvisibility(WebElement element) {
-		try
-		{
-			if(element.isDisplayed()==true) {
+		try {
+			if (element.isDisplayed() == true) {
 
-			}
-			else {
+			} else {
 				((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
 			}
-		}
-		catch(NoSuchElementException e) {
+		} catch (NoSuchElementException e) {
 			((JavascriptExecutor) driver).executeScript("arguments[0].scrollIntoView(true);", element);
-		}
-		catch(Exception e) {
+		} catch (Exception e) {
 
 			System.out.println(e.getMessage());
 		}
 	}
+
+	public static void loadingWait(WebDriver driver, WebElement loader) {
+		WebDriverWait wait = new WebDriverWait(driver, 5000L);
+		wait.until(ExpectedConditions.visibilityOf(loader)); // wait for loader to appear
+		wait.until(ExpectedConditions.invisibilityOf(loader)); // wait for loader to disappear
+	}
+
+	public void spinnerwait(WebElement element) {
+		wait.until(ExpectedConditions.invisibilityOfElementLocated((By) element));
+	}
+
 
 		public static void main(String[] args) {
 			String event_list_index="2";

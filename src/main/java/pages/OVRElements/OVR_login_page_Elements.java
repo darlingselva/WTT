@@ -29,4 +29,7 @@ public class OVR_login_page_Elements {
     @FindBy(xpath = "//a[text()=' Logout']")
     public WebElement button_OVR_Logout;
 
+    @FindBy(xpath = "//div[@class='spinner-image']")
+    public WebElement button_OVR_page_Loader;
+
 }

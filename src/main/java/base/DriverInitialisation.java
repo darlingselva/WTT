@@ -67,6 +67,7 @@ public class DriverInitialisation {
 		driver.manage().deleteAllCookies();
 		driver.manage().timeouts().pageLoadTimeout(20, TimeUnit.SECONDS);
 		driver.manage().timeouts().implicitlyWait(20, TimeUnit.SECONDS);
+		wait=new WebDriverWait(driver, 30);
 		//driver.get(prop.getProperty("url"));
 		//driver.get(url);
 	}
