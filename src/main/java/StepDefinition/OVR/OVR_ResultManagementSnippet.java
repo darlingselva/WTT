@@ -77,12 +77,13 @@ public class OVR_ResultManagementSnippet extends DriverInitialisation {
                         System.out.println("match code="+match_code +"match status="+match_status);
                         base.wait(1);
                         if (match_status.equals("Start List")){
-                            base.wait(1);
+                            base.wait(5);
                             //WebElement match_edit=match_table.get(k).findElement(By.xpath("//td[1]//a"));
                             //WebElement match_edit=Result_man.table_OVR_resultmanagement_matchtable.findElement(By.xpath("//tr["+(k)+"]//td[1]//a"));
                             WebElement match_edit=driver.findElement(By.xpath("//*[@id='table-scroll-fixed']//table//tbody//tr["+k+"]//td[1]//a"));
-                            match_edit.click();
-                            base.wait(2);
+                            //match_edit.click();
+                            base.jclick(match_edit);
+                            base.wait(5);
                             String game_format=Result_man.text_OVR_resultmanagement_editresultpopup_bestof.getText();
                             System.out.println("game_format="+game_format);
                             base.wait(1);
@@ -106,7 +107,7 @@ public class OVR_ResultManagementSnippet extends DriverInitialisation {
                                 base.wait(4);
                                 //OVR_Modalities.button_OVR_Modalities_popup_Yes2.click();
                                 base.jclick(OVR_Modalities.button_OVR_Modalities_popup_Yes2);
-                                base.wait(4);
+                                base.wait(6);
 
                             }
                             else if(game_format.equals("Best Of 7")){
@@ -124,9 +125,9 @@ public class OVR_ResultManagementSnippet extends DriverInitialisation {
 
                                 }
                                 Result_man.button_OVR_resultmanagement_editresultpopup_WinnerSave.click();
-                                base.wait(2);
+                                base.wait(4);
                                 OVR_Modalities.button_OVR_Modalities_popup_Yes2.click();
-                                base.wait(2);
+                                base.wait(6);
 
                             }
                             else {

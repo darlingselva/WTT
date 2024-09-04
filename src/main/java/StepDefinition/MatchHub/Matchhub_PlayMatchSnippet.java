@@ -3,10 +3,7 @@ package StepDefinition.MatchHub;
 import base.Commonmethods;
 import base.DriverInitialisation;
 import io.cucumber.java.en.Given;
-import org.openqa.selenium.Alert;
-import org.openqa.selenium.By;
-import org.openqa.selenium.Keys;
-import org.openqa.selenium.WebElement;
+import org.openqa.selenium.*;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.PageFactory;
 import pages.MatchHubElements.Matchhub_Home_Elements;
@@ -294,10 +291,15 @@ public class Matchhub_PlayMatchSnippet extends DriverInitialisation {
                 base.wait(3);
                 mHub.button_matchhub_table_back.click();
                 base.wait(3);
-                alert=driver.switchTo().alert();
-                base.wait(1);
-                alert.accept();
-                base.wait(3);
+                try {
+                    alert = driver.switchTo().alert();
+                    base.wait(1);
+                    alert.accept();
+                    base.wait(3);
+                }
+                catch (NoAlertPresentException e1){
+                    System.out.println("No alert is present");
+                }
             }
         }
         else if(table_list.size()>4){

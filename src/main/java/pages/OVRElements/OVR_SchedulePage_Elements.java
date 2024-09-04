@@ -85,6 +85,11 @@ public class OVR_SchedulePage_Elements {
     @ElementName("OVR_StatusDD_Board1")
     public WebElement OVR_StatusDD_Board1;
 
+    @FindBy(xpath = "//div[@class='modal-content']//label[contains(text(),'Status')]//following-sibling::ejs-dropdownlist")
+    @ElementName("OVR_StatusDD_Board2")
+    public WebElement OVR_StatusDD_Board2;
+
+
     @FindBy(xpath = "//li[@data-value='Start List']")
     @ElementName("OVR_SelStartList_Board")
     public WebElement OVR_SelStartList_Board;

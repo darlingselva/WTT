@@ -4,7 +4,8 @@ Feature: OVR portal - Create the draw for all the Sub events
   Scenario Outline: To verify the create the draw for all the sub event
     Given Login the OVR Application
     #And Switch into WTT event 'WTT Youth Contender Sulaymaniyah 2024'
-    And Switch into WTT event 'WTT Youth Contender Varazdin 2024'
+    #And Switch into WTT event 'WTT Youth Contender Varazdin 2024'
+    And Switch into WTT event 'WTT Youth Star Contender Skopje 2024'
     When get the subevents from modality
     And create draw using pool functionality
     When get the round of matches for pool standing

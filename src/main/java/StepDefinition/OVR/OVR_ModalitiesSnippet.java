@@ -390,6 +390,13 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
 
     @When("^create draw for youth event using load modality functionality round of '(.*)'$")
     public void load_modality_youthevent(String Roundcategories) throws Exception {
+        base.wait(2);
+        //wait.until(ExpectedConditions.invisibilityOfElementLocated(By.xpath("//div[@class='spinner-bg']//div[@class='spinner-image']")));
+        base.scrollToView(OVR_Home.button_OVR_Homepage_RightMenu_modality);
+        base.wait(2);
+        base.jclick(OVR_Home.button_OVR_Homepage_RightMenu_modality);
+        //OVR_Home.button_OVR_Homepage_RightMenu_modality.click();
+        base.wait(2);
 
         // for (Map.Entry m : Subevent_list.entrySet())
         for (int i=0;i<Subevent_list.size();i++) {
@@ -588,8 +595,8 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                     OVR_Modalities.text_OVR_Modalities_pool_Bestof.sendKeys("5");
                     base.wait(1);
                     OVR_Modalities.button_OVR_Modalities_pool_CreatePools.click();
-                    base.wait(6);
-                    List<WebElement> number_of_groups=OVR_Modalities.table_OVR_Modalities_pool_grouptable.findElements(By.xpath("/tr"));
+                    base.wait(8);
+                    List<WebElement> number_of_groups=OVR_Modalities.table_OVR_Modalities_pool_grouptable.findElements(By.tagName("tr"));
                     pool_Number_of_group=number_of_groups.size();
                     System.out.println("number_of_groups="+pool_Number_of_group);
                     OVR_Modalities.button_OVR_Modalities_pool_AssignSeeds.click();
@@ -1355,6 +1362,8 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         ovrSch.OVR_ScheduleBtn.click();
         base.wait(2);
 
+
+
         //for (int i=1;i<Subevent_rounds.size()+1;i++){
         for (int i=0;i<Subevent_list.size();i++){
 
@@ -1499,8 +1508,9 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                 base.jclick(ovrSch.OVR_CreateScdl);
                 base.wait(3);
                 ovrSch.button_OVR_scedule_RemoveSelectedLine_confirmation_yes1.click();
-                base.wait(8);
-                ovrSch.OVR_Schedule_createtab.click();
+                base.wait(13);
+                base.jclick( ovrSch.OVR_Schedule_createtab);
+                //ovrSch.OVR_Schedule_createtab.click();
                 base.wait(8);
         }
 
@@ -1508,7 +1518,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
 
         base.wait(8);
         ovrSch.button_OVR_scedule_Listtab.click();
-        base.wait(10);
+        base.wait(12);
 
 
         System.out.println("date hashmap size="+dateValue_hashmap.size());
@@ -1526,13 +1536,13 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         base.wait(5);
         //firstelementfromtable.sendKeys(Keys.CONTROL+"A");
         act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
-        base.wait(6);
-        ovrSch.button_OVR_scedule_Listtab_Publish.click();
         base.wait(8);
+        ovrSch.button_OVR_scedule_Listtab_Publish.click();
+        base.wait(10);
 
         ovrSch.button_OVR_scedule_Boardtab.click();
         base.wait(8);
-        base.wait(2);
+        base.wait(4);
         ovrSch.button_OVR_scedule_Boardtab_Showfilters.click();
         base.wait(3);
         base.jclick(ovrSch.button_OVR_scedule_Boardtab_ShowAdvancedfilters);
@@ -1541,8 +1551,8 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         base.wait(3);
 
 
-        // dateValue_hashmap.add("27/08/2024");
-        // dateValue_hashmap.add("28/08/2024");
+         //dateValue_hashmap.add("04/09/2024");
+         //dateValue_hashmap.add("28/08/2024");
 
         System.out.println("date hashmap size="+dateValue_hashmap.size());
 
@@ -1568,31 +1578,38 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
             ovrSch.text_OVR_scedule_Boardtab_Days.sendKeys(d_temp);
             base.wait(2);
             ovrSch.text_OVR_scedule_Boardtab_Days.sendKeys(Keys.ENTER);
-            base.wait(10);
+            base.wait(12);
             ovrSch.button_OVR_scedule_Boardtab_ShowAdvancedfilters_Status.click();
             base.wait(3);
             ovrSch.text_OVR_scedule_Listtab_ShowAdvancedfilters_optionpopupdropdown_inputfield.sendKeys("Scheduled");
-            base.wait(3);
+            base.wait(6);
             ovrSch.text_OVR_scedule_Boardtab_Days.sendKeys(Keys.ENTER);
-            base.wait(10);
+            base.wait(12);
             WebElement firstelementfromtable1=driver.findElement(By.xpath("//div[contains(text(),'Start Time ')]//ancestor::div[@class='d-grid']//tbody//td[1]"));
             base.jclick(firstelementfromtable1);
-            base.wait(5);
+            base.wait(8);
             //firstelementfromtable.sendKeys(Keys.CONTROL+"A");
             act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
             base.wait(8);
             base.jclick(ovrSch.OVR_ShowScheProp_Board);
             //ovrSch.OVR_ShowScheProp_Board.click();
-            base.wait(5);
+            base.wait(7);
             //ovrSch.OVR_StatusDD_Board.click();
-            base.scrollToView(ovrSch.OVR_StatusDD_Board1);
-            base.wait(3);
-            base.jclick(ovrSch.OVR_StatusDD_Board1);
-            base.wait(3);
+            base.scrollToView(ovrSch.OVR_StatusDD_Board2);
+            base.wait(6);
+            base.doubleClick(ovrSch.OVR_StatusDD_Board2);
+            base.wait(6);
             ovrSch.OVR_SelStartList_Board1.click();
-            base.wait(3);
+            base.wait(6);
             ovrSch.OVR_UpdateBtn_Board1.click();
-            base.wait(10);
+            base.wait(8);
+            try {
+                OVR_Modalities.button_OVR_Modalities_popup_Yes.click();
+                base.wait(2);
+            }
+            catch (NoSuchElementException e2){
+                System.out.println("Championship match pop up not appear");
+            }
             // ovrSch.button_OVR_scedule_Listtab_Publish.click();
             // base.wait(2);
 
