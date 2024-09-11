@@ -14,6 +14,7 @@ import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.openqa.selenium.support.ui.WebDriverWait;
+import org.openqa.selenium.remote.DesiredCapabilities;
 
 
 
@@ -57,10 +58,11 @@ public class DriverInitialisation {
 			System.setProperty("webdriver.chrome.driver",CommonPaths.driver_path+"chromedriver.exe");
 
 			driver = new ChromeDriver();
-		} else if (browserName.equals("FF")) {
-			System.setProperty("webdriver.gecko.driver", 
-					System.getProperty("user.dir") + "\\driver\\geckodriver.exe");
-			driver = new FirefoxDriver();
+		} else if (browserName.equals("firefox")) {
+			System.getProperty("webdriver.gecko.driver",CommonPaths.driver_path+"geckodriver.exe");
+			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+			capabilities.setCapability("marionette",true);
+			driver= new FirefoxDriver(capabilities);
 		}
 
 		driver.manage().window().maximize();

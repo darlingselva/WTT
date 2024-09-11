@@ -513,11 +513,12 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         System.out.println("Sub_event_count="+Subevent_list.size());
         for (int i=0;i<Subevent_list.size();i++) {
             event_list_index = i;
-            base.wait(2);
+            base.wait(3);
             WebElement Dynamic_event_element = OVR_Modalities.text_OVR_Modalities_eventlist.findElement(By.xpath("//span[contains(@id,'Event" + event_list_index + "')]"));
 
             // WebElement Dynamic_event_element = OVR_Modalities.text_OVR_Modalities_eventlist.findElement(By.xpath("//span[contains(@id,'Event" + m.getKey() + "')]"));
-            Dynamic_event_element.click();
+            //Dynamic_event_element.click();
+            base.jclick(Dynamic_event_element);
             String Dynamic_event_name = Dynamic_event_element.getText();
             //  if(Subeventname.equals(Dynamic_event_name)) {
             base.wait(3);
@@ -535,7 +536,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
 
             //String player_entries_count=OVR_Modalities.text_OVR_Modalities_pool_Entries.getText();
             String player_entries_count=OVR_Modalities.text_OVR_Modalities_pool_Entries.getAttribute("value");
-            base.wait(3);
+            base.wait(4);
             int player_entries_count_1=Integer.parseInt(player_entries_count);
             System.out.println("player_entries_count="+player_entries_count_1);
 
@@ -571,7 +572,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                     base.jclick(OVR_Modalities.radio_OVR_Modalities_pool_AssignSeeds_All);
                     base.wait(1);
                     OVR_Modalities.button_OVR_Modalities_pool_AssignSeeds_Assign.click();
-                    base.wait(3);
+                    base.wait(5);
                     OVR_Modalities.button_OVR_Modalities_pool_DrawPools.click();
                     base.wait(5);
                     OVR_Modalities.button_OVR_Modalities_popup_Yes.click();
@@ -611,8 +612,9 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                     OVR_Modalities.button_OVR_Modalities_popup_Yes.click();
                     base.wait(5);
                 }
-                base.wait(2);
-                OVR_Modalities.button_OVR_Modalities_pool_Publish.click();
+                base.wait(4);
+                //OVR_Modalities.button_OVR_Modalities_pool_Publish.click();
+                base.jclick(OVR_Modalities.button_OVR_Modalities_pool_Publish);
                 base.wait(1);
                 //OVR_Modalities.button_OVR_Modalities_pool_Back.click();
                 base.jclick(OVR_Modalities.button_OVR_Modalities_pool_Back);
@@ -645,8 +647,9 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                     //OVR_Modalities.checkbox_OVR_Modalities_pool_DrawPools_DrawAll.click();
                     base.jclick(OVR_Modalities.checkbox_OVR_Modalities_pool_DrawPools_DrawAll);
                 }
-                base.wait(2);
-                OVR_Modalities.button_OVR_Modalities_pool_DrawPools_Save.click();
+                base.wait(3);
+                base.jclick(OVR_Modalities.button_OVR_Modalities_pool_DrawPools_Save);
+               // OVR_Modalities.button_OVR_Modalities_pool_DrawPools_Save.click();
                 base.wait(5);
                 OVR_Modalities.button_OVR_Modalities_popup_Yes.click();
                 base.wait(2);
@@ -889,354 +892,14 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
                 base.wait(1);
                 System.out.println("first_subevent_endtime=" + subevent_endtime_hashmap.get(i));
                 base.wait(3);
-/*
-//linestart
-                if(i==1) {
 
-                    base.wait(1);
-                    base.doubleClick(event_schedule_table_list.get(j).findElement(By.xpath("//td[contains(@aria-label,'Start Date')]")));
-                    base.wait(1);
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).clear();
-                    base.wait(1);
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dtf.format(now));
-                    base.wait(1);
-                    //base.doubleClick(event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Start Time')]")));
-                    base.wait(1);
-                     Starttime_temp = Integer.parseInt(dtf1.format(now)) + 1;
-                    String Starttime_temp1 = String.valueOf(Starttime_temp);
-                    String Starttime = Starttime_temp1 + ":" + "00";
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).clear();
-                    base.wait(1);
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(Starttime);
-                    base.wait(1);
-                    //base.doubleClick( event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Duration')]")));
-                    base.wait(1);
-                    base.scrollToView(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                    //act.moveToElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']"))).click().perform();
-                    //base.clickElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                    base.wait(1);
-                    // base.jclick(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                    base.jclick(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                    //event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).click();
-                    base.wait(1);
-                    //   event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).clear();
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).clear();
-                    base.wait(1);
-                    // event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys("30");
-                    base.wait(1);
-                    event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys(Keys.ENTER);
-                    base.wait(9);
-                    //driver.navigate().refresh();
-                    //base.wait(9);
-                    WebElement endtime = driver.findElement(By.xpath("//th//div//span[text()='End Time']"));
-                    base.wait(3);
-                    base.scrollToView(endtime);
-                    base.wait(9);
-                    // WebElement subevent_endtime_element=event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'End Time')]"));
-                    //base.scrollToView(subevent_endtime_element);
-                    // base.wait(7);
-                    //String first_subevent_endtime=subevent_endtime_element.getText();
-                    driver.switchTo().defaultContent();
-                    base.wait(3);
-                    WebElement subevent_endtime_element = driver.findElement(By.xpath("//ejs-grid//div[@class='e-gridcontent']//tbody//tr[" + (j + 1) + "]//td[19]"));
-
-                    try {
-                        first_subevent_endtime = subevent_endtime_element.getText();
-                        //first_subevent_endtime=event_schedule_table_list.get(0).findElement(By.cssSelector("//td[contains(@aria-label,'End Time')]")).getText();
-                    } catch (StaleElementReferenceException e) {
-                        first_subevent_endtime = event_schedule_table_list.get(j - 1).findElement(By.cssSelector("td:nth-child(19)")).getText();
-                    }
-                    base.wait(1);
-                    System.out.println("first_subevent_endtime=" + first_subevent_endtime);
-                    base.wait(3);
-                }
-                else if(i==2) {
-                     //Starttime_temp = Integer.parseInt(dtf1.format(now));
-                    String[] first_subevent_endtime_array=first_subevent_endtime.split(":");
-                     first_subevent_endtime_hour_int=Integer.parseInt(first_subevent_endtime_array[0]);
-
-                    if (Starttime_temp>first_subevent_endtime_hour_int) {
-                        base.wait(1);
-                        base.doubleClick(event_schedule_table_list.get(j).findElement(By.xpath("//td[contains(@aria-label,'Start Date')]")));
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).clear();
-                        base.wait(1);
-                        calendar.add(Calendar.DATE, 1);
-                        date = calendar.getTime();
-                        dateValue = formatter.format(date);
-
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                        base.wait(1);
-                        //base.doubleClick(event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Start Time')]")));
-                        base.wait(1);
-//                    int Starttime_temp = Integer.parseInt(dtf1.format(now)) + 1;
-//                    String Starttime_temp1 = String.valueOf(Starttime_temp);
-//                    String Starttime = Starttime_temp1 + ":" + "00";
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).clear();
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(first_subevent_endtime);
-                        base.wait(1);
-                        //base.doubleClick( event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Duration')]")));
-                        base.wait(1);
-                        base.scrollToView(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //act.moveToElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']"))).click().perform();
-                        //base.clickElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.wait(1);
-                        // base.jclick(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.jclick(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).click();
-                        base.wait(1);
-                        //   event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).clear();
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).clear();
-                        base.wait(1);
-                        // event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys("30");
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys(Keys.ENTER);
-                        base.wait(9);
-                        //driver.navigate().refresh();
-                        //base.wait(9);
-                        WebElement endtime = driver.findElement(By.xpath("//th//div//span[text()='End Time']"));
-                        base.wait(3);
-                        base.scrollToView(endtime);
-                        base.wait(9);
-                        // WebElement subevent_endtime_element=event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'End Time')]"));
-                        //base.scrollToView(subevent_endtime_element);
-                        // base.wait(7);
-                        //String first_subevent_endtime=subevent_endtime_element.getText();
-                        driver.switchTo().defaultContent();
-                        base.wait(3);
-                        WebElement subevent_endtime_element = driver.findElement(By.xpath("//ejs-grid//div[@class='e-gridcontent']//tbody//tr[" + (j + 1) + "]//td[19]"));
-
-                        try {
-                            second_subevent_endtime = subevent_endtime_element.getText();
-                            //first_subevent_endtime=event_schedule_table_list.get(0).findElement(By.cssSelector("//td[contains(@aria-label,'End Time')]")).getText();
-                        } catch (StaleElementReferenceException e) {
-                            second_subevent_endtime = event_schedule_table_list.get(j - 1).findElement(By.cssSelector("td:nth-child(19)")).getText();
-                        }
-                        base.wait(1);
-                        System.out.println("first_subevent_endtime=" + second_subevent_endtime);
-                        base.wait(3);
-
-                    }
-                    else {
-
-                        base.wait(1);
-                        base.doubleClick(event_schedule_table_list.get(j).findElement(By.xpath("//td[contains(@aria-label,'Start Date')]")));
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).clear();
-                        base.wait(1);
-                        dateValue=dtf.format(now);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                        base.wait(1);
-                        //base.doubleClick(event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Start Time')]")));
-                        base.wait(1);
-//                    int Starttime_temp = Integer.parseInt(dtf1.format(now)) + 1;
-//                    String Starttime_temp1 = String.valueOf(Starttime_temp);
-//                    String Starttime = Starttime_temp1 + ":" + "00";
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).clear();
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(first_subevent_endtime);
-                        base.wait(1);
-                        //base.doubleClick( event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Duration')]")));
-                        base.wait(1);
-                        base.scrollToView(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //act.moveToElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']"))).click().perform();
-                        //base.clickElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.wait(1);
-                        // base.jclick(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.jclick(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).click();
-                        base.wait(1);
-                        //   event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).clear();
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).clear();
-                        base.wait(1);
-                        // event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys("30");
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys(Keys.ENTER);
-                        base.wait(9);
-                        //driver.navigate().refresh();
-                        //base.wait(9);
-                        WebElement endtime = driver.findElement(By.xpath("//th//div//span[text()='End Time']"));
-                        base.wait(3);
-                        base.scrollToView(endtime);
-                        base.wait(9);
-                        // WebElement subevent_endtime_element=event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'End Time')]"));
-                        //base.scrollToView(subevent_endtime_element);
-                        // base.wait(7);
-                        //String first_subevent_endtime=subevent_endtime_element.getText();
-                        driver.switchTo().defaultContent();
-                        base.wait(3);
-                        WebElement subevent_endtime_element = driver.findElement(By.xpath("//ejs-grid//div[@class='e-gridcontent']//tbody//tr[" + (j + 1) + "]//td[19]"));
-
-                        try {
-                            second_subevent_endtime = subevent_endtime_element.getText();
-                            //first_subevent_endtime=event_schedule_table_list.get(0).findElement(By.cssSelector("//td[contains(@aria-label,'End Time')]")).getText();
-                        } catch (StaleElementReferenceException e) {
-                            second_subevent_endtime = event_schedule_table_list.get(j - 1).findElement(By.cssSelector("td:nth-child(19)")).getText();
-                        }
-                        base.wait(1);
-                        System.out.println("second_subevent_endtime=" + second_subevent_endtime);
-                        base.wait(3);
-
-                    }
-                }
-                else if(i==3){
-
-                    String[] second_subevent_endtime_array=second_subevent_endtime.split(":");
-                    int second_subevent_endtime_hour_int=Integer.parseInt(second_subevent_endtime_array[0]);
-                    if (first_subevent_endtime_hour_int>second_subevent_endtime_hour_int) {
-                        base.wait(1);
-                        base.doubleClick(event_schedule_table_list.get(j).findElement(By.xpath("//td[contains(@aria-label,'Start Date')]")));
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).clear();
-                        base.wait(1);
-                        if(dateValue.equals(dtf.format(now))){
-                            calendar.add(Calendar.DATE, 1);
-                            date = calendar.getTime();
-                            dateValue = formatter.format(date);
-                            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                            base.wait(1);
-                        }
-                        else{
-                            calendar.add(Calendar.DATE, 2);
-                            date = calendar.getTime();
-                            dateValue = formatter.format(date);
-                            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                            base.wait(1);
-                        }
-
-                        base.wait(1);
-//                    int Starttime_temp = Integer.parseInt(dtf1.format(now)) + 1;
-//                    String Starttime_temp1 = String.valueOf(Starttime_temp);
-//                    String Starttime = Starttime_temp1 + ":" + "00";
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).clear();
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(second_subevent_endtime);
-                        base.wait(1);
-                        //base.doubleClick( event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Duration')]")));
-                        base.wait(1);
-                        base.scrollToView(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //act.moveToElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']"))).click().perform();
-                        //base.clickElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.wait(1);
-                        // base.jclick(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.jclick(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).click();
-                        base.wait(1);
-                        //   event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).clear();
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).clear();
-                        base.wait(1);
-                        // event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys("30");
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys(Keys.ENTER);
-                        base.wait(9);
-                        //driver.navigate().refresh();
-                        //base.wait(9);
-                        WebElement endtime = driver.findElement(By.xpath("//th//div//span[text()='End Time']"));
-                        base.wait(3);
-                        base.scrollToView(endtime);
-                        base.wait(9);
-                        // WebElement subevent_endtime_element=event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'End Time')]"));
-                        //base.scrollToView(subevent_endtime_element);
-                        // base.wait(7);
-                        //String first_subevent_endtime=subevent_endtime_element.getText();
-                        driver.switchTo().defaultContent();
-                        base.wait(3);
-                        WebElement subevent_endtime_element = driver.findElement(By.xpath("//ejs-grid//div[@class='e-gridcontent']//tbody//tr[" + (j + 1) + "]//td[19]"));
-
-                        try {
-                            third_subevent_endtime = subevent_endtime_element.getText();
-                            //first_subevent_endtime=event_schedule_table_list.get(0).findElement(By.cssSelector("//td[contains(@aria-label,'End Time')]")).getText();
-                        } catch (StaleElementReferenceException e) {
-                            third_subevent_endtime = event_schedule_table_list.get(j - 1).findElement(By.cssSelector("td:nth-child(19)")).getText();
-                        }
-                        base.wait(1);
-                        System.out.println("third_subevent_endtime=" + third_subevent_endtime);
-                        base.wait(3);
-
-                    }
-                    else {
-                        base.wait(1);
-                        base.doubleClick(event_schedule_table_list.get(j).findElement(By.xpath("//td[contains(@aria-label,'Start Date')]")));
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).clear();
-                        base.wait(1);
-                        if(dateValue.equals(dtf.format(now))){
-                            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                            base.wait(1);
-                        }
-                        else{
-                            calendar.add(Calendar.DATE, 1);
-                            date = calendar.getTime();
-                            dateValue = formatter.format(date);
-                            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dateValue);
-                            base.wait(1);
-                        }
-
-                        base.wait(1);
-//                    int Starttime_temp = Integer.parseInt(dtf1.format(now)) + 1;
-//                    String Starttime_temp1 = String.valueOf(Starttime_temp);
-//                    String Starttime = Starttime_temp1 + ":" + "00";
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).clear();
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(second_subevent_endtime);
-                        base.wait(1);
-                        //base.doubleClick( event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'Duration')]")));
-                        base.wait(1);
-                        base.scrollToView(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //act.moveToElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']"))).click().perform();
-                        //base.clickElement(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.wait(1);
-                        // base.jclick(event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")));
-                        base.jclick(event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")));
-                        //event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).click();
-                        base.wait(1);
-                        //   event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).clear();
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).clear();
-                        base.wait(1);
-                        // event_schedule_table_list.get(0).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys("30");
-                        base.wait(1);
-                        event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']//parent::span//input")).sendKeys(Keys.ENTER);
-                        base.wait(9);
-                        //driver.navigate().refresh();
-                        //base.wait(9);
-                        WebElement endtime = driver.findElement(By.xpath("//th//div//span[text()='End Time']"));
-                        base.wait(3);
-                        base.scrollToView(endtime);
-                        base.wait(9);
-                        // WebElement subevent_endtime_element=event_schedule_table_list.get(0).findElement(By.xpath("//td[contains(@aria-label,'End Time')]"));
-                        //base.scrollToView(subevent_endtime_element);
-                        // base.wait(7);
-                        //String first_subevent_endtime=subevent_endtime_element.getText();
-                        driver.switchTo().defaultContent();
-                        base.wait(3);
-                        WebElement subevent_endtime_element = driver.findElement(By.xpath("//ejs-grid//div[@class='e-gridcontent']//tbody//tr[" + (j + 1) + "]//td[19]"));
-
-                        try {
-                            third_subevent_endtime = subevent_endtime_element.getText();
-                            //first_subevent_endtime=event_schedule_table_list.get(0).findElement(By.cssSelector("//td[contains(@aria-label,'End Time')]")).getText();
-                        } catch (StaleElementReferenceException e) {
-                            third_subevent_endtime = event_schedule_table_list.get(j - 1).findElement(By.cssSelector("td:nth-child(19)")).getText();
-                        }
-                        base.wait(1);
-                        System.out.println("third_subevent_endtime=" + third_subevent_endtime);
-                        base.wait(3);
-                    }
-
-                }
-                //line_end */
             }
             base.wait(3);
             //ovrSch.OVR_CreateScdl.click();
             base.jclick(ovrSch.OVR_CreateScdl);
             base.wait(3);
             ovrSch.button_OVR_scedule_RemoveSelectedLine_confirmation_yes1.click();
-            base.wait(8);
+            base.wait(10);
             ovrSch.OVR_Schedule_createtab.click();
             base.wait(8);
         }
@@ -1245,22 +908,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         ovrSch.button_OVR_scedule_Listtab.click();
         base.wait(10);
 
-        /*
-        for (int j=0;j<event_schedule_table_list.size();j++){
-            base.wait(1);
-            DateTimeFormatter dtf = DateTimeFormatter.ofPattern("dd/MM/yyyy");
-            DateTimeFormatter dtf1 = DateTimeFormatter.ofPattern("HH:mm");
-            LocalDateTime now = LocalDateTime.now();
-            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startDate']")).sendKeys(dtf.format(now));
-            base.wait(1);
-            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='startTime']")).sendKeys(dtf1.format(now));
-            base.wait(1);
-            event_schedule_table_list.get(j).findElement(By.xpath("//input[@name='duration']")).sendKeys("30");
-            base.wait(1);
-            event_schedule_table_list.get(j).findElement(By.xpath("//td[19]")).getText();
 
-        }
-        */
 
         System.out.println("date hashmap size="+dateValue_hashmap.size());
         base.jclick(ovrSch.button_OVR_scedule_Listtab_ShowAdvancedfilters);
@@ -1320,13 +968,14 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
            base.wait(5);
            //firstelementfromtable.sendKeys(Keys.CONTROL+"A");
            act.keyDown(Keys.CONTROL).sendKeys("a").keyUp(Keys.CONTROL).perform();
-           base.wait(6);
-           ovrSch.OVR_ShowScheProp_Board.click();
-           base.wait(1);
+           base.wait(7);
+           //ovrSch.OVR_ShowScheProp_Board.click();
+           base.jclick(ovrSch.OVR_ShowScheProp_Board);
+           base.wait(2);
            ovrSch.OVR_StatusDD_Board.click();
-           base.wait(1);
+           base.wait(2);
            ovrSch.OVR_SelStartList_Board.click();
-           base.wait(1);
+           base.wait(2);
            ovrSch.OVR_UpdateBtn_Board.click();
            base.wait(8);
           // ovrSch.button_OVR_scedule_Listtab_Publish.click();
@@ -1521,7 +1170,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         base.wait(12);
 
 
-        System.out.println("date hashmap size="+dateValue_hashmap.size());
+        System.out.println("date hashmap="+dateValue_hashmap);
         base.jclick(ovrSch.button_OVR_scedule_Listtab_ShowAdvancedfilters);
         //ovrSch.button_OVR_scedule_Listtab_ShowAdvancedfilters.click();
         base.wait(3);
@@ -1547,12 +1196,11 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
         base.wait(3);
         base.jclick(ovrSch.button_OVR_scedule_Boardtab_ShowAdvancedfilters);
         base.wait(3);
-        ovrSch.button_OVR_scedule_Boardtab_Days.click();
-        base.wait(3);
 
 
-         //dateValue_hashmap.add("04/09/2024");
-         //dateValue_hashmap.add("28/08/2024");
+
+         //dateValue_hashmap.add("11/09/2024");
+         //dateValue_hashmap.add("12/09/2024");
 
         System.out.println("date hashmap size="+dateValue_hashmap.size());
 
@@ -1561,6 +1209,11 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
 
 //           Select dropdown=new Select(ovrSch.dropdown_OVR_scedule_Listtab_Days);
 //           base.wait(2);
+            ovrSch.button_OVR_scedule_Boardtab_Days1.click();
+            //base.doubleClick(ovrSch.button_OVR_scedule_Boardtab_Days1);
+            base.wait(3);
+            ovrSch.text_OVR_scedule_Boardtab_Days.clear();
+            base.wait(3);
             String v_date_str = dateValue_hashmap.get(x);
             DateFormat formatter1 = new SimpleDateFormat("dd/MM/yyyy");
             String d_temp = null;
@@ -1574,6 +1227,7 @@ public class OVR_ModalitiesSnippet extends DriverInitialisation {
             }
             //dropdown.selectByVisibleText(dateValue_hashmap.get(x));
             //dropdown.selectByVisibleText(d_temp);
+            //ovrSch.button_OVR_scedule_Boardtab_Days.click();
 
             ovrSch.text_OVR_scedule_Boardtab_Days.sendKeys(d_temp);
             base.wait(2);

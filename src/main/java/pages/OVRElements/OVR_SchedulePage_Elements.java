@@ -235,6 +235,10 @@ public class OVR_SchedulePage_Elements {
     @ElementName("button_OVR_scedule_Boardtab_Days")
     public WebElement button_OVR_scedule_Boardtab_Days;
 
+    @FindBy(xpath = "(//label[contains(text(),'Days') and @for='filterDay']//following-sibling::ejs-dropdownlist//span)[1]")
+    @ElementName("button_OVR_scedule_Boardtab_Days1")
+    public WebElement button_OVR_scedule_Boardtab_Days1;
+
     @FindBy(xpath = "//div[contains(@id,'ej2_dropdownlist')]//input[@type='text']")
     @ElementName("text_OVR_scedule_Boardtab_Days")
     public WebElement text_OVR_scedule_Boardtab_Days;
