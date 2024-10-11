@@ -12,6 +12,6 @@ Feature: OVR portal - Verifying Youth event - Group standing
     And play the matches in the match hub
     And Umpire Logouts MatchHub
     Given Login the OVR Application
-    And Switch into WTT event 'WTT Youth Star Contender Skopje 2024'
+    And Switch into WTT event 'WTT Youth Star Contender 2024'
     And update the match result in the result management for 'Group standing'
     Then Logout the OVR Application

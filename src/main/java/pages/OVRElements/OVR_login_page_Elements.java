@@ -32,4 +32,7 @@ public class OVR_login_page_Elements {
     @FindBy(xpath = "//div[@class='spinner-image']")
     public WebElement button_OVR_page_Loader;
 
+    @FindBy(xpath = "//div[@class='alert alert-danger']")
+    public WebElement text_OVR_login_error_alert;
+
 }
