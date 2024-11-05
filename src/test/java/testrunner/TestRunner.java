@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@OVR_Loginpage"
+		,tags = ""
 		//,publish = true
 		)
 //@SpringBootTest
