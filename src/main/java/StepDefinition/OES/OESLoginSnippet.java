@@ -16,7 +16,10 @@ public class OESLoginSnippet extends DriverInitialisation {
 	@Given("^Login the OES Application$")
 	public static void login() throws Exception {
 		OES_login_page_Elements OEs =  PageFactory.initElements(driver,OES_login_page_Elements.class);
-		Commonmethods.properties_file="OES";
+		String OES_Prop= System.getenv("OES_Prop");
+		//System.out.println("Class Path - " + classPath);
+		Commonmethods.properties_file=OES_Prop;
+		//Commonmethods.properties_file="OES";
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		driver.get(url);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);

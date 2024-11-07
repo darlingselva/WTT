@@ -8,6 +8,9 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileNotFoundException;
 import java.io.IOException;
+import java.lang.reflect.Constructor;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
@@ -31,6 +34,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.remote.RemoteWebDriver;
+import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.ExpectedCondition;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.Select;
@@ -44,10 +48,11 @@ import org.monte.media.math.Rational;
 import static org.monte.media.AudioFormatKeys.*;
 import static org.monte.media.VideoFormatKeys.*;
 
+import pages.AdminPortalElements.EventcreationElements;
 import util.SpecializedScreenRecorder;
 
 public class Commonmethods {
-	public WebDriver driver;
+	public static WebDriver driver;
 	public WebDriverWait wait;
 
 
@@ -59,6 +64,7 @@ public class Commonmethods {
 	public static String Properties_file_value;
 
 	public static Properties prop;
+	public static WebElement webElement;
 
 
 	public static String setpropertiesname(String properties_file1) {
@@ -959,4 +965,71 @@ public class Commonmethods {
 
 			System.out.println("//li["+event_list_index+"]");
 		}
+
+
+/*
+
+	public void element_visiability(String Webelement_name)throws Exception{
+		getthefield(Webelement_name);
+		checkelementvisibility(webElement);
+		//webElement.isDisplayed();
+	}
+
+	public void element_on_element(String Webelement_name)throws Exception{
+		getthefield(Webelement_name);
+		webElement.click();
+	}
+
+
+
+
+	public static void getthefield(String Webelement_name) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+
+		String[] a=Webelement_name.split("/");
+
+		String parentfoldername=a[0].toString();
+		String Class_name=a[1].toString();
+		String classpath="pages."+parentfoldername+"."+Class_name;
+		String Webelement_name1=a[2].toString();
+
+		Class<?> clazz = Class.forName(classpath);
+		//Object instance = clazz.getDeclaredConstructor().newInstance();
+
+		Constructor<?> constructor = clazz.getConstructor(WebDriver.class);
+
+		Object obj = constructor.newInstance(driver);
+
+		//webElement= (WebElement) clazz.getField(Webelement_name1).get(instance);
+
+		//Field field=clazz.getField(Webelement_name1);
+
+		//webElement= (WebElement) clazz.getField(Webelement_name1).get(obj);
+
+		//webElement= (WebElement) field.get(obj);
+
+
+
+
+
+		try {
+			for (Field field : obj.getClass().getDeclaredFields()) {
+				if (field.isAnnotationPresent(Webelementname.class)) {
+					Webelementname fieldAttribute = field.getAnnotation(Webelementname.class);
+
+					// Check if the identifier matches either name or id
+					if (fieldAttribute.name().equals(Webelement_name)) {
+						field.setAccessible(true);  // Make the field accessible via reflection
+						webElement= (WebElement) field.get(obj);  // Return the actual WebElement
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
+	}
+*/
+
+
 }

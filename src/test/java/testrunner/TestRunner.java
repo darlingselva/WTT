@@ -14,8 +14,8 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/OVR/Login_page_scenario.feature"}
-		,glue = {"StepDefinition"}
+		,features= {"classpath:features/Admin_portal_OES_lite/para_scenario.feature"}
+		,glue = {"StepDefinition" , "PreDefinedstepdefinitions"}
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE

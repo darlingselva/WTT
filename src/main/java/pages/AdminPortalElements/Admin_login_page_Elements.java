@@ -37,6 +37,11 @@ public class Admin_login_page_Elements {
 	@ElementName("ittf_logout_button")
 	public WebElement ittf_logout_button;
 
+	@FindBy(xpath = "//simple-snack-bar//span")
+	@ElementName("text_Admin_login_error_alert")
+	public WebElement text_Admin_login_error_alert;
+
+
 
 
 }

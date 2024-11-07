@@ -13,7 +13,9 @@ public class OVR_LoginSnippet extends DriverInitialisation {
 	@Given("^Login the OVR Application$")
 	public static void OVR_login() throws Exception {
 		OVR_login_page_Elements OVR_Login =  PageFactory.initElements(driver,OVR_login_page_Elements.class);
-		Commonmethods.properties_file="OVR";
+		String OVR_Prop= System.getenv("OVR_Prop");
+		//Commonmethods.properties_file="OVR";
+		Commonmethods.properties_file=OVR_Prop;
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		driver.get(url);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -35,7 +37,9 @@ public class OVR_LoginSnippet extends DriverInitialisation {
 	@Given("^launch the OVR Application$")
 	public static void lanuch_login() throws Exception {
 		OVR_login_page_Elements OVR_Login =  PageFactory.initElements(driver,OVR_login_page_Elements.class);
-		Commonmethods.properties_file="OVR";
+		String OVR_Prop= System.getenv("OVR_Prop");
+		//Commonmethods.properties_file="OVR";
+		Commonmethods.properties_file=OVR_Prop;
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		driver.get(url);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -110,7 +114,9 @@ public class OVR_LoginSnippet extends DriverInitialisation {
 	@Given("^Excepted results OVR positive scenarios$")
 	public static void OVR_login_positive_scenarios() throws Exception {
 		OVR_login_page_Elements OVR_Login =  PageFactory.initElements(driver,OVR_login_page_Elements.class);
-		Commonmethods.properties_file="OVR";
+		String OVR_Prop= System.getenv("OVR_Prop");
+		//Commonmethods.properties_file="OVR";
+		Commonmethods.properties_file=OVR_Prop;
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
 		Commonmethods base=new Commonmethods(driver,wait1);

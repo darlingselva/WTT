@@ -4,6 +4,8 @@ import java.io.File;
 import java.io.FileInputStream;
 import java.io.FileOutputStream;
 import java.io.IOException;
+import java.lang.reflect.Field;
+import java.lang.reflect.InvocationTargetException;
 import java.text.DateFormat;
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -258,4 +260,49 @@ public class ActionFunctions extends Commonmethods {
 		}
 		return Result;
 	}
+
+	/*
+	public static void getthefield(String Webelement_name) throws ClassNotFoundException, NoSuchMethodException, InvocationTargetException, InstantiationException, IllegalAccessException, NoSuchFieldException {
+
+		String[] a=Webelement_name.split("/");
+
+		String parentfoldername=a[0].toString();
+		String Class_name=a[1].toString();
+		String classpath="pages."+parentfoldername+"."+Class_name;
+		String Webelement_name1=a[2].toString();
+
+		Class<?> clazz = Class.forName(classpath);
+		//Object instance = clazz.getDeclaredConstructor().newInstance();
+
+		//Object obj = clazz.newInstance();
+
+		//webElement= (WebElement) clazz.getField(Webelement_name1).get(instance);
+
+		//Field field=clazz.getField(Webelement_name1);
+
+		//webElement= (WebElement) clazz.getField(Webelement_name1).get(obj);
+
+		//webElement= (WebElement) field.get(obj);
+
+
+		try {
+			for (Field field : clazz.getClass().getDeclaredFields()) {
+				if (field.isAnnotationPresent(Webelementname.class)) {
+					Webelementname fieldAttribute = field.getAnnotation(Webelementname.class);
+
+					// Check if the identifier matches either name or id
+					if (fieldAttribute.name().equals(Webelement_name)) {
+						field.setAccessible(true);  // Make the field accessible via reflection
+						webElement= (WebElement) field.get(clazz.getDeclaredConstructor(driver).newInstance());  // Return the actual WebElement
+					}
+				}
+			}
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+
+
+	}
+
+	 */
 }
