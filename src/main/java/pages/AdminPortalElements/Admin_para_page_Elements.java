@@ -16,6 +16,10 @@ public class Admin_para_page_Elements {
     }
 
 
+    @FindBy(xpath = "//app-list//div[@class='ittf_category_key mob-header ng-star-inserted']//span")
+    @ElementName("text_admin_para_header")
+    @Webelementname(name = "text_admin_para_header")
+    public WebElement text_admin_para_header;
 
     @FindBy(xpath = "//button[contains(text(),'Paralympic Class')]")
     @ElementName("button_admin_para_ParalympicClasses_createParalympicClass")

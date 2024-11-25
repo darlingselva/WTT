@@ -2,19 +2,11 @@ package StepDefinition.AdminPortal;
 
 import base.DriverInitialisation;
 import io.cucumber.java.en.Given;
-import org.apache.log4j.LogManager;
-import org.apache.log4j.Logger;
-import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.PageFactory;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.junit.Assert;
-import StepDefinition.TestClass;
 import base.Commonmethods;
 import pages.AdminPortalElements.Admin_login_page_Elements;
-import pages.AdminPortalElements.EventcreationElements;
-import pages.OVRElements.OVR_login_page_Elements;
-import util.AnnotationProcessor;
-import util.TestDataReader;
 
 public class LoginSnippet extends DriverInitialisation {
 
