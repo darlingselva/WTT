@@ -25,7 +25,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
     public static WebElement webElement=null;
 
     public static int search_valued_table_key=0;
-
+    public static String Value=null;
     public static void getthefield(String Webelement_name)throws Exception {
 
         WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -143,18 +143,18 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         Commonmethods base = new Commonmethods(driver, wait1);
         base.wait(2);
 
-        int numberofrow= 0;
+        int numberofrow = 0;
         int numberofdata = 0;
         List<WebElement> tableRows;
 
-         tableRows = webElement.findElements(By.tagName("tr"));
-       // List<WebElement> tableRows = webElement.findElements(By.xpath("//tr"));
+        tableRows = webElement.findElements(By.tagName("tr"));
+        // List<WebElement> tableRows = webElement.findElements(By.xpath("//tr"));
         driver.navigate().refresh();
         base.wait(5);
-         tableRows = webElement.findElements(By.tagName("tr"));
+        tableRows = webElement.findElements(By.tagName("tr"));
         numberofrow = tableRows.size();
         System.out.println("number of row=" + numberofrow);
-        for (int i = 0; i < numberofrow - 1; i++) {
+        for (int i = 0; i < numberofrow; i++) {
             List<WebElement> rowdata = tableRows.get(i).findElements(By.tagName("td"));
             numberofdata = rowdata.size();
 
@@ -166,51 +166,77 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         //HashMap<Integer, String> tablevaluehashmap = new HashMap<>();
 
         Multimap<Integer, String> tablevaluehashmap = ArrayListMultimap.create();
+        WebElement temp_webelement;
+        String Actualvalue = null;
 
-            for (int j = 0; j < numberofrow; j++) {
-                for (int k=0;k<numberofdata ; k++) {
-                    WebElement temp_webelement;
-                    String Actualvalue = null;
+        if (numberofrow>=1) {
+              for (int j = 0; j < numberofrow; j++) {
+                for (int k = 0; k < numberofdata; k++) {
+
                     try {
-                        temp_webelement = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span//span"));
+
+                        Actualvalue = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span//span")).getText();
+
+                        //temp_webelement = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span//span"));
                         //temp_webelement=rowdata.get(j).findElement(By.xpath("//div//span//span//span"));
-                        Actualvalue = temp_webelement.getText();
-                        tablevaluelist.add(Actualvalue);
-                        tablevaluehashmap.put(j,Actualvalue);
+                        //Actualvalue = temp_webelement.getText();
+                        //tablevaluelist.add(Actualvalue);
+                        tablevaluehashmap.put(j, Actualvalue);
 
                     } catch (NoSuchElementException e) {
                         try {
-                            temp_webelement = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span"));
+
+                            Actualvalue = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span")).getText();
+
+                            //temp_webelement = webElement.findElement(By.xpath("//tr[" + (j + 1) + "]//td[" + (k + 1) + "]//div//span//span"));
                             //temp_webelement=rowdata.get(j).findElement(By.xpath("//div//span//span//span"));
-                            Actualvalue = temp_webelement.getText();
-                            tablevaluelist.add(Actualvalue);
-                            tablevaluehashmap.put(j,Actualvalue);
-                        }
-                        catch (NoSuchElementException e1){
+//                            Actualvalue = temp_webelement.getText();
+                            //tablevaluelist.add(Actualvalue);
+                            tablevaluehashmap.put(j, Actualvalue);
+                        } catch (NoSuchElementException e1) {
                             System.out.println("not interactable");
                         }
 
                     }
 
-                    System.out.println(Actualvalue);
+                    //System.out.println(Actualvalue);
                 }
-            }
-        System.out.println("List elements: " + tablevaluelist);
-        if(tablevaluelist.contains(Expectedvalue)) {
-            System.out.println("value founded");
+
         }
-        else {
+
+            System.out.println(tablevaluehashmap);
+            System.out.println(Expectedvalue);
+            if(tablevaluehashmap.containsValue(Expectedvalue))
+            {
+                for (Map.Entry<Integer, String> e : tablevaluehashmap.entries())
+                {
+                String value1 = e.getValue();
+                if (value1.equals(Expectedvalue)) {
+                    System.out.println("value founded");
+                    search_valued_table_key = e.getKey();
+                }
+               }
+            }
+            else {
+                Assert.fail("value not founded");
+            }
+        }
+       else
+        {
             Assert.fail("value not founded");
         }
 
-        System.out.println(tablevaluehashmap);
-        for (Map.Entry<Integer, String> e : tablevaluehashmap.entries()) {
-            String value1 = e.getValue();
-            if(value1.equals(Expectedvalue)){
-                search_valued_table_key = e.getKey();
-            }
-        }
-        System.out.println("Key="+search_valued_table_key);
+
+//        System.out.println("List elements: " + tablevaluelist);
+//        if(tablevaluelist.contains(Expectedvalue)) {
+//            System.out.println("value founded");
+//        }
+//        else {
+//            Assert.fail("value not founded");
+//        }
+
+
+        //System.out.println("Key="+search_valued_table_key);
     }
 
     @Given("^Admin portal action option '(.*)' into the table '(.*)'$")
@@ -313,6 +339,47 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         base.wait(10);
 
 
+
+    }
+
+    @Given("^clear the value into '(.*)'$")
+    public static void clearthevalueintotheelement(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        webElement.clear();
+    }
+
+    @Given("^delete the value into '(.*)'$")
+    public static void deletethevalueintotheelement(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        webElement.sendKeys(Keys.CONTROL + "a");
+
+    }
+
+    @Given("^Jclear the value into '(.*)'$")
+    public static void Jclearthevalueintotheelement(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        JavascriptExecutor jse = (JavascriptExecutor) driver;
+        jse.executeScript("arguments[0].value=''",webElement);
+
+    }
+
+    @Given("^get the value from '(.*)'$")
+    public static void getthevaluefromelement(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        Value=webElement.getText();
+        System.out.println("value of webelement="+Value);
 
     }
 

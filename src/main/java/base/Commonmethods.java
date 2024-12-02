@@ -14,10 +14,8 @@ import java.lang.reflect.InvocationTargetException;
 import java.net.URL;
 import java.time.LocalDateTime;
 import java.time.format.DateTimeFormatter;
-import java.util.ArrayList;
+import java.util.*;
 import java.util.List;
-import java.util.Properties;
-import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
@@ -959,6 +957,17 @@ public class Commonmethods {
 		wait.until(ExpectedConditions.invisibilityOfElementLocated((By) element));
 	}
 
+	public String randomvalue(int digits) {
+		 Random random = new Random();
+
+		 //int rand = random.nextInt(100);
+		int rand = random.nextInt(digits);
+
+		String randomnumber=String.valueOf(rand);
+
+		return randomnumber;
+
+	}
 
 		public static void main(String[] args) {
 			String event_list_index="2";
@@ -1030,6 +1039,8 @@ public class Commonmethods {
 
 	}
 */
+
+
 
 
 }
