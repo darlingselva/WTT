@@ -26,6 +26,8 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     public static int search_valued_table_key=0;
     public static String Value=null;
+
+    public static  int numberofdata = 0;
     public static void getthefield(String Webelement_name)throws Exception {
 
         WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -144,7 +146,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         base.wait(2);
 
         int numberofrow = 0;
-        int numberofdata = 0;
+
         List<WebElement> tableRows;
 
         tableRows = webElement.findElements(By.tagName("tr"));
@@ -246,7 +248,8 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         Commonmethods base = new Commonmethods(driver, wait1);
         base.wait(2);
         WebElement temp_webelement;
-        temp_webelement = webElement.findElement(By.xpath("//tr[" + ( search_valued_table_key+ 1) + "]//td[4]//button[@mattooltip='"+action_option+"']"));
+
+        temp_webelement = webElement.findElement(By.xpath("//tr[" + ( search_valued_table_key+ 1) + "]//td["+numberofdata+"]//button[@mattooltip='"+action_option+"']"));
         temp_webelement.click();
 
 

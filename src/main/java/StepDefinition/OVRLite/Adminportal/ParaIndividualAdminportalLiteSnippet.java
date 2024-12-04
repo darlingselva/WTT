@@ -3,13 +3,12 @@ package StepDefinition.OVRLite.Adminportal;
 import base.Commonmethods;
 import io.cucumber.java.en.Given;
 import io.cucumber.java.en.Then;
-import org.openqa.selenium.Alert;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static PreDefinedstepdefinitions.Predefinedstepdefinitions.*;
 
 
-public class ParaAdminportalLiteSnippet {
+public class ParaIndividualAdminportalLiteSnippet {
 
 
 //    static Random random = new Random();
@@ -1806,12 +1805,305 @@ public class ParaAdminportalLiteSnippet {
     public static void ParaRoomTypeoptionpage() throws Exception {
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
-        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup");
-
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        Verifytheactualandexceptedvalues("Para Room Type","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
 
     }
 
+    @Then("^Create Para Room Type button in the Para Room Type option page$")
+    public static void CreateParaRoomTypebuttonintheParaRoomTypeoptionpage() throws Exception {
 
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParaRoomType_createParaRoomType_Active");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+
+    }
+
+    @Then("^Create Para Room Type using positive values$")
+    public static void CreateParaRoomTypeusingpositivevalues() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+    }
+
+    @Then("^Create Para Room Type without enter the Type fields$")
+    public static void CreateParaRoomTypewithoutentertheTypefields() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        Verifytheactualandexceptedvalues("MANDATORY FIELDS REQUIRED\n"+"\n" +"Type cannot be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+
+    }
+
+    @Then("^Create Para Room Type disable Action toggle$")
+    public static void CreateParaRoomTypedisableActiontoggle() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        Jclick_on_element("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParaRoomType_createParaRoomType_Active");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable("No","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
+    }
+
+    @Then("^Create Para Room Type cancel the popup window$")
+    public static void createParaRoomTypecancelthepopupwindow() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        Verifytheactualandexceptedvalues("Para Room Type","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+
+    }
+
+    @Then("^Edit Para Room Type from data table$")
+    public static void EditParaRoomTypefromdatatable() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParaRoomType_createParaRoomType_Active");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        Verifytheactualandexceptedvalues("Para Room Type","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+    }
+
+    @Then("^Edit Para Room Type from data table using edit Type field$")
+    public static void EditParaRoomTypefromdatatableusingeditTypefield() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        type=type+"E"+base.randomvalue(100);
+
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+    }
+
+    @Then("^Edit Para Room Type from data table using edit Active status$")
+    public static void EditParaRoomTypefromdatatableusingeditActivestatus() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Jclick_on_element("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParaRoomType_createParaRoomType_Active");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable("No","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
+    }
+
+    @Then("^Edit Para Room Type from data table using empty value for Type  field$")
+    public static void EditParaRoomTypefromdatatableusingemptyvalueforTypefield() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        Verifytheactualandexceptedvalues("MANDATORY FIELDS REQUIRED\n"+"\n" +"Type cannot be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+    }
+
+    @Then("^Edit Para Room Type from data table click on cancel button$")
+    public static void EditParaRoomTypefromdatatableclickoncancelbutton() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        Verifytheactualandexceptedvalues("Para Room Type","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+    }
+
+    @Then("^search field in the Para Room Type data table$")
+    public static void searchfieldintheParaRoomTypedatatable() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
+    }
+
+    @Then("^Delete Para Room Type from data table$")
+    public static void DeleteParaRoomTypefromdatatable() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaRoomType_createParaRoomType");
+        String type="testtype";
+        type=type+base.randomvalue(100);
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(type,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaRoomType");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
+    }
+
+    @Then("^Paralympic Classes option page$")
+    public static void ParalympicClassesoptionpage() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParalympicClasses");
+        Verifytheactualandexceptedvalues("Paralympic Class","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParalympicClasses_createParalympicClass");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+
+    }
 
 
     }
