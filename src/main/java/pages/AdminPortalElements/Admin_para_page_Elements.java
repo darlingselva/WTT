@@ -41,7 +41,7 @@ public class Admin_para_page_Elements {
     @Webelementname(name = "text_admin_para_ParalympicClasses_createParalympicClass_ClassId")
     public WebElement text_admin_para_ParalympicClasses_createParalympicClass_ClassId;
 
-    @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Impairment Group')]//parent::div//angular2-multiselect")
+    @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Impairment Group')]//parent::div//angular2-multiselect//div[@class='c-btn']")
     @ElementName("dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup")
     @Webelementname(name = "dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup")
     public WebElement dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup;
@@ -50,6 +50,11 @@ public class Admin_para_page_Elements {
     @ElementName("text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_searchfield")
     @Webelementname(name = "text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_searchfield")
     public WebElement text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_searchfield;
+
+    @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Impairment Group')]//parent::div//ul[@class='lazyContainer']")
+    @ElementName("text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_list")
+    @Webelementname(name = "text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_list")
+    public WebElement text_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup_list;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Active')]//parent::div//input[@type='checkbox']")
     @ElementName("toggle_admin_para_ParalympicClasses_createParalympicClass_Active")

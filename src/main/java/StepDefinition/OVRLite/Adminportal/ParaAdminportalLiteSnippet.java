@@ -8,7 +8,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import static PreDefinedstepdefinitions.Predefinedstepdefinitions.*;
 
 
-public class ParaIndividualAdminportalLiteSnippet {
+public class ParaAdminportalLiteSnippet {
 
 
 //    static Random random = new Random();
@@ -2102,6 +2102,64 @@ public class ParaIndividualAdminportalLiteSnippet {
         element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParalympicClasses_createParalympicClass");
         element_visiability("AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
         element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+
+    }
+
+    @Then("^Create Paralympic Classes button in the Paralympic Classes option page$")
+    public static void CreateParalympicClassesbuttonintheParalympicClassesoptionpage() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParalympicClasses");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParalympicClasses_createParalympicClass");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_ParalympicClassName");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_Description");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_ClassId");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParalympicClasses_createParalympicClass_Active");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Cancel");
+        Verifytheactualandexceptedvalues("Paralympic Class","AdminPortalElements/Admin_para_page_Elements/text_admin_para_header");
+    }
+
+    @Then("^Create Paralympic Classes using positive values$")
+    public static void CreateParalympicClassesusingpositivevalues() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParalympicClasses");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParalympicClasses_createParalympicClass");
+        String Paralympic_Class_Name="testParalympicClassName";
+        String Description="testDescription";
+        String Class_Id="CId";
+        Paralympic_Class_Name=Paralympic_Class_Name+base.randomvalue(10);
+        Description=Description+base.randomvalue(10);
+        Class_Id=Class_Id+base.randomvalue(10);
+
+        enterthevalueintotheelement(Paralympic_Class_Name,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_ParalympicClassName");
+        enterthevalueintotheelement(Description,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_Description");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup");
+        Selectdropdownbasedonindex(0,"AdminPortalElements/Admin_para_page_Elements/dropdown_admin_para_ParalympicClasses_createParalympicClass_ImpairmentGroup");
+        enterthevalueintotheelement(Class_Id,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParalympicClasses_createParalympicClass_ClassId");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
+
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(Paralympic_Class_Name,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(Paralympic_Class_Name,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(Paralympic_Class_Name,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(Description,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        enterthevalueintotheelement(Paralympic_Class_Name,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
+        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
+        AdminportalSearchthevalueintothetable(Class_Id,"AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
+
+        Adminportaloptionontable("Delete","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParalympicClasses");
+        base.wait(2);
+        driver.switchTo().alert().accept();
+        base.wait(2);
 
     }
 

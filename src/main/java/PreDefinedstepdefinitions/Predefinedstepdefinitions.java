@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
 import java.lang.reflect.Constructor;
@@ -386,4 +387,32 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
-}
+
+    @Given("^Select dropdown based on index '(.*)' from '(.*)'$")
+    public static void Selectdropdownbasedonindex(int index,String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        Select dropdown = new Select(webElement);
+        dropdown.selectByIndex(index);
+    }
+
+    @Given("^select action option '(.*)' from list '(.*)'$")
+    public static void selectlistactionoption(int index,String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        List<WebElement> list;
+
+        list=webElement.findElements(By.tagName("li"));
+        System.out.println("number of list="+list.size());
+
+                list.get(index).findElement(By.xpath("//input[@type='checkbox']")).click();
+
+
+
+
+    }
+
+
+
+
+
+
+    }
