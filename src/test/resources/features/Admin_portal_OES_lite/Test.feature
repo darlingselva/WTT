@@ -9,6 +9,6 @@ Feature: Admin OES lite portal - para scenarios
   Scenario: To Verify the "Para Mobility Code" option page
 #    And To Verify the Create Para Mobility Code using positive values
 #  And test
-    And Edit Para Impairment Groups from data table using edit Code field
+    And Delete Para Impairment Groups from data table
 
 

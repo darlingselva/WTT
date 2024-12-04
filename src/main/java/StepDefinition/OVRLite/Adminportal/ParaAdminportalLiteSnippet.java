@@ -1802,6 +1802,15 @@ public class ParaAdminportalLiteSnippet {
 
     }
 
+    @Then("^Para Room Type option page$")
+    public static void ParaRoomTypeoptionpage() throws Exception {
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        element_visiability("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup");
+
+
+    }
+
 
 
 
