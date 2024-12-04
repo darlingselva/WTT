@@ -14,12 +14,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/Admin_portal_OES_lite/Test.feature"}
+		,features= {"classpath:features/Admin_portal_OES_lite"}
 		,glue = {"StepDefinition" , "PreDefinedstepdefinitions"}
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = ""
+		,tags = "@Admin_OES_lite"
 		//,publish = true
 		)
 //@SpringBootTest

@@ -1,5 +1,4 @@
-@Admin_OES_lite_para
-@Admin_OES_lite
+
 Feature: Admin OES lite portal - para scenarios
 
   Background: login the application
