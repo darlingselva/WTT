@@ -7,6 +7,7 @@ import base.Webelementname;
 import com.google.common.collect.ArrayListMultimap;
 import com.google.common.collect.Multimap;
 import io.cucumber.java.en.Given;
+import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
 import org.openqa.selenium.chrome.ChromeDriver;
@@ -402,12 +403,64 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
         list=webElement.findElements(By.tagName("li"));
         System.out.println("number of list="+list.size());
+        WebElement temp_webelement=webElement.findElement(By.xpath("li["+index+"]//input[@type='checkbox']"));
+        //WebElement temp_webelement=list.get(index).findElement(By.xpath("//input[@type='checkbox']"));
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        base.jclick(temp_webelement);
+    }
 
-                list.get(index).findElement(By.xpath("//input[@type='checkbox']")).click();
+    @Given("^check the value '(.*)' from list '(.*)'$")
+    public static void checklistvalues(String excpectedvalue,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        System.out.println("excepted value="+excpectedvalue);
+        List<WebElement> list;
+        String valueforlist=null;
 
 
 
+        Multimap<Integer, String> valueoflistMap = ArrayListMultimap.create();
 
+        list=webElement.findElements(By.tagName("li"));
+        System.out.println("number of list="+list.size());
+
+
+
+        for (int i=0;i<list.size();i++){
+            //valueforlist=list.get(i).findElement(By.xpath("//label")).getText().toString();
+            valueforlist=webElement.findElement(By.xpath("li["+(i+1)+"]//label")).getText();
+            //valueoflist.add(valueforlist);
+            //System.out.println(valueforlist);
+            valueoflistMap.put(i,valueforlist);
+        }
+
+        System.out.println(valueoflistMap);
+        String capsexcpectedvalue= StringUtils.capitalize(excpectedvalue);
+        if(valueoflistMap.containsValue(capsexcpectedvalue))
+        {
+            for (Map.Entry<Integer, String> e : valueoflistMap.entries())
+            {
+                String value1 = e.getValue();
+                if (value1.equals(capsexcpectedvalue)) {
+                    System.out.println("value founded");
+                }
+
+            }
+        }
+        else if(valueoflistMap.containsValue(excpectedvalue)){
+            for (Map.Entry<Integer, String> e : valueoflistMap.entries())
+            {
+                String value1 = e.getValue();
+                if (value1.equals(excpectedvalue)) {
+                    System.out.println("value founded");
+                }
+
+            }
+        }
+        else {
+            Assert.fail("value not founded");
+        }
     }
 
 
