@@ -8,6 +8,6 @@ Feature: Admin OES lite portal - para scenarios
   Scenario: To Verify the "Para Mobility Code" option page
 #    And To Verify the Create Para Mobility Code using positive values
 #  And test
-    And Edit Paralympic Classes from data table using empty value for Paralympic Class Name field
+    And Delete Paralympic Classes from data table
 
 

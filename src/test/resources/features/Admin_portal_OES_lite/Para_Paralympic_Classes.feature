@@ -78,6 +78,33 @@ Feature: Admin OES lite portal - para Para_Paralympic_Classes scenarios
   Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Impairment Group field
     And Edit Paralympic Classes from data table using empty value for Impairment Group field
 
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Impairment Group field
+    And Edit Paralympic Classes from data table using empty value for Impairment Group field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Description field
+    And Edit Paralympic Classes from data table using empty value for Description field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Class Id field
+    And Edit Paralympic Classes from data table using empty value for Class Id field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for all fields
+    And Edit Paralympic Classes from data table using empty value for all fields
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table click on cancel button
+    And Edit Paralympic Classes from data table click on cancel button
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the search field in the Paralympic Classes data table
+    And search field in the Paralympic Classes data table
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Delete Paralympic Classes" from data table
+    And Delete Paralympic Classes from data table
 
 
 
