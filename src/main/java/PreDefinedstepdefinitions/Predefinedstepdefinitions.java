@@ -411,6 +411,21 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         base.jclick(temp_webelement);
     }
 
+    @Given("^select action with value '(.*)' from list '(.*)'$")
+    public static void selectlistactionvalue(String value,String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        List<WebElement> list;
+
+        list=webElement.findElements(By.tagName("li"));
+        System.out.println("number of list="+list.size());
+        WebElement temp_webelement=webElement.findElement(By.xpath("//label[contains(text(),'"+value+"')]//parent::li//input[@type='checkbox']"));
+        //WebElement temp_webelement=list.get(index).findElement(By.xpath("//input[@type='checkbox']"));
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        base.jclick(temp_webelement);
+    }
+
     @Given("^check the value '(.*)' from list '(.*)'$")
     public static void checklistvalues(String excpectedvalue,String Webelement_name)throws Exception {
         getthefield(Webelement_name);

@@ -6,13 +6,14 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 
 import static base.DriverInitialisation.driver;
 
-public class ParaplayerAdminportalLiteSnippet {
+public class ParaeventAdminportalLiteSnippet {
 
     public static WebDriverWait wait1 = new WebDriverWait(driver, 60);
     public static Commonmethods base = new Commonmethods(driver, wait1);
 
-    @Given("^Para Player toggle button in the Individuals module$")
-    public static void ParaPlayertogglebuttonintheIndividualsmodule() throws Exception {
+    @Given("^enable Is Para Event toggle button in the Core step page Event creation process$")
+    public static void enableIsParaEventtogglebuttonintheCoresteppageEventcreationprocess() throws Exception {
 
     }
+
 }

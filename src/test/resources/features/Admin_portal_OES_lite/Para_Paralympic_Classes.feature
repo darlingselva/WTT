@@ -37,3 +37,47 @@ Feature: Admin OES lite portal - para Para_Paralympic_Classes scenarios
   @WTT_OVR_Lite_Admin_portal_TS008
   Scenario: To Verify the "Create Paralympic Classes" without enter the Class Id fields
     And Create Paralympic Classes without enter the Class Id fields
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Create Paralympic Classes" disable "Action" toggle
+    And Create Paralympic Classes disable Action toggle
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Create Paralympic Classes" cancel the popup window
+    And Create Paralympic Classes cancel the popup window
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table
+    And Edit Paralympic Classes from data table
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using edit Paralympic Class Name field
+    And Edit Paralympic Classes from data table using edit Paralympic Class Name field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using edit Description field
+    And Edit Paralympic Classes from data table using edit Description field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using edit Class Id field
+    And Edit Paralympic Classes from data table using edit Class Id field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using edit all fields
+    And Edit Paralympic Classes from data table using edit all fields
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using edit Active status
+    And Edit Paralympic Classes from data table using edit Active status
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Paralympic Class Name field
+    And Edit Paralympic Classes from data table using empty value for Paralympic Class Name field
+
+  @WTT_OVR_Lite_Admin_portal_TS008
+  Scenario: To Verify the "Edit Paralympic Classes" from data table using empty value for Impairment Group field
+    And Edit Paralympic Classes from data table using empty value for Impairment Group field
+
+
+
+
