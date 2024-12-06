@@ -16,4 +16,39 @@ public class ParaeventAdminportalLiteSnippet {
 
     }
 
+    @Given("^enable Is Para Event toggle button in the Core step page and Verify Hospitality tab Event creation process$")
+    public static void enableIsParaEventtogglebuttonintheCoresteppageandVerifyHospitalitytabEventcreationprocess() throws Exception {
+
+    }
+
+    @Given("^Para Accessibility Room Type dropdown in the Hospitality tab Event creation process$")
+    public static void ParaAccessibilityRoomTypedropdownintheHospitalitytabEventcreationprocess() throws Exception {
+
+    }
+
+    @Given("^enable Is Para Event toggle button in the Core step page and verify Review tab Event creation process$")
+    public static void enableIsParaEventtogglebuttonintheCoresteppageandverifyReviewtabEventcreationprocess() throws Exception {
+
+    }
+
+    @Given("^enable Is Para Event toggle button in the Core step page and verify create the Event$")
+    public static void enableIsParaEventtogglebuttonintheCoresteppageandverifycreatetheEvent() throws Exception {
+
+    }
+
+    @Given("^Edit the Para Accessibility Room Type dropdown values in the Hospitality tab for created event$")
+    public static void EdittheParaAccessibilityRoomTypedropdownvaluesintheHospitalitytabforcreatedevent() throws Exception {
+
+    }
+
+    @Given("^Edit the Para Accessibility Room Type dropdown values in the Hospitality tab and verify Review tab for created event$")
+    public static void EdittheParaAccessibilityRoomTypedropdownvaluesintheHospitalitytabandverifyReviewtabforcreatedevent() throws Exception {
+
+    }
+
+    @Given("^Edit the Para Accessibility Room Type dropdown values in the Hospitality tab and verify update tab for created event$")
+    public static void EdittheParaAccessibilityRoomTypedropdownvaluesintheHospitalitytabandverifyupdatetabforcreatedevent() throws Exception {
+
+    }
+
 }

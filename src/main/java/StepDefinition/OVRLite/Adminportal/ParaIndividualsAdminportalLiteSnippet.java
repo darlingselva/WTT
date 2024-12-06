@@ -4,6 +4,7 @@ import base.Commonmethods;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
+import static PreDefinedstepdefinitions.Predefinedstepdefinitions.click_on_element;
 import static base.DriverInitialisation.driver;
 
 public class ParaIndividualsAdminportalLiteSnippet {
@@ -13,6 +14,7 @@ public class ParaIndividualsAdminportalLiteSnippet {
 
     @Given("^Para Player toggle button in the Individuals module$")
     public static void ParaPlayertogglebuttonintheIndividualsmodule() throws Exception {
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_Individuals_individuals_cv");
 
     }
 

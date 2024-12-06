@@ -1,6 +1,6 @@
 @Admin_OES_lite_para
 @Admin_OES_lite
-@Para_Individual_Para_Player
+@Para_Para_Room_Type
 Feature: Admin OES lite portal - para Para_Individual_Para_Player scenarios
 
   Background: login the application
