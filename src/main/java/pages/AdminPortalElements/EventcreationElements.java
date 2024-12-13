@@ -1,9 +1,11 @@
 package pages.AdminPortalElements;
 
+import base.Webelementname;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.PageFactory;
+import pageobjectconfiguration.ElementName;
 
 public class EventcreationElements {
 
@@ -1983,6 +1985,89 @@ public class EventcreationElements {
 
 	@FindBy (xpath = "//span[contains(text(),'Tournament Details')]")
 	public WebElement text1_event_eventdeails;
+
+
+
+
+	@FindBy(xpath = "//app-create-events//div[contains(text(),'Show Organizer in OES')]//parent::div//parent::div//mat-slide-toggle")
+	@ElementName("toggle_event_creation_core_ShowOrganizerinOES")
+	@Webelementname(name = "toggle_event_creation_core_ShowOrganizerinOES")
+	public WebElement toggle_event_creation_core_ShowOrganizerinOES;
+
+	@FindBy(xpath = "//app-create-events//div[contains(text(),'Is Para Event')]//parent::div//parent::div//mat-slide-toggle")
+	@ElementName("toggle_event_creation_core_IsParaEvent")
+	@Webelementname(name = "toggle_event_creation_core_IsParaEvent")
+	public WebElement toggle_event_creation_core_IsParaEvent;
+
+	@FindBy(xpath = "//app-create-events//div[contains(text(),'Enable OES')]//parent::div//parent::div//mat-slide-toggle")
+	@ElementName("toggle_event_creation_OnlineEntrySystem_EnableOES1")
+	@Webelementname(name = "toggle_event_creation_OnlineEntrySystem_EnableOES1")
+	public WebElement toggle_event_creation_OnlineEntrySystem_EnableOES1;
+
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	@ElementName("button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
+	@Webelementname(name = "button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
+	public WebElement button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType;
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//input[@type='text']")
+	@ElementName("text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield")
+	@Webelementname(name = "text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield")
+	public WebElement text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Details')]")
+	@ElementName("tab_event_Details")
+	@Webelementname(name = "tab_event_Details")
+	public WebElement tab_event_Details;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Sub Events')]")
+	@ElementName("tab_event_SubEvents")
+	@Webelementname(name = "tab_event_SubEvents")
+	public WebElement tab_event_SubEvents;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Match Configuration')]")
+	@ElementName("tab_event_MatchConfiguration")
+	@Webelementname(name = "tab_event_MatchConfiguration")
+	public WebElement tab_event_MatchConfiguration;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Meetings')]")
+	@ElementName("tab_event_Meetings")
+	@Webelementname(name = "tab_event_Meetings")
+	public WebElement tab_event_Meetings;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Courses/Seminars')]")
+	@ElementName("tab_event_CoursesSeminars")
+	@Webelementname(name = "tab_event_CoursesSeminars")
+	public WebElement tab_event_CoursesSeminars;
+
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Progress')]")
+	@ElementName("tab_event_Progress")
+	@Webelementname(name = "tab_event_Progress")
+	public WebElement tab_event_Progress;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'OES Lite')]")
+	@ElementName("tab_event_OESLite")
+	@Webelementname(name = "tab_event_OESLite")
+	public WebElement tab_event_OESLite;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and text()='Logs']")
+	@ElementName("tab_event_Logs")
+	@Webelementname(name = "tab_event_Logs")
+	public WebElement tab_event_Logs;
+
+	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and text()='ODF Logs']")
+	@ElementName("tab_event_ODFLogs")
+	@Webelementname(name = "tab_event_ODFLogs")
+	public WebElement tab_event_ODFLogs;
+
+	@FindBy(xpath = "//app-events-preview//app-list//table//tbody")
+	@ElementName("table_event_common_table")
+	@Webelementname(name = "table_event_common_table")
+	public WebElement table_event_common_table;
+
+
+
 
 
 }
