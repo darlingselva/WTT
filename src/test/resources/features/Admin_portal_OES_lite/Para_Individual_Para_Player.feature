@@ -6,6 +6,10 @@ Feature: Admin OES lite portal - para Para_Individual_Para_Player scenarios
   Background: login the application
     Given Login the admin Application
 
+  @WTT_OVR_Lite_Admin_portal_pre_creation_Individual
+  Scenario: OVR Lite Admin portal pre creation Individual
+    And Admin portal Individuals creation
+
   @WTT_OVR_Lite_Admin_portal_TS100
   Scenario: To Verify the "Is Para Player" toggle button in the Individuals module
     And Para Player toggle button in the Individuals module

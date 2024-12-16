@@ -109,6 +109,26 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         //webElement.isDisplayed();
     }
 
+    @Given("^element invisiability '(.*)'$")
+    public static void element_invisiability(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        //base.checkelementvisibility(webElement);
+        //webElement.isDisplayed();
+        try {
+            if (webElement.isDisplayed()) {
+                Assert.fail("element is visiable condition of invisiability");
+            } else {
+                System.out.println("elements is invisiability");
+            }
+        }
+        catch (NoSuchElementException e){
+            System.out.println("elements is invisiability");
+        }
+    }
+
 
     @Given("^jclick on element '(.*)'$")
     public static void Jclick_on_element(String Webelement_name)throws Exception{
@@ -479,7 +499,79 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
     }
 
 
+    @Given("^click on enabled button '(.*)'$")
+    public static void clickonenablebutton(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        String button_action=null;
+        if(webElement.isEnabled()){
+            System.out.println("button is enable");
+            button_action="Enable";
+        }
+        else {
+            webElement.click();
 
+        }
+
+    }
+
+    @Given("^click on enabled button to disable '(.*)'$")
+    public static void clickonenableintodisablebutton(String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        if(webElement.isEnabled()){
+            webElement.click();
+        }
+        else {
+
+            System.out.println("button is disenable");
+        }
+
+    }
+
+    @Given("^click on enabled or disable button '(.*)' and '(.*)'$")
+    public static void clickonenableordisablebutton(String action,String Webelement_name)throws Exception{
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        String button_action=null;
+        if(webElement.isSelected()){
+            System.out.println("button is enable");
+            button_action="Enable";
+        }
+        else {
+            button_action = "Disable";
+
+        }
+
+        switch (action){
+            case "Enable":
+                if(button_action.equals("Enable")){
+                    System.out.println("button is already enable");
+                }
+                else {
+                    webElement.click();
+                }
+                break;
+            case "Disable":
+                if(button_action.equals("Enable")){
+                    webElement.click();
+                }
+                else {
+
+                    System.out.println("button is already disenable");
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
 
 
 

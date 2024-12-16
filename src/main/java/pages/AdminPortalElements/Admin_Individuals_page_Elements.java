@@ -14,10 +14,20 @@ public class Admin_Individuals_page_Elements {
         PageFactory.initElements(driver, this);  // Initialize WebElements using PageFactory
     }
 
-    @FindBy(xpath = "//div[contains(@class,'mat-select-panel-wrap')]//input[@type='text']")
-    @ElementName("text_multiselectionpopuo_searchfield")
-    @Webelementname(name = "text_multiselectionpopuo_searchfield")
-    public WebElement text_multiselectionpopuo_searchfield;
+    @FindBy(xpath = "//ngx-mat-select-search//input[@type='text']")
+    @ElementName("searchtext_multiselectionpopup_searchfield")
+    @Webelementname(name = "searchtext_multiselectionpopup_searchfield")
+    public WebElement searchtext_multiselectionpopup_searchfield;
+
+    @FindBy(xpath = "(//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_common_dropdown")
+    @Webelementname(name = "checkbox_common_dropdown")
+    public WebElement checkbox_common_dropdown;
+
+    @FindBy(xpath = "(//angular2-multiselect//input[@type='checkbox'])[1]")
+    @ElementName("checkbox_common_dropdown1")
+    @Webelementname(name = "checkbox_common_dropdown1")
+    public WebElement checkbox_common_dropdown1;
 
     @FindBy(xpath = "//app-list//button[contains(text(),' Individual')]")
     @ElementName("button_Individuals_Individual_CreateIndividual")
@@ -39,10 +49,20 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "table_Individuals_Individual")
     public WebElement table_Individuals_Individual;
 
+    @FindBy(xpath = "//app-list//table//tbody//button[@mattooltip='Edit']")
+    @ElementName("button_Individuals_Individual_table_edit")
+    @Webelementname(name = "button_Individuals_Individual_table_edit")
+    public WebElement button_Individuals_Individual_table_edit;
+
     @FindBy(xpath = "(//span[contains(text(),'Create')])[2]")
     @ElementName("button_Individuals_Individual_Create")
     @Webelementname(name = "button_Individuals_Individual_Create")
     public WebElement button_Individuals_Individual_Create;
+
+    @FindBy(xpath = "//span[contains(text(),'Update')]")
+    @ElementName("button_Individuals_Individual_Update")
+    @Webelementname(name = "button_Individuals_Individual_Update")
+    public WebElement button_Individuals_Individual_Update;
 
     @FindBy(xpath = "//button[contains(text(),'Next')]")
     @ElementName("button_Individuals_Individual_Next")
@@ -84,10 +104,15 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "button_Individuals_Individual_Basics_photoUploadLocation")
     public WebElement button_Individuals_Individual_Basics_photoUploadLocation;
 
+    @FindBy(xpath = "(//div[@class='cdk-overlay-container']//following-sibling::div)[2]")
+    @ElementName("button_Individuals_Individual_Basics_photoUploadLocationoptions")
+    @Webelementname(name = "button_Individuals_Individual_Basics_photoUploadLocationoptions")
+    public WebElement button_Individuals_Individual_Basics_photoUploadLocationoptions;
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Photo')]//parent::div//parent::div//label[contains(text(),' Select Image ')]")
-    @ElementName("button_Individuals_Individual_Basics_photoSelectImage")
-    @Webelementname(name = "button_Individuals_Individual_Basics_photoSelectImage")
-    public WebElement button_Individuals_Individual_Basics_photoSelectImage;
+    @ElementName("filebutton_Individuals_Individual_Basics_photoSelectImage")
+    @Webelementname(name = "filebutton_Individuals_Individual_Basics_photoSelectImage")
+    public WebElement filebutton_Individuals_Individual_Basics_photoSelectImage;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Organization ')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Basics_Organization")
@@ -98,6 +123,16 @@ public class Admin_Individuals_page_Elements {
     @ElementName("text_Individuals_Individual_Basics_Organizationsearchfield")
     @Webelementname(name = "text_Individuals_Individual_Basics_Organizationsearchfield")
     public WebElement text_Individuals_Individual_Basics_Organizationsearchfield;
+
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Organization ')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Basics_Organization")
+    @Webelementname(name = "checkbox_Individuals_Individual_Basics_Organization")
+    public WebElement checkbox_Individuals_Individual_Basics_Organization;
+
+//    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Organization ')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[1]")
+//    @ElementName("checkbox_Individuals_Individual_Basics_Organization")
+//    @Webelementname(name = "checkbox_Individuals_Individual_Basics_Organization")
+//    public WebElement checkbox_Individuals_Individual_Basics_Organization;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Gender ')]//parent::div//parent::div//mat-select")
     @ElementName("button_Individuals_Individual_Basics_Gender")
@@ -114,16 +149,31 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "text_Individuals_Individual_Basics_Nationalitysearchfield")
     public WebElement text_Individuals_Individual_Basics_Nationalitysearchfield;
 
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Nationality ')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Basics_Nationality")
+    @Webelementname(name = "checkbox_Individuals_Individual_Basics_Nationality")
+    public WebElement checkbox_Individuals_Individual_Basics_Nationality;
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'BirthDate')]//parent::div//parent::div//input[@placeholder='Choose a date']")
     @ElementName("button_Individuals_Individual_Basics_BirthDate")
     @Webelementname(name = "button_Individuals_Individual_Basics_BirthDate")
     public WebElement button_Individuals_Individual_Basics_BirthDate;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'BirthDate')]//parent::div//parent::div//input[@placeholder='Choose a date']")
+    @ElementName("date_Individuals_Individual_Basics_BirthDate")
+    @Webelementname(name = "date_Individuals_Individual_Basics_BirthDate")
+    public WebElement date_Individuals_Individual_Basics_BirthDate;
 
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'DeathDate ')]//parent::div//parent::div//input[@placeholder='Choose a date']")
     @ElementName("button_Individuals_Individual_Basics_DeathDate")
     @Webelementname(name = "button_Individuals_Individual_Basics_DeathDate")
     public WebElement button_Individuals_Individual_Basics_DeathDate;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'DeathDate ')]//parent::div//parent::div//input[@placeholder='Choose a date']")
+    @ElementName("date_Individuals_Individual_Basics_DeathDate")
+    @Webelementname(name = "date_Individuals_Individual_Basics_DeathDate")
+    public WebElement date_Individuals_Individual_Basics_DeathDate;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Is Master ')]//parent::div//parent::div//mat-slide-toggle")
     @ElementName("toggle_Individuals_Individual_Basics_IsMaster")
@@ -180,6 +230,11 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "text_Individuals_Individual_Basics_IssuedOn")
     public WebElement text_Individuals_Individual_Basics_IssuedOn;
 
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Issued On')]//parent::div//parent::div//input")
+    @ElementName("date_Individuals_Individual_Basics_IssuedOn")
+    @Webelementname(name = "date_Individuals_Individual_Basics_IssuedOn")
+    public WebElement date_Individuals_Individual_Basics_IssuedOn;
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'State/Province/County')]//parent::div//parent::div//input")
     @ElementName("text_Individuals_Individual_Basics_StateProvinceCounty")
     @Webelementname(name = "text_Individuals_Individual_Basics_StateProvinceCounty")
@@ -189,6 +244,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("text_Individuals_Individual_Basics_ExpiresOn")
     @Webelementname(name = "text_Individuals_Individual_Basics_ExpiresOn")
     public WebElement text_Individuals_Individual_Basics_ExpiresOn;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Expires On')]//parent::div//parent::div//input")
+    @ElementName("date_Individuals_Individual_Basics_ExpiresOn")
+    @Webelementname(name = "date_Individuals_Individual_Basics_ExpiresOn")
+    public WebElement date_Individuals_Individual_Basics_ExpiresOn;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Residing Country')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Basics_ResidingCountry")
@@ -200,6 +260,11 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "text_Individuals_Individual_Basics_ResidingCountrysearchfield")
     public WebElement text_Individuals_Individual_Basics_ResidingCountrysearchfield;
 
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Residing Country')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Basics_ResidingCountry")
+    @Webelementname(name = "checkbox_Individuals_Individual_Basics_ResidingCountry")
+    public WebElement checkbox_Individuals_Individual_Basics_ResidingCountry;
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Office Location')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Basics_OfficeLocation")
     @Webelementname(name = "button_Individuals_Individual_Basics_OfficeLocation")
@@ -209,6 +274,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("text_Individuals_Individual_Basics_OfficeLocationsearchfield")
     @Webelementname(name = "text_Individuals_Individual_Basics_OfficeLocationsearchfield")
     public WebElement text_Individuals_Individual_Basics_OfficeLocationsearchfield;
+
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Office Location')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Basics_OfficeLocation")
+    @Webelementname(name = "checkbox_Individuals_Individual_Basics_OfficeLocation")
+    public WebElement checkbox_Individuals_Individual_Basics_OfficeLocation;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Postcode')]//parent::div//parent::div//input")
     @ElementName("text_Individuals_Individual_Basics_Postcode")
@@ -381,6 +451,11 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "text_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileTypesearchfield")
     public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileTypesearchfield;
 
+    @FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Profile Type')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileType")
+    @Webelementname(name = "checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileType")
+    public WebElement checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileType;
+
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile Group')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroup")
     @Webelementname(name = "button_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroup")
@@ -390,6 +465,12 @@ public class Admin_Individuals_page_Elements {
     @ElementName("text_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroupsearchfield")
     @Webelementname(name = "text_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroupsearchfield")
     public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroupsearchfield;
+
+    @FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Profile Group')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroup")
+    @Webelementname(name = "checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroup")
+    public WebElement checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_ProfileGroup;
+
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Organization')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Profiles_IndividualProfile_addnew_Organization")
     @Webelementname(name = "button_Individuals_Individual_Profiles_IndividualProfile_addnew_Organization")
@@ -399,6 +480,12 @@ public class Admin_Individuals_page_Elements {
     @ElementName("text_Individuals_Individual_Profiles_IndividualProfile_addnew_Organizationsearchfield")
     @Webelementname(name = "text_Individuals_Individual_Profiles_IndividualProfile_addnew_Organizationsearchfield")
     public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_Organizationsearchfield;
+
+    @FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Organization')]//parent::div//parent::div//angular2-multiselect//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_Organization")
+    @Webelementname(name = "checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_Organization")
+    public WebElement checkbox_Individuals_Individual_Profiles_IndividualProfile_addnew_Organization;
+
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Linked Individual')]//parent::div//parent::div//angular2-multiselect")
     @ElementName("button_Individuals_Individual_Profiles_IndividualProfile_addnew_LinkedIndividual")
     @Webelementname(name = "button_Individuals_Individual_Profiles_IndividualProfile_addnew_LinkedIndividual")
@@ -410,14 +497,14 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_LinkedIndividualsearchfield;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate")
-    @Webelementname(name = "text_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate")
-    public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate;
+    @ElementName("date_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate")
+    @Webelementname(name = "date_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate")
+    public WebElement date_Individuals_Individual_Profiles_IndividualProfile_addnew_StartDate;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate")
-    @Webelementname(name = "text_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate")
-    public WebElement text_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate;
+    @ElementName("date_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate")
+    @Webelementname(name = "date_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate")
+    public WebElement date_Individuals_Individual_Profiles_IndividualProfile_addnew_EndDate;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Email')]//parent::div//parent::div//input")
     @ElementName("text_Individuals_Individual_Profiles_IndividualProfile_addnew_Email")
@@ -532,14 +619,14 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_Membership_AddNew_Membershipsearchfield;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Active From')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Membership_AddNew_ActiveFrom")
-    @Webelementname(name = "text_Individuals_Individual_Membership_AddNew_ActiveFrom")
-    public WebElement text_Individuals_Individual_Membership_AddNew_ActiveFrom;
+    @ElementName("date_Individuals_Individual_Membership_AddNew_ActiveFrom")
+    @Webelementname(name = "date_Individuals_Individual_Membership_AddNew_ActiveFrom")
+    public WebElement date_Individuals_Individual_Membership_AddNew_ActiveFrom;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Expires On')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Membership_AddNew_ExpiresOn")
-    @Webelementname(name = "text_Individuals_Individual_Membership_AddNew_ExpiresOn")
-    public WebElement text_Individuals_Individual_Membership_AddNew_ExpiresOn;
+    @ElementName("date_Individuals_Individual_Membership_AddNew_ExpiresOn")
+    @Webelementname(name = "date_Individuals_Individual_Membership_AddNew_ExpiresOn")
+    public WebElement date_Individuals_Individual_Membership_AddNew_ExpiresOn;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Active')]//parent::div//parent::div//mat-slide-toggle")
     @ElementName("toggle_Individuals_Individual_Membership_AddNew_Active")
@@ -553,15 +640,15 @@ public class Admin_Individuals_page_Elements {
     public WebElement button_Individuals_Individual_PlayerProfile;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Current Out Of Competition Start Date ')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate")
-    @Webelementname(name = "text_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate")
-    public WebElement text_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate;
+    @ElementName("date_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate")
+    @Webelementname(name = "date_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate")
+    public WebElement date_Individuals_Individual_PlayerProfile_CurrentOutOfCompetitionStartDate;
 
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Protected Ranking Activation Date ')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate")
-    @Webelementname(name = "text_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate")
-    public WebElement text_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate;
+    @ElementName("date_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate")
+    @Webelementname(name = "date_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate")
+    public WebElement date_Individuals_Individual_PlayerProfile_ProtectedRankingActivationDate;
 
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Protected Ranking Period In Months ')]//parent::div//parent::div//input")
@@ -616,9 +703,9 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_PlayerProfile_Grip;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Zero Point Penalty Expiry Date ')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate")
-    @Webelementname(name = "text_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate")
-    public WebElement text_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate;
+    @ElementName("date_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate")
+    @Webelementname(name = "date_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate")
+    public WebElement date_Individuals_Individual_PlayerProfile_ZeroPointPenaltyExpiryDate;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Protected Ranking ')]//parent::div//parent::div//mat-slide-toggle")
     @ElementName("toggle_Individuals_Individual_PlayerProfile_ProtectedRanking")
@@ -626,7 +713,7 @@ public class Admin_Individuals_page_Elements {
     public WebElement toggle_Individuals_Individual_PlayerProfile_ProtectedRanking;
 
 
-    @FindBy(xpath = "//div[contains(text(),'9: Medical Information')]")
+    @FindBy(xpath = "//div[contains(text(),'Medical Information')]")
     @ElementName("button_Individuals_Individual_MedicalInformation")
     @Webelementname(name = "button_Individuals_Individual_MedicalInformation")
     public WebElement button_Individuals_Individual_MedicalInformation;
@@ -643,16 +730,16 @@ public class Admin_Individuals_page_Elements {
     public WebElement button_Individuals_Individual_MedicalInformation_NoofVaccination;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Date of Last Vaccination ')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_MedicalInformation_DateofLastVaccination")
-    @Webelementname(name = "text_Individuals_Individual_MedicalInformation_DateofLastVaccination")
-    public WebElement text_Individuals_Individual_MedicalInformation_DateofLastVaccination;
+    @ElementName("date_Individuals_Individual_MedicalInformation_DateofLastVaccination")
+    @Webelementname(name = "date_Individuals_Individual_MedicalInformation_DateofLastVaccination")
+    public WebElement date_Individuals_Individual_MedicalInformation_DateofLastVaccination;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Certificate ')]//parent::div//parent::div//label[@class='file_upload_button']")
     @ElementName("file_Individuals_Individual_MedicalInformation_Certificate")
     @Webelementname(name = "file_Individuals_Individual_MedicalInformation_Certificate")
     public WebElement file_Individuals_Individual_MedicalInformation_Certificate;
 
-    @FindBy(xpath = "//div[contains(text(),'10: Documents')]")
+    @FindBy(xpath = "//div[@class='mat-tab-label-container']//div[contains(text(),'Documents')]")
     @ElementName("button_Individuals_Individual_Documents")
     @Webelementname(name = "button_Individuals_Individual_Documents")
     public WebElement button_Individuals_Individual_Documents;
@@ -680,14 +767,14 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_Documents_AddNew_DocumentTitle;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid From')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Documents_AddNew_ValidFrom")
-    @Webelementname(name = "text_Individuals_Individual_Documents_AddNew_ValidFrom")
-    public WebElement text_Individuals_Individual_Documents_AddNew_ValidFrom;
+    @ElementName("date_Individuals_Individual_Documents_AddNew_ValidFrom")
+    @Webelementname(name = "date_Individuals_Individual_Documents_AddNew_ValidFrom")
+    public WebElement date_Individuals_Individual_Documents_AddNew_ValidFrom;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Valid To')]//parent::div//parent::div//input")
-    @ElementName("text_Individuals_Individual_Documents_AddNew_ValidTo")
-    @Webelementname(name = "text_Individuals_Individual_Documents_AddNew_ValidTo")
-    public WebElement text_Individuals_Individual_Documents_AddNew_ValidTo;
+    @ElementName("date_Individuals_Individual_Documents_AddNew_ValidTo")
+    @Webelementname(name = "date_Individuals_Individual_Documents_AddNew_ValidTo")
+    public WebElement date_Individuals_Individual_Documents_AddNew_ValidTo;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Place')]//parent::div//parent::div//input")
     @ElementName("text_Individuals_Individual_Documents_AddNew_Place")
@@ -709,6 +796,11 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "button_Individuals_Individual_Documents_AddNew_DocumentType")
     public WebElement button_Individuals_Individual_Documents_AddNew_DocumentType;
 
+    @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Category')]//parent::div//parent::div//mat-select")
+    @ElementName("button_Individuals_Individual_Documents_AddNew_Category")
+    @Webelementname(name = "button_Individuals_Individual_Documents_AddNew_Category")
+    public WebElement button_Individuals_Individual_Documents_AddNew_Category;
+
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Active')]//parent::div//parent::div//mat-slide-toggle")
     @ElementName("toggle_Individuals_Individual_Documents_AddNew_Active")
     @Webelementname(name = "toggle_Individuals_Individual_Documents_AddNew_Active")
@@ -720,11 +812,11 @@ public class Admin_Individuals_page_Elements {
     public WebElement toggle_Individuals_Individual_Documents_AddNew_PublicDocument;
 
     @FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Document')]//parent::div//parent::div//label[@class='file_upload_button']")
-    @ElementName("file_Individuals_Individual_Documents_AddNew_Document")
-    @Webelementname(name = "file_Individuals_Individual_Documents_AddNew_Document")
-    public WebElement file_Individuals_Individual_Documents_AddNew_Document;
+    @ElementName("filebutton_Individuals_Individual_Documents_AddNew_Document")
+    @Webelementname(name = "filebutton_Individuals_Individual_Documents_AddNew_Document")
+    public WebElement filebutton_Individuals_Individual_Documents_AddNew_Document;
 
-    @FindBy(xpath = "//div[contains(text(),'12: Review')]")
+    @FindBy(xpath = "//div[@class='mat-tab-label-container']//div[contains(text(),'Review')]")
     @ElementName("button_Individuals_Individual_Review")
     @Webelementname(name = "button_Individuals_Individual_Review")
     public WebElement button_Individuals_Individual_Review;
@@ -1012,14 +1104,134 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_Review_MedicalInformation_DateofLastVaccination;
 
 
+    @FindBy (xpath = "//span[contains(text(),'Individual Details')]")
+    @ElementName("text1_Individuals_Individualsdeails")
+    @Webelementname(name = "text1_Individuals_Individualsdeails")
+    public WebElement text1_Individuals_Individualsdeails;
+
+   //ParaInformation
+    @FindBy(xpath = "//div[@class='mat-tab-label-container']//div[contains(text(),'Para Information')]")
+    @ElementName("button_Individuals_Individual_ParaInformation")
+    @Webelementname(name = "button_Individuals_Individual_ParaInformation")
+    public WebElement button_Individuals_Individual_ParaInformation;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'PTT Id  ')]//parent::div//parent::div//input[@type='number']")
+    @ElementName("text_Individuals_Individual_PTTId")
+    @Webelementname(name = "text_Individuals_Individual_PTTId")
+    public WebElement text_Individuals_Individual_PTTId;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Paralympic Class ')]//parent::div//parent::div//angular2-multiselect")
+    @ElementName("button_Individuals_Individual_ParalympicClass")
+    @Webelementname(name = "button_Individuals_Individual_ParalympicClass")
+    public WebElement button_Individuals_Individual_ParalympicClass;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Paralympic Class ')]//parent::div//parent::div//input[@type='text']")
+    @ElementName("text_Individuals_Individual_ParalympicClasssearchfield")
+    @Webelementname(name = "text_Individuals_Individual_ParalympicClasssearchfield")
+    public WebElement text_Individuals_Individual_ParalympicClasssearchfield;
 
 
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Paralympic Class ')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_ParalympicClass")
+    @Webelementname(name = "checkbox_Individuals_Individual_ParalympicClass")
+    public WebElement checkbox_Individuals_Individual_ParalympicClass;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Paralympic Class ')]//parent::div//parent::div//ul[@class='lazyContainer']")
+    @ElementName("text_Individuals_Individual_ParalympicClasslist")
+    @Webelementname(name = "text_Individuals_Individual_ParalympicClasslist")
+    public WebElement text_Individuals_Individual_ParalympicClasslist;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div")
+    @ElementName("text_Individuals_Individual_ImpairmentGroup")
+    @Webelementname(name = "text_Individuals_Individual_ImpairmentGroup")
+    public WebElement text_Individuals_Individual_ImpairmentGroup;
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//angular2-multiselect")
+    @ElementName("button_Individuals_Individual_ImpairmentGroup")
+    @Webelementname(name = "button_Individuals_Individual_ImpairmentGroup")
+    public WebElement button_Individuals_Individual_ImpairmentGroup;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//input[@type='text']")
+    @ElementName("text_Individuals_Individual_ImpairmentGroupsearchfield")
+    @Webelementname(name = "text_Individuals_Individual_ImpairmentGroupsearchfield")
+    public WebElement text_Individuals_Individual_ImpairmentGroupsearchfield;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//ul[@class='lazyContainer']")
+    @ElementName("text_Individuals_Individual_ImpairmentGrouplist")
+    @Webelementname(name = "text_Individuals_Individual_ImpairmentGrouplist")
+    public WebElement text_Individuals_Individual_ImpairmentGrouplist;
+
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_ImpairmentGroup")
+    @Webelementname(name = "checkbox_Individuals_Individual_ImpairmentGroup")
+    public WebElement checkbox_Individuals_Individual_ImpairmentGroup;
 
 
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//angular2-multiselect")
+    @ElementName("button_Individuals_Individual_ClassificationStatus")
+    @Webelementname(name = "button_Individuals_Individual_ClassificationStatus")
+    public WebElement button_Individuals_Individual_ClassificationStatus;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//input[@type='text']")
+    @ElementName("text_Individuals_Individual_ClassificationStatussearchfield")
+    @Webelementname(name = "text_Individuals_Individual_ClassificationStatussearchfield")
+    public WebElement text_Individuals_Individual_ClassificationStatussearchfield;
+
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_ClassificationStatus")
+    @Webelementname(name = "checkbox_Individuals_Individual_ClassificationStatus")
+    public WebElement checkbox_Individuals_Individual_ClassificationStatus;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//ul[@class='lazyContainer']")
+    @ElementName("text_Individuals_Individual_ClassificationStatuslist")
+    @Webelementname(name = "text_Individuals_Individual_ClassificationStatuslist")
+    public WebElement text_Individuals_Individual_ClassificationStatuslist;
 
 
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//angular2-multiselect")
+    @ElementName("button_Individuals_Individual_MobilityCode")
+    @Webelementname(name = "button_Individuals_Individual_MobilityCode")
+    public WebElement button_Individuals_Individual_MobilityCode;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//input[@type='text']")
+    @ElementName("text_Individuals_Individual_MobilityCodesearchfield")
+    @Webelementname(name = "text_Individuals_Individual_MobilityCodesearchfield")
+    public WebElement text_Individuals_Individual_MobilityCodesearchfield;
+
+    @FindBy(xpath = "(//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+    @ElementName("checkbox_Individuals_Individual_MobilityCode")
+    @Webelementname(name = "checkbox_Individuals_Individual_MobilityCode")
+    public WebElement checkbox_Individuals_Individual_MobilityCode;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//ul[@class='lazyContainer']")
+    @ElementName("text_Individuals_Individual_MobilityCodelist")
+    @Webelementname(name = "text_Individuals_Individual_MobilityCodelist")
+    public WebElement text_Individuals_Individual_MobilityCodelist;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Wheelchair Width')]//parent::div//parent::div//input")
+    @ElementName("text_Individuals_Individual_WheelchairWidth")
+    @Webelementname(name = "text_Individuals_Individual_WheelchairWidth")
+    public WebElement text_Individuals_Individual_WheelchairWidth;
 
 
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Review Year ')]//parent::div//parent::div//mat-select")
+    @ElementName("button_Individuals_Individual_ReviewYear")
+    @Webelementname(name = "button_Individuals_Individual_ReviewYear")
+    public WebElement button_Individuals_Individual_ReviewYear;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Use Second Wheelchair ')]//parent::div//parent::div//mat-slide-toggle")
+    @ElementName("button_Individuals_Individual_UseSecondWheelchair")
+    @Webelementname(name = "button_Individuals_Individual_UseSecondWheelchair")
+    public WebElement toggle_Individuals_Individual_UseSecondWheelchair;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Ball Picker Needed ')]//parent::div//parent::div//mat-slide-toggle")
+    @ElementName("button_Individuals_Individual_BallPickerNeeded")
+    @Webelementname(name = "button_Individuals_Individual_BallPickerNeeded")
+    public WebElement toggle_Individuals_Individual_BallPickerNeeded;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Is Active ')]//parent::div//parent::div//mat-slide-toggle")
+    @ElementName("button_Individuals_Individual_IsActive")
+    @Webelementname(name = "button_Individuals_Individual_IsActive")
+    public WebElement toggle_Individuals_Individual_IsActive;
 
 
 
