@@ -17,13 +17,15 @@ public class EventcreationElements {
 
 	public EventcreationElements(WebDriver driver) {
 		this.driver = driver;
-		PageFactory.initElements(driver, this);
+		PageFactory.initElements(driver, this);  // Initialize WebElements using PageFactory
 	}
 
 
 
 
 	@FindBy(xpath = "//a[@href='#/list/events/tournaments']")
+	@ElementName("tab_event")
+	@Webelementname(name = "tab_event")
 	public WebElement tab_event;
 
 
@@ -828,7 +830,9 @@ public class EventcreationElements {
 
 	//Event creation - 11: Online Entry System
 
-	@FindBy(xpath = "//div[text()='11: Online Entry System']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Online Entry System')])[1]")
+	@ElementName("tab_event_creation_OnlineEntrySystem")
+	@Webelementname(name = "tab_event_creation_OnlineEntrySystem")
 	public WebElement tab_event_creation_OnlineEntrySystem;
 
 	@FindBy(xpath = "//div[contains(text(),'Deadline Time Zone')]//parent::div//parent::div//div[@class='selected-list']")
@@ -1110,7 +1114,9 @@ public class EventcreationElements {
 
 	//Event creation - 15: Hospitality
 
-	@FindBy(xpath = "//div[text()='15: Hospitality']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Hospitality')])[1]")
+	@ElementName("tab_event_creation_Hospitality")
+	@Webelementname(name = "tab_event_creation_Hospitality")
 	public WebElement tab_event_creation_Hospitality;
 
 	@FindBy(xpath = "//div[contains(text(),'Allowed First Arrival Date')]//parent::div//parent::div//input")
@@ -1123,18 +1129,26 @@ public class EventcreationElements {
 	public WebElement toggle_event_creation_Hospitality_ForceHospitality;
 
 	@FindBy(xpath = "//button[text()='Add New']")
+	@ElementName("button_event_creation_Hospitality_AddNew")
+	@Webelementname(name = "button_event_creation_Hospitality_AddNew")
 	public WebElement button_event_creation_Hospitality_AddNew;
 
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	@ElementName("button_event_creation_Hospitality_AddHospitalityInformation_Profile")
+	@Webelementname(name = "button_event_creation_Hospitality_AddHospitalityInformation_Profile")
 	public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Profile;
 
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Profile')]//parent::div//parent::div//input[@placeholder='Search']")
+	@ElementName("bartext_event_creation_Hospitality_AddHospitalityInformation_Profilesearch")
+	@Webelementname(name = "bartext_event_creation_Hospitality_AddHospitalityInformation_Profilesearch")
 	public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_Profilesearch;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::div//label//span[text()='Select All']")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Profileselectall;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Coach']")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileCoach")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileCoach")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileCoach;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//input[@type='checkbox']//parent::li//label[text()='Daughter']")
@@ -1165,27 +1179,43 @@ public class EventcreationElements {
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUmpire;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-up ng-star-inserted']")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUparrowicon")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUparrowicon")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileUparrowicon;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Profile')]//parent::div//parent::div//span[@class='c-angle-down ng-star-inserted']")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileDownarrowicon")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileDownarrowicon")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ProfileDownarrowicon;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	@ElementName("button_event_creation_Hospitality_AddHospitalityInformation_Accommodation")
+	@Webelementname(name = "button_event_creation_Hospitality_AddHospitalityInformation_Accommodation")
 	public WebElement button_event_creation_Hospitality_AddHospitalityInformation_Accommodation;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@placeholder='Search']")
+	@ElementName("bartext_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch")
+	@Webelementname(name = "bartext_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch")
 	public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearch;
 
 	@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Accommodation')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearchresult")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearchresult")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_Accommodationsearchresult;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	@ElementName("button_event_creation_Hospitality_AddHospitalityInformation_RoomType")
+	@Webelementname(name = "button_event_creation_Hospitality_AddHospitalityInformation_RoomType")
 	public WebElement button_event_creation_Hospitality_AddHospitalityInformation_RoomType;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@placeholder='Search']")
+	@ElementName("bartext_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch")
+	@Webelementname(name = "bartext_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch")
 	public WebElement bartext_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearch;
 
 	@FindBy(xpath = "(//mat-dialog-content//div[contains(text(),'Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearchresult")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearchresult")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_RoomTypesearchresult;
 
 	@FindBy(xpath = "//mat-dialog-content//div[contains(text(),'Cost(per night/person)')]//parent::div//parent::div//input")
@@ -1661,7 +1691,9 @@ public class EventcreationElements {
 
 	//Event creation - 25: Review
 
-	@FindBy(xpath = "//div[text()='25: Review']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Review')])[1]")
+	@ElementName("tab_event_creation_Review")
+	@Webelementname(name = "tab_event_creation_Review")
 	public WebElement tab_event_creation_Review;
 
 	@FindBy(xpath = "(//div[contains(text(),'Event Name ')]//parent::div//parent::div//span)")
@@ -1984,9 +2016,68 @@ public class EventcreationElements {
 	public WebElement text1_event_successpopupmessage;
 
 	@FindBy (xpath = "//span[contains(text(),'Tournament Details')]")
+	@ElementName("text1_event_eventdeails")
+	@Webelementname(name = "text1_event_eventdeails")
 	public WebElement text1_event_eventdeails;
 
+	@FindBy(xpath = "//app-list//input[@type='text']")
+	@ElementName("text_event_searchfield")
+	@Webelementname(name = "text_event_searchfield")
+	public WebElement text_event_searchfield;
 
+	@FindBy(xpath = "//app-list//button[@class='search-btn']")
+	@ElementName("button_event_searchfieldicon")
+	@Webelementname(name = "button_event_searchfieldicon")
+	public WebElement button_event_searchfieldicon;
+
+	@FindBy(xpath = "//app-list//table//tbody")
+	@ElementName("table_event_table")
+	@Webelementname(name = "table_event_table")
+	public WebElement table_event_table;
+
+	@FindBy(xpath = "//app-root//table//tbody//tr")
+	@ElementName("table_event_tableresultrow")
+	@Webelementname(name = "table_event_tableresultrow")
+	public WebElement table_event_tableresultrow;
+	@FindBy(xpath = "//app-list//table//button[@mattooltip='Edit']")
+	@ElementName("button_event_tablesearchedeventedit")
+	@Webelementname(name = "button_event_tablesearchedeventedit")
+	public WebElement button_event_tablesearchedeventedit;
+
+	@FindBy(xpath = "//app-list//table//button[@mattooltip='Delete']")
+	@ElementName("button_event_tablesearchedeventdelete")
+	@Webelementname(name = "button_event_tablesearchedeventdelete")
+	public WebElement button_event_tablesearchedeventdelete;
+
+	@FindBy(xpath = "//app-create-events//button//span[text()='Update']")
+	@ElementName("button_event_update")
+	@Webelementname(name = "button_event_update")
+	public WebElement button_event_update;
+
+	@FindBy(xpath = "//app-create-events//button[text()='Next']")
+	@ElementName("button_event_up_Next")
+	@Webelementname(name = "button_event_up_Next")
+	public WebElement button_event_up_Next;
+
+	@FindBy(xpath = "//app-create-events//button[text()='Delete']")
+	@ElementName("button_event_Delete")
+	@Webelementname(name = "button_event_Delete")
+	public WebElement button_event_Delete;
+
+	@FindBy(xpath = "//app-create-events//button[text()='Cancel']")
+	@ElementName("button_event_Cancel")
+	@Webelementname(name = "button_event_Cancel")
+	public WebElement button_event_Cancel;
+
+	@FindBy(xpath = "//app-create-events//button//span[text()='Next']")
+	@ElementName("button_event_down_Next")
+	@Webelementname(name = "button_event_down_Next")
+	public WebElement button_event_down_Next;
+
+	@FindBy(xpath = "//app-create-events//button//span[text()='Back']")
+	@ElementName("button_event_down_Back")
+	@Webelementname(name = "button_event_down_Back")
+	public WebElement button_event_down_Back;
 
 
 	@FindBy(xpath = "//app-create-events//div[contains(text(),'Show Organizer in OES')]//parent::div//parent::div//mat-slide-toggle")
@@ -2004,16 +2095,47 @@ public class EventcreationElements {
 	@Webelementname(name = "toggle_event_creation_OnlineEntrySystem_EnableOES1")
 	public WebElement toggle_event_creation_OnlineEntrySystem_EnableOES1;
 
+	@FindBy(xpath = "//app-create-events//div[contains(text(),'Enable OES')]//parent::div//parent::div//span[@style='color:red;']")
+	@ElementName("text_event_creation_OnlineEntrySystem_EnableOES1")
+	@Webelementname(name = "text_event_creation_OnlineEntrySystem_EnableOES1")
+	public WebElement text_event_creation_OnlineEntrySystem_EnableOES1;
 
-	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//div[@class='cuppa-dropdown']")
+	@FindBy(xpath = "//mat-dialog-container//button//span[contains(text(),'Proceed')]")
+	@ElementName("button_event_creation_common_popupwindow_proceed")
+	@Webelementname(name = "button_event_creation_common_popupwindow_proceed")
+	public WebElement button_event_creation_common_popupwindow_proceed;
+
+	@FindBy(xpath = "//mat-dialog-container//button//span[contains(text(),'Cancel')]")
+	@ElementName("button_event_creation_common_popupwindow_Cancel")
+	@Webelementname(name = "button_event_creation_common_popupwindow_Cancel")
+	public WebElement button_event_creation_common_popupwindow_Cancel;
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//angular2-multiselect")
 	@ElementName("button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
 	@Webelementname(name = "button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
 	public WebElement button_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType;
 
-	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//input[@type='text']")
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//angular2-multiselect//ul[@class='lazyContainer']")
+	@ElementName("text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypelist")
+	@Webelementname(name = "text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypelist")
+	public WebElement text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypelist;
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//angular2-multiselect//input[@type='text']")
 	@ElementName("text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield")
 	@Webelementname(name = "text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield")
 	public WebElement text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypesearchfield;
+
+
+	@FindBy(xpath = "(//mat-dialog-container//div[contains(text(),'Para Accessibility Room Type')]//parent::div//parent::div//input[@type='checkbox'])[2]")
+	@ElementName("checkbox_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
+	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
+	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType;
+
+	@FindBy(xpath = "(//td[@data-label='Para Accessibility Room Type'])[2]//app-fetcher-value//span")
+	@ElementName("text_event_creation_review_ParaAccessibilityRoomType")
+	@Webelementname(name = "text_event_creation_review_ParaAccessibilityRoomType")
+	public WebElement text_event_creation_review_ParaAccessibilityRoomType;
+
 
 	@FindBy(xpath = "//app-events-preview//div[@class='mat-tab-label-content' and contains(text(),'Details')]")
 	@ElementName("tab_event_Details")

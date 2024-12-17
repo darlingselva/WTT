@@ -26,8 +26,8 @@ Feature: Admin OES lite portal -  OES_Lite_Scenario
     And the OES Lite option tab options
 
   @WTT_OVR_Lite_Admin_Portal_TS139
-  Scenario: To Verify the OES Lite option tab for subevent wise Main draw tab Action dropdown options before the import the entries
-    And OES Lite option tab for subevent wise Main draw tab Action dropdown options before the import the entries
+  Scenario: To Verify the OES Lite option tab for subevent wise options
+    And OES Lite option tab for subevent wise options
 
   @WTT_OVR_Lite_Admin_Portal_TS140
   Scenario: To Verify the OES Lite option tab for subevent wise Main draw tab Action dropdown options before the import the entries

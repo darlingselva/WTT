@@ -54,6 +54,11 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "button_Individuals_Individual_table_edit")
     public WebElement button_Individuals_Individual_table_edit;
 
+    @FindBy(xpath = "//app-list//table//tbody//button[@mattooltip='Delete']")
+    @ElementName("button_Individuals_Individual_table_delete")
+    @Webelementname(name = "button_Individuals_Individual_table_delete")
+    public WebElement button_Individuals_Individual_table_delete;
+
     @FindBy(xpath = "(//span[contains(text(),'Create')])[2]")
     @ElementName("button_Individuals_Individual_Create")
     @Webelementname(name = "button_Individuals_Individual_Create")
@@ -68,6 +73,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("button_Individuals_Individual_Next")
     @Webelementname(name = "button_Individuals_Individual_Next")
     public WebElement button_Individuals_Individual_Next;
+
+    @FindBy(xpath = "//button//span[contains(text(),'Back')]")
+    @ElementName("button_Individuals_Individual_Back")
+    @Webelementname(name = "button_Individuals_Individual_Back")
+    public WebElement button_Individuals_Individual_Back;
 
     @FindBy(xpath = "//button[contains(text(),'Cancel')]")
     @ElementName("button_Individuals_Individual_Cancel")
@@ -857,8 +867,8 @@ public class Admin_Individuals_page_Elements {
     public WebElement text_Individuals_Individual_Review_BasicInformation_IsMaster;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Is Para Player ')]//parent::div//parent::div//app-form-field-value//span//span//span//span")
-    @ElementName("text_Individuals_Individual_Review_IsParaPlayer")
-    @Webelementname(name = "text_Individuals_Individual_Review_IsParaPlayer")
+    @ElementName("text_Individuals_Individual_Review_BasicInformation_IsParaPlayer")
+    @Webelementname(name = "text_Individuals_Individual_Review_BasicInformation_IsParaPlayer")
     public WebElement text_Individuals_Individual_Review_BasicInformation_IsParaPlayer;
 
     @FindBy(xpath = "(//app-create-individuals//app-inner-sub-view)[1]//div[contains(text(),'Active ')]//parent::div//parent::div//app-form-field-value//span//span//span//span")
@@ -1141,6 +1151,12 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "text_Individuals_Individual_ParalympicClasslist")
     public WebElement text_Individuals_Individual_ParalympicClasslist;
 
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Paralympic Class ')]//parent::div//parent::div//angular2-multiselect//span[@class='c-remove clear-all ng-star-inserted']")
+    @ElementName("button_Individuals_Individual_ParalympicClasslistclear")
+    @Webelementname(name = "button_Individuals_Individual_ParalympicClasslistclear")
+    public WebElement button_Individuals_Individual_ParalympicClasslistclear;
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div")
     @ElementName("text_Individuals_Individual_ImpairmentGroup")
     @Webelementname(name = "text_Individuals_Individual_ImpairmentGroup")
@@ -1149,6 +1165,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("button_Individuals_Individual_ImpairmentGroup")
     @Webelementname(name = "button_Individuals_Individual_ImpairmentGroup")
     public WebElement button_Individuals_Individual_ImpairmentGroup;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//angular2-multiselect//span[@class='c-remove clear-all ng-star-inserted']")
+    @ElementName("button_Individuals_Individual_ImpairmentGroupclear")
+    @Webelementname(name = "button_Individuals_Individual_ImpairmentGroupclear")
+    public WebElement button_Individuals_Individual_ImpairmentGroupclear;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Impairment Group ')]//parent::div//parent::div//input[@type='text']")
     @ElementName("text_Individuals_Individual_ImpairmentGroupsearchfield")
@@ -1170,6 +1191,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("button_Individuals_Individual_ClassificationStatus")
     @Webelementname(name = "button_Individuals_Individual_ClassificationStatus")
     public WebElement button_Individuals_Individual_ClassificationStatus;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//angular2-multiselect//span[@class='c-remove clear-all ng-star-inserted']")
+    @ElementName("button_Individuals_Individual_ClassificationStatusclear")
+    @Webelementname(name = "button_Individuals_Individual_ClassificationStatusclear")
+    public WebElement button_Individuals_Individual_ClassificationStatusclear;
 
 
 
@@ -1194,6 +1220,11 @@ public class Admin_Individuals_page_Elements {
     @ElementName("button_Individuals_Individual_MobilityCode")
     @Webelementname(name = "button_Individuals_Individual_MobilityCode")
     public WebElement button_Individuals_Individual_MobilityCode;
+
+    @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//angular2-multiselect//span[@class='c-remove clear-all ng-star-inserted']")
+    @ElementName("button_Individuals_Individual_MobilityCodeclear")
+    @Webelementname(name = "button_Individuals_Individual_MobilityCodeclear")
+    public WebElement button_Individuals_Individual_MobilityCodeclear;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Mobility Code ')]//parent::div//parent::div//input[@type='text']")
     @ElementName("text_Individuals_Individual_MobilityCodesearchfield")

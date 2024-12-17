@@ -25,10 +25,21 @@ public class OESLiteElements {
     @Webelementname(name = "tab_OESlite_common_subeventsheader")
     public WebElement tab_OESlite_common_subeventsheader;
 
+    @FindBy(xpath = "((//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content'])[1]")
+    @ElementName("tab_OESlite_common_subeventsheaderfirsttab")
+    @Webelementname(name = "tab_OESlite_common_subeventsheaderfirsttab")
+    public WebElement tab_OESlite_common_subeventsheaderfirsttab;
+
     @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[2]")
     @ElementName("tab_OESlite_common_subeventsroundsheader")
     @Webelementname(name = "tab_OESlite_common_subeventsroundsheader")
     public WebElement tab_OESlite_common_subeventsroundsheader;
+
+    @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[2]//div[@class='mat-tab-label-content' and text()='Main Draw']")
+    @ElementName("tab_OESlite_common_subeventsroundsheaderMainDrawtab")
+    @Webelementname(name = "tab_OESlite_common_subeventsroundsheaderMainDrawtab")
+    public WebElement tab_OESlite_common_subeventsroundsheaderMainDrawtab;
+
 
     @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content' and text()='Reports']")
     @ElementName("tab_OESlite_common_subeventsheader_reports")

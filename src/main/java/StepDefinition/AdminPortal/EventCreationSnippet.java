@@ -22,7 +22,7 @@ public class EventCreationSnippet extends DriverInitialisation
 //public class EventCreationSnippet
 {
 
-	public static String eventid;
+	public static String eventid="3661";
 	public static String eventname;
 
 	@Given("^Admin portal event creation$")
@@ -226,14 +226,17 @@ public class EventCreationSnippet extends DriverInitialisation
 				base.takescreenshoot("eventcreation");
 			}
 			else {
+				eventid="3661";
 				base.takescreenshoot("eventcreationerror");	
 			}
 		}
 		catch(NoSuchElementException e) {
+			eventid="3661";
 			base.takescreenshoot("eventcreationerror");	
 
 		}
 		catch(Exception e) {
+			eventid="3661";
 			base.takescreenshoot("eventcreationerror");	
 			//e.printStackTrace();
 		}

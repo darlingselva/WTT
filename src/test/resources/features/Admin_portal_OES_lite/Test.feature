@@ -8,6 +8,6 @@ Feature: Admin OES lite portal - para scenarios
   Scenario: To Verify the "Para Mobility Code" option page
 #    And To Verify the Create Para Mobility Code using positive values
 #  And test
-    And Admin portal Individuals creation
+    And Admin portal event creation
 
 
