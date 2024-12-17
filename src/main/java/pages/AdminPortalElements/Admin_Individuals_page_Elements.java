@@ -1171,6 +1171,9 @@ public class Admin_Individuals_page_Elements {
     @Webelementname(name = "button_Individuals_Individual_ClassificationStatus")
     public WebElement button_Individuals_Individual_ClassificationStatus;
 
+
+
+
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Classification Status ')]//parent::div//parent::div//input[@type='text']")
     @ElementName("text_Individuals_Individual_ClassificationStatussearchfield")
     @Webelementname(name = "text_Individuals_Individual_ClassificationStatussearchfield")
@@ -1219,18 +1222,18 @@ public class Admin_Individuals_page_Elements {
     public WebElement button_Individuals_Individual_ReviewYear;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Use Second Wheelchair ')]//parent::div//parent::div//mat-slide-toggle")
-    @ElementName("button_Individuals_Individual_UseSecondWheelchair")
-    @Webelementname(name = "button_Individuals_Individual_UseSecondWheelchair")
+    @ElementName("toggle_Individuals_Individual_UseSecondWheelchair")
+    @Webelementname(name = "toggle_Individuals_Individual_UseSecondWheelchair")
     public WebElement toggle_Individuals_Individual_UseSecondWheelchair;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Ball Picker Needed ')]//parent::div//parent::div//mat-slide-toggle")
-    @ElementName("button_Individuals_Individual_BallPickerNeeded")
-    @Webelementname(name = "button_Individuals_Individual_BallPickerNeeded")
+    @ElementName("toggle_Individuals_Individual_BallPickerNeeded")
+    @Webelementname(name = "toggle_Individuals_Individual_BallPickerNeeded")
     public WebElement toggle_Individuals_Individual_BallPickerNeeded;
 
     @FindBy(xpath = "//app-create-individuals//div[contains(text(),'Is Active ')]//parent::div//parent::div//mat-slide-toggle")
-    @ElementName("button_Individuals_Individual_IsActive")
-    @Webelementname(name = "button_Individuals_Individual_IsActive")
+    @ElementName("toggle_Individuals_Individual_IsActive")
+    @Webelementname(name = "toggle_Individuals_Individual_IsActive")
     public WebElement toggle_Individuals_Individual_IsActive;
 
 

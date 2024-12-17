@@ -1,5 +1,6 @@
 package StepDefinition.OVRLite.Adminportal;
 
+import PreDefinedstepdefinitions.Predefinedstepdefinitions;
 import base.Commonmethods;
 import io.cucumber.java.en.Given;
 import org.openqa.selenium.Keys;
@@ -567,10 +568,87 @@ public class ParaIndividualsAdminportalLiteSnippet {
     @Given("^Para Information step in individual creation process for Positive fields$")
     public static void ParaInformationstepinindividualcreationprocessforPositivefields() throws Exception{
 
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_Individuals_Individuals");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_searchfields");
+        enterthevalueintotheelement(Individualsid,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_searchfields");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_searchfieldsicon");
+        base.wait(4);
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_table_edit");
+        base.wait(3);
+        clickonenableordisablebutton("Enable","AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_Basics_IsParaPlayer");
+        base.wait(2);
+        element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParaInformation");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParaInformation");
+        enterthevalueintotheelement("1456","AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_PTTId");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParalympicClass");
+        selectlistactionvalue("NE","AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParalympicClass");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ImpairmentGroup");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ImpairmentGrouplist");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ClassificationStatus");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ClassificationStatuslist");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_MobilityCode");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_MobilityCodelist");
+
+        enterthevalueintotheelement("12","AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_WheelchairWidth");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ReviewYear");
+        enterthevalueintotheelement("1995","AdminPortalElements/Admin_Individuals_page_Elements/searchtext_multiselectionpopup_searchfield");
+        //getthefield("AdminPortalElements/Admin_Individuals_page_Elements/searchtext_multiselectionpopup_searchfield");
+        webElement.sendKeys(Keys.ENTER);
+
+        base.wait(4);
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_UseSecondWheelchair");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_BallPickerNeeded");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_Update");
+        base.wait(6);
+        element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/text1_Individuals_Individualsdeails");
+
+
     }
 
     @Given("^Para Information step in individual creation process for Positive fields in Review step$")
     public static void ParaInformationstepinindividualcreationprocessforPositivefieldsinReviewstep() throws Exception{
+
+        click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_Individuals_Individuals");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_searchfields");
+        enterthevalueintotheelement(Individualsid,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_searchfields");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_searchfieldsicon");
+        base.wait(4);
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_table_edit");
+        base.wait(3);
+        clickonenableordisablebutton("Enable","AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_Basics_IsParaPlayer");
+        base.wait(2);
+        element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParaInformation");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParaInformation");
+        enterthevalueintotheelement("1456","AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_PTTId");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParalympicClass");
+        selectlistactionvalue("NE","AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ParalympicClass");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ImpairmentGroup");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ImpairmentGrouplist");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ClassificationStatus");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_ClassificationStatuslist");
+
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_MobilityCode");
+        selectlistactionoption(1,"AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_MobilityCodelist");
+
+        enterthevalueintotheelement("12","AdminPortalElements/Admin_Individuals_page_Elements/text_Individuals_Individual_WheelchairWidth");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_ReviewYear");
+        enterthevalueintotheelement("1995","AdminPortalElements/Admin_Individuals_page_Elements/searchtext_multiselectionpopup_searchfield");
+        //getthefield("AdminPortalElements/Admin_Individuals_page_Elements/searchtext_multiselectionpopup_searchfield");
+        webElement.sendKeys(Keys.ENTER);
+
+        base.wait(4);
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_UseSecondWheelchair");
+        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_BallPickerNeeded");
+
+
 
     }
 
