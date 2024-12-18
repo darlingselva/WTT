@@ -393,6 +393,12 @@ Feature: Admin OES lite portal -  OES_Lite_Scenario
   Scenario: To Verify the OES Lite option tab for Report tab
     And OES Lite option tab for Report tab
 
+ #if execute the OEs lite reports scenarios first mandatory execute the @WTT_OVR_Lite_Admin_Portal_Prerequisite_Step_OES_lite_Report/Admin Portal Prerequisite Step OES lite Report scenario
+
+  @WTT_OVR_Lite_Admin_Portal_Prerequisite_Step_OES_lite_Report
+  Scenario: Admin Portal Prerequisite Step OES lite Report
+    And Admin Portal Prerequisite Step OES lite Report
+
   @WTT_OVR_Lite_Admin_Portal_TS231
   Scenario: To Verify the OES Lite option tab for Report tab options
     And OES Lite option tab for Report tab options

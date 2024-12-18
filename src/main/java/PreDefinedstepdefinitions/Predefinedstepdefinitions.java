@@ -10,6 +10,7 @@ import io.cucumber.java.en.Given;
 import org.apache.commons.lang3.StringUtils;
 import org.junit.Assert;
 import org.openqa.selenium.*;
+import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.support.ui.Select;
 import org.openqa.selenium.support.ui.WebDriverWait;
@@ -17,10 +18,7 @@ import org.openqa.selenium.support.ui.WebDriverWait;
 import java.lang.reflect.Constructor;
 import java.lang.reflect.Field;
 import java.lang.reflect.InvocationTargetException;
-import java.util.ArrayList;
-import java.util.HashMap;
-import java.util.List;
-import java.util.Map;
+import java.util.*;
 
 public class Predefinedstepdefinitions extends DriverInitialisation {
 
@@ -781,15 +779,98 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
-public static void main(String[] args){
-    String s1 = "Hello";
-    String s2 = "hello1";
+    @Given("^Verify the excepted value '(.*)' from popup window container '(.*)'$")
+    public static void verifyexceptedvaluefrompopupwindowcontainer(String exceptedvalue,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+        List<WebElement> list;
+        String valueforlist=null;
 
-    if (s1.equalsIgnoreCase(s2)) {
-        System.out.println("pass");
-    } else {
-        System.out.println("fail");
+        Multimap<Integer, String> valueoflistMap = ArrayListMultimap.create();
+
+        list=webElement.findElements(By.xpath("mat-option"));
+        System.out.println("list Size="+list.size());
+        for(int i=0;i<list.size();i++){
+            valueforlist=webElement.findElement(By.xpath("//mat-option["+(i+1)+"]//span[@class='mat-option-text']//span")).getText().toString().trim().toLowerCase();
+
+            valueoflistMap.put(i,valueforlist);
+        }
+
+        System.out.println("exceptedvalue="+exceptedvalue.toLowerCase());
+
+        System.out.println(valueoflistMap);
+
+
+        if(valueoflistMap.containsValue(exceptedvalue.toLowerCase()))
+        {
+            for (Map.Entry<Integer, String> e : valueoflistMap.entries())
+            {
+                String value1 = e.getValue();
+                if (value1.equals(exceptedvalue.toLowerCase())) {
+                    System.out.println("value founded");
+                }
+
+            }
+        }
+        else {
+            Assert.fail("value not founded");
+        }
+
+
+
+
     }
+
+    @Given("^Verify the list of excepted value '(.*)' from popup window container '(.*)'$")
+    public static void verifylistexceptedvaluefrompopupwindowcontainer(List<String> exceptedvalue,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+        List<WebElement> list;
+        String valueforlist = null;
+
+        List<String> actuallist = new ArrayList<>();
+
+        Multimap<Integer, String> valueoflistMap = ArrayListMultimap.create();
+
+        list = webElement.findElements(By.xpath("mat-option"));
+        System.out.println("list Size=" + list.size());
+        for (int i = 0; i < list.size(); i++) {
+            valueforlist = webElement.findElement(By.xpath("//mat-option[" + (i + 1) + "]//span[@class='mat-option-text']//span")).getText().toString().trim();
+
+            valueoflistMap.put(i, valueforlist);
+            actuallist.add(valueforlist);
+        }
+
+        if (actuallist.equals(exceptedvalue)) {
+            System.out.println("The lists match exactly!");
+        } else {
+           Assert.fail("The lists do not match.");
+        }
+
+    }
+
+        public static void main(String[] args){
+
+            List<Integer> list1 = new ArrayList<>();
+            List<Integer> list2 = new ArrayList<>();
+
+            list1.add(1);
+            list1.add(2);
+            list1.add(3);
+
+            list2.add(3);
+            list2.add(2);
+            list2.add(3);
+
+            if (list1.equals(list2)) {
+                System.out.println("The lists match exactly!");
+            } else {
+                System.out.println("The lists do not match.");
+            }
 }
 
 

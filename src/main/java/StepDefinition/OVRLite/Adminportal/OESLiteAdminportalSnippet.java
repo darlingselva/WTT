@@ -4,9 +4,15 @@ import StepDefinition.AdminPortal.EventCreationSnippet;
 import base.Commonmethods;
 import io.cucumber.java.an.E;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.By;
+import org.openqa.selenium.Keys;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import util.Fileuploadrobotclass;
 import util.TestDataReader;
+
+import java.util.ArrayList;
+import java.util.List;
 
 import static PreDefinedstepdefinitions.Predefinedstepdefinitions.*;
 import static base.DriverInitialisation.driver;
@@ -5828,6 +5834,89 @@ public class OESLiteAdminportalSnippet {
 
     }
 
+    @Given("^Admin Portal Prerequisite Step OES lite Report$")
+    public static void AdminPortalPrerequisiteStepOESliteReport()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+
+
+    }
+
     @Given("^OES Lite option tab for Report tab options$")
     public static void OESLiteoptiontabforReporttaboptions()throws Exception{
 
@@ -5977,25 +6066,301 @@ public class OESLiteAdminportalSnippet {
     @Given("^OES Lite reporttab for Entries Count Per SubEvent subtab and Verify the Sub Event dropdown options$")
     public static void OESLitereporttabforEntriesCountPerSubEventsubtabandVerifytheSubEventdropdownoptions()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheader_reports");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_reports_EntriesCountPerSubEvent");
+        base.wait(2);
+
+        getthefield("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        String firsttabsubeventname=webElement.getText().toString().trim();
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_EntriesCountPerSubEvent_SubEvent");
+        base.wait(2);
+
+
+        verifyexceptedvaluefrompopupwindowcontainer(firsttabsubeventname,"AdminPortalElements/OESLiteElements/container_OESlite_reports_commonpopupwindow");
+
+
     }
 
     @Given("^OES Lite reporttab for Entries Count Per SubEvent subtab and Verify the Sub Event dropdown functionality$")
     public static void OESLitereporttabforEntriesCountPerSubEventsubtabandVerifytheSubEventdropdownfunctionality()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheader_reports");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_reports_EntriesCountPerSubEvent");
+        base.wait(2);
+
+        getthefield("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        String firsttabsubeventname=webElement.getText().toString().trim();
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_EntriesCountPerSubEvent_SubEvent");
+        base.wait(2);
+
+        enterthevalueintotheelement(firsttabsubeventname,"AdminPortalElements/OESLiteElements/text_OESlite_common_optionpopupwindow_searchfield");
+        getthefield("AdminPortalElements/OESLiteElements/text_OESlite_common_optionpopupwindow_searchfield");
+        webElement.sendKeys(Keys.ENTER);
+        base.wait(2);
+
+        //close the overlay container
+        driver.findElement(By.cssSelector(".cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing")).click();
+
+
+        Jclick_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_EntriesCountPerSubEvent_SubEvent");
+        base.wait(2);
+
+        Verifytheactualandexceptedvalueswithoutcasesensitive(firsttabsubeventname,"AdminPortalElements/OESLiteElements/table_OESlite_reports_common_tablefirstrowfirtcolumndata");
+        base.wait(2);
 
     }
 
     @Given("^OES Lite reporttab for Entries Count Per SubEvent subtab and Verify the Clear the filter button functionality$")
     public static void OESLitereporttabforEntriesCountPerSubEventsubtabandVerifytheClearthefilterbuttonfunctionality()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheader_reports");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_reports_EntriesCountPerSubEvent");
+        base.wait(2);
+
+        getthefield("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        String firsttabsubeventname=webElement.getText().toString().trim();
+
+        getthefield("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_tablefirstrowfirtcolumndata");
+
+        String beforefiltervalue=webElement.getText().toString();
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_EntriesCountPerSubEvent_SubEvent");
+        base.wait(2);
+
+        enterthevalueintotheelement(firsttabsubeventname,"AdminPortalElements/OESLiteElements/text_OESlite_common_optionpopupwindow_searchfield");
+        getthefield("AdminPortalElements/OESLiteElements/text_OESlite_common_optionpopupwindow_searchfield");
+        webElement.sendKeys(Keys.ENTER);
+        base.wait(2);
+
+        //close the overlay container
+        driver.findElement(By.cssSelector(".cdk-overlay-backdrop.cdk-overlay-transparent-backdrop.cdk-overlay-backdrop-showing")).click();
+
+
+        Jclick_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_common_clearfilter");
+        base.wait(2);
+
+        Verifytheactualandexceptedvalueswithoutcasesensitive(beforefiltervalue,"AdminPortalElements/OESLiteElements/table_OESlite_reports_common_tablefirstrowfirtcolumndata");
+        base.wait(2);
+
     }
 
     @Given("^OES Lite reporttab for Entries Count Per SubEvent subtab and Verify the Sort By dropdown functionality options$")
     public static void OESLitereporttabforEntriesCountPerSubEventsubtabandVerifytheSortBydropdownfunctionalityoptions()throws Exception{
 
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheader_reports");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_reports_EntriesCountPerSubEvent");
+        base.wait(2);
+
+        List<String> exceptedlist = new ArrayList<>();
+
+        exceptedlist.add("Sub-Event");
+        exceptedlist.add("SubEventCode");
+        exceptedlist.add("Total");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_common_SortBysortfields");
+        base.wait(4);
+
+        verifylistexceptedvaluefrompopupwindowcontainer(exceptedlist,"AdminPortalElements/OESLiteElements/container_OESlite_reports_commonpopupwindow");
+
+
     }
 
     @Given("^OES Lite reporttab for Entries Count Per SubEvent subtab and Verify the order By dropdown functionality$")
     public static void OESLitereporttabforEntriesCountPerSubEventsubtabandVerifytheorderBydropdownfunctionality()throws Exception{
+
+/*
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+*/
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsheader_reports");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_reports_EntriesCountPerSubEvent");
+        base.wait(2);
+
+        List<String> exceptedlist = new ArrayList<>();
+
+        exceptedlist.add("ASC");
+        exceptedlist.add("DESC");
+
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_reports_common_SortByorderby");
+        base.wait(4);
+
+        verifylistexceptedvaluefrompopupwindowcontainer(exceptedlist,"AdminPortalElements/OESLiteElements/container_OESlite_reports_commonpopupwindow1");
 
     }
 

@@ -187,13 +187,13 @@ public class OESLiteElements {
 
 //common fields report tabs
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//span[text()='Sort By:']//parent::div//parent::div//mat-select[@placeholder='Select Field']")
-    @ElementName("button_OESlite_reports_EntriesCountPerSubEvent_SortBysortfields")
-    @Webelementname(name = "button_OESlite_reports_EntriesCountPerSubEvent_SortBysortfields")
+    @ElementName("button_OESlite_reports_common_SortBysortfields")
+    @Webelementname(name = "button_OESlite_reports_common_SortBysortfields")
     public WebElement button_OESlite_reports_common_SortBysortfields;
 
     @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//span[text()='Sort By:']//parent::div//parent::div//mat-select)[2]")
-    @ElementName("button_OESlite_reports_EntriesCountPerSubEvent_SortByorderby")
-    @Webelementname(name = "button_OESlite_reports_EntriesCountPerSubEvent_SortByorderby")
+    @ElementName("button_OESlite_reports_common_SortByorderby")
+    @Webelementname(name = "button_OESlite_reports_common_SortByorderby")
     public WebElement button_OESlite_reports_common_SortByorderby;
 
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//input[@type='search']")
@@ -226,6 +226,11 @@ public class OESLiteElements {
     @ElementName("table_OESlite_reports_common_table")
     @Webelementname(name = "table_OESlite_reports_common_table")
     public WebElement table_OESlite_reports_common_table;
+
+    @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//table//tbody//td[1]")
+    @ElementName("table_OESlite_reports_common_tablefirstrowfirtcolumndata")
+    @Webelementname(name = "table_OESlite_reports_common_tablefirstrowfirtcolumndata")
+    public WebElement table_OESlite_reports_common_tablefirstrowfirtcolumndata;
 
     @FindBy(xpath = "//app-events-preview//img[@class='report-filter-icon']")
     @ElementName("button_OESlite_reports_common_clearfilter")
@@ -353,6 +358,16 @@ public class OESLiteElements {
     @ElementName("button_OESlite_reports_PlayerEntryReport_EntryQuotaType")
     @Webelementname(name = "button_OESlite_reports_PlayerEntryReport_EntryQuotaType")
     public WebElement button_OESlite_reports_PlayerEntryReport_EntryQuotaType;
+
+    @FindBy(xpath = "//ngx-mat-select-search//parent::div")
+    @ElementName("container_OESlite_reports_commonpopupwindow")
+    @Webelementname(name = "container_OESlite_reports_commonpopupwindow")
+    public WebElement container_OESlite_reports_commonpopupwindow;
+
+    @FindBy(xpath = "//div[@class='cdk-overlay-pane']/div//div")
+    @ElementName("container_OESlite_reports_commonpopupwindow1")
+    @Webelementname(name = "container_OESlite_reports_commonpopupwindow1")
+    public WebElement container_OESlite_reports_commonpopupwindow1;
 
 
 }

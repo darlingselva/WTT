@@ -19,7 +19,7 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@WTT_OVR_Lite_Admin_Portal_TS233"
+		,tags = "@WTT_OVR_Lite_Admin_Portal_TS238"
 		//,publish = true
 		)
 //@SpringBootTest
