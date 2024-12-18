@@ -40,6 +40,16 @@ public class OESLiteElements {
     @Webelementname(name = "tab_OESlite_common_subeventsroundsheaderMainDrawtab")
     public WebElement tab_OESlite_common_subeventsroundsheaderMainDrawtab;
 
+    @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[2]//div[@class='mat-tab-label-content' and text()='Qualification Draw']")
+    @ElementName("tab_OESlite_common_subeventsroundsheaderQualificationDrawtab")
+    @Webelementname(name = "tab_OESlite_common_subeventsroundsheaderQualificationDrawtab")
+    public WebElement tab_OESlite_common_subeventsroundsheaderQualificationDrawtab;
+
+    @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[2]//div[@class='mat-tab-label-content' and text()='Waiting List']")
+    @ElementName("tab_OESlite_common_subeventsroundsheaderWaitingListtab")
+    @Webelementname(name = "tab_OESlite_common_subeventsroundsheaderWaitingListtab")
+    public WebElement tab_OESlite_common_subeventsroundsheaderWaitingListtab;
+
 
     @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content' and text()='Reports']")
     @ElementName("tab_OESlite_common_subeventsheader_reports")
@@ -111,6 +121,11 @@ public class OESLiteElements {
     @ElementName("checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER")
     @Webelementname(name = "checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER")
     public WebElement checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER;
+
+    @FindBy(xpath = "//mat-dialog-container//b[text()='WC']//following-sibling::input[@type='checkbox']")
+    @ElementName("checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC")
+    @Webelementname(name = "checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC")
+    public WebElement checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC;
 
     @FindBy(xpath = "//mat-dialog-container//b[text()='WTT']//following-sibling::input[@type='checkbox']")
     @ElementName("checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT")
@@ -200,6 +215,11 @@ public class OESLiteElements {
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//table//tbody")
     @ElementName("table_OESlite_reports_EntriesCountPerSubEvent_table")
     @Webelementname(name = "table_OESlite_reports_EntriesCountPerSubEvent_table")
+    public WebElement table_OESlite_reports_EntriesCountPerSubEvent_table;
+
+    @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//table//tbody")
+    @ElementName("table_OESlite_reports_common_table")
+    @Webelementname(name = "table_OESlite_reports_common_table")
     public WebElement table_OESlite_reports_common_table;
 
  //specific elements for report tabs

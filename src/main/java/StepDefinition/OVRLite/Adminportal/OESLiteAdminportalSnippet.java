@@ -564,333 +564,4033 @@ public class OESLiteAdminportalSnippet {
 
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
-        base.wait(8);
+        base.wait(4);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
 
         click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
+
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the invalid file$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadtheinvalidfile()throws Exception{
 
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template_invalid_format.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+
+        Verifytheactualandexceptedvalues("ERROR\n" +
+                "\n" +
+                "Status should not be empty\n" +
+                "DrawType should not be empty\n" +
+                "EntryType should not be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
+
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select Skip All checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectSkipAllcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select Draw Size checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectDrawSizecheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select AER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectAERcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select NER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectNERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WC checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWCcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WTT checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselecdWTTcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WYN checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWYNcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select QUAL checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectQUALcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select CWR checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectCWRcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select PDR checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectPDRcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERTotalPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERTotalPairscheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERMIXPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERMIXPairscheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab Action dropdown options before the import the entries$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabActiondropdownoptionsbeforetheimporttheentries()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsaction()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action step1 validation Download Import Template$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadImportTemplate()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action step1 validation Download Para Event Import Template$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadParaEventImportTemplate()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadParaEventImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action step 2 validation upload file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionstep2validationuploadfile()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(8);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action step 3 validation Skip Restrictions$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionstep3validationSkipRestrictions()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfile()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the invalid file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadtheinvalidfile()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template_invalid_format.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+
+        Verifytheactualandexceptedvalues("ERROR\n" +
+                "\n" +
+                "Status should not be empty\n" +
+                "DrawType should not be empty\n" +
+                "EntryType should not be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select Skip All checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectSkipAllcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select Draw Size checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectDrawSizecheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select AER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectAERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select NER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectNERcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WC checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWCcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WTT checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWTTcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select WYN checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWYNcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select QUAL checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectQUALcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select CWR checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectCWRcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select PDR checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectPDRcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERTotalPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERTotalPairscheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab before the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERMIXPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabbeforetheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERMIXPairscheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(4);
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab Action dropdown options after the import the entries$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabActiondropdownoptionsaftertheimporttheentries()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ExportasExcel");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ExportasPDF");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+      //  element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_RollbacktoDraft");
+
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsaction()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadParaEventImportTemplate");
+        element_visiability("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        element_visiability("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // element_visiability("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action step1 validation Download Import Template$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadImportTemplate()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action step1 validation Download Para Event Import Template$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadParaEventImportTemplate()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadParaEventImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action step2 validation upload file$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionstep2validationuploadfile()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(8);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action step3 validation Skip Restrictions$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionstep3validationSkipRestrictions()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfile()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the invalid file$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadtheinvalidfile()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template_invalid_format.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+
+        Verifytheactualandexceptedvalues("ERROR\n" +
+                "\n" +
+                "Status should not be empty\n" +
+                "DrawType should not be empty\n" +
+                "EntryType should not be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
+
+
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select Skip All checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectSkipAllcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select Draw Size checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectDrawSizecheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select AER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectAERcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select NER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectNERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select WC checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWCcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select WTT checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWTTcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select WYN checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectWYNcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select QUAL checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectQUALcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select CWR checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectCWRcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+    }
+
+    @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select PDR checkbox$")
+    public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectPDRcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNER checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERcheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERTotalPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERTotalPairscheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select HOSTNERMIXPairs checkbox$")
     public static void OESLiteoptiontabforsubeventwiseMaindrawtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectHOSTNERMIXPairscheckbox()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderMainDrawtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab Action dropdown options After the import the entries$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabActiondropdownoptionsAftertheimporttheentries()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
+
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ExportasExcel");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ExportasPDF");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_DeleteEntries");
+        //  element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_RollbacktoDraft");
 
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsaction()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate");
+        element_visiability("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadParaEventImportTemplate");
+        element_visiability("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        element_visiability("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // element_visiability("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action step1 validation  Download Import Template$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadImportTemplate()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action step1 validation  Download Para Event Import Template$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionstep1validationDownloadParaEventImportTemplate()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadParaEventImportTemplate");
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action step2 validation upload file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionstep2validationuploadfile()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(8);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action step3 validation Skip Restrictions$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionstep3validationSkipRestrictions()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_Cancel");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action achieve all the three steps upload the valid file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfile()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action achieve all the three steps upload the invalid file$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadtheinvalidfile()throws Exception{
 
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template_invalid_format.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+
+        Verifytheactualandexceptedvalues("ERROR\n" +
+                "\n" +
+                "Status should not be empty\n" +
+                "DrawType should not be empty\n" +
+                "EntryType should not be empty","AdminPortalElements/Admin_login_page_Elements/text_Admin_login_error_alert");
     }
 
     @Given("^OES Lite option tab for subevent wise Waiting List tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select Skip All checkbox$")
     public static void OESLiteoptiontabforsubeventwiseWaitingListtabAftertheimporttheentriesandverifytheimportrecordsactionachieveallthethreestepsuploadthevalidfileandselectSkipAllcheckbox()throws Exception{
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_tablesearchedeventedit");
+        base.wait(3);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+        base.scrollToView(webElement);
+        base.wait(1);
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_OnlineEntrySystem");
+
+        clickonenableordisablebutton("Disable","AdminPortalElements/EventcreationElements/toggle_event_creation_OnlineEntrySystem_EnableOES1");
+
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_update");
+        base.wait(3);
+        element_visiability("AdminPortalElements/EventcreationElements/text1_event_eventdeails");
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event");
+        base.wait(4);
+        clearthevalueintotheelement("AdminPortalElements/EventcreationElements/text_event_searchfield");
+        enterthevalueintotheelement(OESlit_eventid,"AdminPortalElements/EventcreationElements/text_event_searchfield");
+        click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
+        base.wait(3);
+        click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
+        base.wait(2);
+
+        click_on_element("AdminPortalElements/EventcreationElements/tab_OESlite_common_subeventsheaderfirsttab");
+
+        click_on_element("AdminPortalElements/OESLiteElements/tab_OESlite_common_subeventsroundsheaderWaitingListtab");
+        base.wait(1);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action");
+        base.wait(1);
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecords");
+
+        click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
+        Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(4);
+
+        click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
+        base.wait(3);
+
+        click_on_element("AdminPortalElements/OESLiteElements/button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step4_importrecords");
+        base.wait(1);
+        driver.switchTo().alert().accept();
+        base.wait(30);
+        element_visiability("AdminPortalElements/OESLiteElements/table_OESlite_reports_common_table");
 
     }
 

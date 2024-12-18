@@ -267,7 +267,7 @@ Feature: Admin OES lite portal -  OES_Lite_Scenario
 
   @WTT_OVR_Lite_Admin_Portal_TS199
   Scenario: OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select CWR checkbox
-    And OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select CWR checkbox
+    And OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps upload the valid file and select PDR checkbox
 
   @WTT_OVR_Lite_Admin_Portal_TS200
   Scenario: To Verify the OES Lite option tab for subevent wise Main draw tab After the import the entries and verify the import records action achieve all the three steps - upload the valid file and select "HOST_NER   " checkbox
