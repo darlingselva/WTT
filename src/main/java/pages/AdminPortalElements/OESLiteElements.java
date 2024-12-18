@@ -86,6 +86,11 @@ public class OESLiteElements {
     @Webelementname(name = "button_OESlite_common_subeventsrounds_action_RollbacktoDraft")
     public WebElement button_OESlite_common_subeventsrounds_action_RollbacktoDraft;
 
+    @FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Mark as Published']")
+    @ElementName("button_OESlite_common_subeventsrounds_action_MarkasPublished")
+    @Webelementname(name = "button_OESlite_common_subeventsrounds_action_MarkasPublished")
+    public WebElement button_OESlite_common_subeventsrounds_action_MarkasPublished;
+
     @FindBy(xpath = "//mat-dialog-container//button[text()='Download Import Template']")
     @ElementName("button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate")
     @Webelementname(name = "button_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_DownloadImportTemplate")
@@ -192,9 +197,9 @@ public class OESLiteElements {
     public WebElement button_OESlite_reports_common_SortByorderby;
 
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//input[@type='search']")
-    @ElementName("tab_OESlite_reports_common_searchfield")
-    @Webelementname(name = "tab_OESlite_reports_common_searchfield")
-    public WebElement tab_OESlite_reports_common_searchfield;
+    @ElementName("text_OESlite_reports_common_searchfield")
+    @Webelementname(name = "text_OESlite_reports_common_searchfield")
+    public WebElement text_OESlite_reports_common_searchfield;
 
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//mat-select[@placeholder='Select Visible Fields']")
     @ElementName("button_OESlite_common_SelectVisibleFields")
@@ -221,6 +226,11 @@ public class OESLiteElements {
     @ElementName("table_OESlite_reports_common_table")
     @Webelementname(name = "table_OESlite_reports_common_table")
     public WebElement table_OESlite_reports_common_table;
+
+    @FindBy(xpath = "//app-events-preview//img[@class='report-filter-icon']")
+    @ElementName("button_OESlite_reports_common_clearfilter")
+    @Webelementname(name = "button_OESlite_reports_common_clearfilter")
+    public WebElement button_OESlite_reports_common_clearfilter;
 
  //specific elements for report tabs
 
