@@ -853,7 +853,48 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
-    @Given("^check column name '(.*)' excepected order by '(.*)' from webtable '(.*)'$")
+    @Given("^select the checkbox '(.*)' from popup window container '(.*)'$")
+    public static void selectcheckboxfrompopupwindowcontainer(String checkboxname,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+      WebElement tempwebelement=webElement.findElement(By.xpath("parent::div//span[contains(text(),'"+checkboxname+"')]//ancestor::mat-option//mat-pseudo-checkbox"));
+        base.wait(1);
+        tempwebelement.click();
+    }
+
+    @Given("^check the header value '(.*)' from webtable '(.*)'$")
+    public static void checktheheadervaluefromwebtable(List<String>  exceptedvalue,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+
+        List<String> actuallist = new ArrayList<>();
+
+        WebElement headerRow = webElement.findElement(By.xpath("//table/thead/tr"));
+
+        // Get all the header columns
+        List<WebElement> headers = headerRow.findElements(By.tagName("th"));
+
+        System.out.println("header size="+headers.size());
+        // Find the column index by matching the column name
+        for (int i = 0; i < headers.size(); i++) {
+
+            actuallist.add(headers.get(i).getText().trim());
+
+        }
+
+        if (exceptedvalue.equals(actuallist)) {
+            System.out.println("table header values match exactly!");
+        } else {
+            System.out.println("table header values do not match.");
+        }
+    }
+
+
+        @Given("^check column name '(.*)' excepected order by '(.*)' from webtable '(.*)'$")
     public static void checkwebtablecolumnbasedorderby(String columnname,String exceptedorder,String Webelement_name) throws Exception {
 
        getthefield(Webelement_name);
@@ -865,7 +906,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         String actualorder=null;
 
         // Find the header row of the table
-        WebElement headerRow = driver.findElement(By.xpath("//table/thead/tr"));
+        WebElement headerRow = webElement.findElement(By.xpath("//table/thead/tr"));
 
         // Get all the header columns
         List<WebElement> headers = headerRow.findElements(By.tagName("th"));
@@ -885,7 +926,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         }
 
         // Extract the column data from the table body
-        List<WebElement> rows = driver.findElements(By.xpath("//table/tbody/tr"));
+        List<WebElement> rows = webElement.findElements(By.xpath("//table/tbody/tr"));
         boolean isAscending = true;
         boolean isDescending = true;
 
@@ -932,22 +973,17 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
         public static void main(String[] args){
 
-            List<Integer> list1 = new ArrayList<>();
-            List<Integer> list2 = new ArrayList<>();
+            String visibilityitem1="Sub-Event";
+            String visibilityitem2="SubEventCode";
+            String visibilityitem3="Total";
 
-            list1.add(1);
-            list1.add(2);
-            list1.add(3);
+            List<String> exceptedlist = new ArrayList<>();
 
-            list2.add(3);
-            list2.add(2);
-            list2.add(3);
+            exceptedlist.add(visibilityitem1);
+            exceptedlist.add(visibilityitem2);
+            exceptedlist.add(visibilityitem3);
 
-            if (list1.equals(list2)) {
-                System.out.println("The lists match exactly!");
-            } else {
-                System.out.println("The lists do not match.");
-            }
+            System.out.println(exceptedlist.get(1));
 }
 
 

@@ -243,6 +243,11 @@ public class OESLiteElements {
     @Webelementname(name = "table_OESlite_reports_common_tablefirstrowfirtcolumndata")
     public WebElement table_OESlite_reports_common_tablefirstrowfirtcolumndata;
 
+    @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//table//tbody//td[1]//div[@class='empty-text']")
+    @ElementName("table_OESlite_reports_common_nodataavailable")
+    @Webelementname(name = "table_OESlite_reports_common_nodataavailable")
+    public WebElement table_OESlite_reports_common_nodataavailable;
+
     @FindBy(xpath = "//app-events-preview//img[@class='report-filter-icon']")
     @ElementName("button_OESlite_reports_common_clearfilter")
     @Webelementname(name = "button_OESlite_reports_common_clearfilter")
