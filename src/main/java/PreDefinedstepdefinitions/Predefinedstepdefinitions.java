@@ -853,6 +853,83 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
+    @Given("^check column name '(.*)' excepected order by '(.*)' from webtable '(.*)'$")
+    public static void checkwebtablecolumnbasedorderby(String columnname,String exceptedorder,String Webelement_name) throws Exception {
+
+       getthefield(Webelement_name);
+
+        // Identify the column name you want to check (e.g., "Price")
+       // String columnName = "Price";  // Change this to your column name
+        String columnName = columnname;
+        int columnIndex = -1;
+        String actualorder=null;
+
+        // Find the header row of the table
+        WebElement headerRow = driver.findElement(By.xpath("//table/thead/tr"));
+
+        // Get all the header columns
+        List<WebElement> headers = headerRow.findElements(By.tagName("th"));
+
+        // Find the column index by matching the column name
+        for (int i = 0; i < headers.size(); i++) {
+            if (headers.get(i).getText().trim().equalsIgnoreCase(columnName)) {
+                columnIndex = i;
+                break;
+            }
+        }
+
+        if (columnIndex == -1) {
+            System.out.println("Column '" + columnName + "' not found.");
+            driver.quit();
+            return;
+        }
+
+        // Extract the column data from the table body
+        List<WebElement> rows = driver.findElements(By.xpath("//table/tbody/tr"));
+        boolean isAscending = true;
+        boolean isDescending = true;
+
+        String previousValue = "";
+
+        // Loop through the rows and compare values
+        for (WebElement row : rows) {
+            List<WebElement> cells = row.findElements(By.tagName("td"));
+            String currentValue = cells.get(columnIndex).getText().trim();
+
+            // Compare current value with the previous value to check for ascending/descending order
+            if (!previousValue.isEmpty()) {
+                if (currentValue.compareTo(previousValue) < 0) {
+                    isAscending = false;  // If current value is less than the previous value, not ascending
+                }
+                if (currentValue.compareTo(previousValue) > 0) {
+                    isDescending = false;  // If current value is greater than the previous value, not descending
+                }
+            }
+            previousValue = currentValue;
+        }
+
+        // Print results based on the comparisons
+        if (isAscending) {
+            System.out.println("The column '" + columnName + "' is sorted in ascending order.");
+            actualorder="ASC";
+        } else if (isDescending) {
+            actualorder="DESC";
+            System.out.println("The column '" + columnName + "' is sorted in descending order.");
+        } else {
+            System.out.println("The column '" + columnName + "' is not sorted in a specific order.");
+        }
+
+        if(exceptedorder.equalsIgnoreCase(actualorder)){
+            System.out.println("check orderby is successfully");
+        }
+        else {
+            Assert.fail("orderby condition is failed");
+        }
+
+
+
+    }
+
         public static void main(String[] args){
 
             List<Integer> list1 = new ArrayList<>();

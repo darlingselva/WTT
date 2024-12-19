@@ -196,6 +196,17 @@ public class OESLiteElements {
     @Webelementname(name = "button_OESlite_reports_common_SortByorderby")
     public WebElement button_OESlite_reports_common_SortByorderby;
 
+    @FindBy(xpath = "//div[@class='cdk-overlay-pane']/div//div//mat-option//span[text()='ASC']")
+    @ElementName("button_OESlite_reports_common_SortByorderby_ASC")
+    @Webelementname(name = "button_OESlite_reports_common_SortByorderby_ASC")
+    public WebElement button_OESlite_reports_common_SortByorderby_ASC;
+
+    @FindBy(xpath = "//div[@class='cdk-overlay-pane']/div//div//mat-option//span[text()='DESC']")
+    @ElementName("button_OESlite_reports_common_SortByorderby_DESC")
+    @Webelementname(name = "button_OESlite_reports_common_SortByorderby_DESC")
+    public WebElement button_OESlite_reports_common_SortByorderby_DESC;
+
+
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//input[@type='search']")
     @ElementName("text_OESlite_reports_common_searchfield")
     @Webelementname(name = "text_OESlite_reports_common_searchfield")
@@ -207,13 +218,13 @@ public class OESLiteElements {
     public WebElement button_OESlite_common_SelectVisibleFields;
 
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//button[@mattooltip='Download as Excel']")
-    @ElementName("button_OESlite_reports_EntriesCountPerSubEvent_DownloadasExcel")
-    @Webelementname(name = "button_OESlite_reports_EntriesCountPerSubEvent_DownloadasExcel")
+    @ElementName("button_OESlite_common_DownloadasExcel")
+    @Webelementname(name = "button_OESlite_common_DownloadasExcel")
     public WebElement button_OESlite_common_DownloadasExcel;
 
     @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents//button[@mattooltip='Download as PDF']")
-    @ElementName("button_OESlite_reports_EntriesCountPerSubEvent_DownloadasPDF")
-    @Webelementname(name = "button_OESlite_reports_EntriesCountPerSubEvent_DownloadasPDF")
+    @ElementName("button_OESlite_common_DownloadasPDF")
+    @Webelementname(name = "button_OESlite_common_DownloadasPDF")
     public WebElement button_OESlite_common_DownloadasPDF;
 
 
@@ -368,6 +379,11 @@ public class OESLiteElements {
     @ElementName("container_OESlite_reports_commonpopupwindow1")
     @Webelementname(name = "container_OESlite_reports_commonpopupwindow1")
     public WebElement container_OESlite_reports_commonpopupwindow1;
+
+    @FindBy(xpath = "//app-events-preview//app-oes-lite-subevents")
+    @ElementName("frame_common_OESlite")
+    @Webelementname(name = "frame_common_OESlite")
+    public WebElement frame_common_OESlite;
 
 
 }
