@@ -30,6 +30,21 @@ public class OESLiteElements {
     @Webelementname(name = "tab_OESlite_common_subeventsheaderfirsttab")
     public WebElement tab_OESlite_common_subeventsheaderfirsttab;
 
+    @FindBy(xpath = "(((//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content' and contains(text(),'Doubles')]))[1]")
+    @ElementName("tab_OESlite_common_subeventsheaderfirsttabofdoubles")
+    @Webelementname(name = "tab_OESlite_common_subeventsheaderfirsttabofdoubles")
+    public WebElement tab_OESlite_common_subeventsheaderfirsttabofdoubles;
+
+    @FindBy(xpath = "((//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content' and contains(text(),'Mixed Doubles')])")
+    @ElementName("tab_OESlite_common_subeventsheadermixeddoubles")
+    @Webelementname(name = "tab_OESlite_common_subeventsheadermixeddoubles")
+    public WebElement tab_OESlite_common_subeventsheadermixeddoubles;
+
+    @FindBy(xpath = "(((//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[1]//div[@class='mat-tab-label-content' and contains(text(),'Teams')]))[1]")
+    @ElementName("tab_OESlite_common_subeventsheaderfirsttabofteams")
+    @Webelementname(name = "tab_OESlite_common_subeventsheaderfirsttabofteams")
+    public WebElement tab_OESlite_common_subeventsheaderfirsttabofteams;
+
     @FindBy(xpath = "(//app-events-preview//app-oes-lite-subevents//mat-tab-group//mat-tab-header)[2]")
     @ElementName("tab_OESlite_common_subeventsroundsheader")
     @Webelementname(name = "tab_OESlite_common_subeventsroundsheader")

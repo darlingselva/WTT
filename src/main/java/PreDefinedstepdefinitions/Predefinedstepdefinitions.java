@@ -257,6 +257,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         base.wait(2);
         String execepted_value=webElement.getText().toString();
 
+        System.out.println("value="+execepted_value);
 
         if (execepted_value.equalsIgnoreCase(value)) {
             System.out.println("matched");
@@ -779,6 +780,62 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
+    @Given("^click on enabled or disable check box button '(.*)' and '(.*)'$")
+    public static void clickonenableordisablecheckboxbutton(String action,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+        String button_action=null;
+
+        if(webElement.isSelected() || webElement.isEnabled()){
+            System.out.println("button is enable");
+            button_action="Enable";
+        }
+        else {
+            System.out.println("button is Disable");
+            button_action = "Disable";
+
+        }
+
+        switch (action){
+            case "Enable":
+
+//                if(webElement.isEnabled()){
+//                    System.out.println("button is already enable");
+//                }
+//                else {
+//                    webElement.click();
+//                }
+                if (button_action.equals("Enable")){
+                    System.out.println("button is already enable");
+                }
+                else {
+                    webElement.click();
+                }
+
+                break;
+            case "Disable":
+//                if(webElement.isEnabled()){
+//                    webElement.click();
+//                }
+//                else {
+//                    System.out.println("button is already disenable");
+//                }
+
+                if (button_action.equals("Disable")){
+                    System.out.println("button is already Disable");
+                }
+                else {
+                    webElement.click();
+                }
+                break;
+            default:
+                break;
+        }
+
+    }
+
     @Given("^Verify the excepted value '(.*)' from popup window container '(.*)'$")
     public static void verifyexceptedvaluefrompopupwindowcontainer(String exceptedvalue,String Webelement_name)throws Exception {
         getthefield(Webelement_name);
@@ -845,6 +902,13 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
             actuallist.add(valueforlist);
         }
 
+
+        System.out.println("===========actual list=============");
+        System.out.println(actuallist);
+        System.out.println("===========expected list=============");
+        System.out.println(exceptedvalue);
+
+
         if (actuallist.equals(exceptedvalue)) {
             System.out.println("The lists match exactly!");
         } else {
@@ -858,8 +922,9 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver, 60);
         Commonmethods base = new Commonmethods(driver, wait1);
+        checkboxname = "\"" + checkboxname + "\"";
         base.wait(2);
-      WebElement tempwebelement=webElement.findElement(By.xpath("parent::div//span[contains(text(),'"+checkboxname+"')]//ancestor::mat-option//mat-pseudo-checkbox"));
+      WebElement tempwebelement=webElement.findElement(By.xpath("parent::div//span[contains(text(),"+checkboxname+")]//ancestor::mat-option//mat-pseudo-checkbox"));
         base.wait(1);
         tempwebelement.click();
     }
@@ -890,6 +955,47 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
             System.out.println("table header values match exactly!");
         } else {
             System.out.println("table header values do not match.");
+        }
+    }
+
+
+    @Given("^check the excepted value '(.*)' header name '(.*)' from first row data of webtable '(.*)'$")
+    public static void checktheexceptedvalueheadernamefromfistdataofwebtable(String exceptedvalue,String columnname,String Webelement_name)throws Exception {
+        getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver, 60);
+        Commonmethods base = new Commonmethods(driver, wait1);
+        base.wait(2);
+        int columnIndex = -1;
+        //List<String> actuallist = new ArrayList<>();
+
+        WebElement headerRow = webElement.findElement(By.xpath("//table/thead/tr"));
+
+        // Get all the header columns
+        List<WebElement> headers = headerRow.findElements(By.tagName("th"));
+
+        System.out.println("header size="+headers.size());
+        // Find the column index by matching the column name
+        for (int i = 0; i < headers.size(); i++) {
+
+            if (headers.get(i).getText().trim().equalsIgnoreCase(columnname)) {
+                columnIndex = i;
+                break;
+            }
+
+        }
+
+        WebElement row = webElement.findElement(By.xpath("//table/tbody/tr[1]"));
+        List<WebElement> cells = row.findElements(By.tagName("td"));
+        String Actual_value = cells.get(columnIndex).getText().trim();
+       // String Actual_value=rows.get(columnIndex).getText();
+
+        System.out.println("Actual_value="+Actual_value);
+        System.out.println("exceptedvalue="+exceptedvalue);
+
+        if (exceptedvalue.equalsIgnoreCase(Actual_value)) {
+            System.out.println("matched");
+        } else {
+            Assert.fail("unmatched");
         }
     }
 
@@ -973,17 +1079,15 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
         public static void main(String[] args){
 
-            String visibilityitem1="Sub-Event";
-            String visibilityitem2="SubEventCode";
-            String visibilityitem3="Total";
+            String theFirst = "Java Programming";
+            String ROM = "\"" + theFirst + "\"";
 
-            List<String> exceptedlist = new ArrayList<>();
+            String checkboxname="Men'sS";
+            String uploadsubtasknamearray="parent::div//span[contains(text(),"+ROM+")]//ancestor::mat-option//mat-pseudo-checkbox";
 
-            exceptedlist.add(visibilityitem1);
-            exceptedlist.add(visibilityitem2);
-            exceptedlist.add(visibilityitem3);
+            System.out.println(uploadsubtasknamearray);
 
-            System.out.println(exceptedlist.get(1));
+           // System.out.println(ROM);
 }
 
 
