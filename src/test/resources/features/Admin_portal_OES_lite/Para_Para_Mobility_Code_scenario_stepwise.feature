@@ -3,7 +3,7 @@
 @Para_Mobility_Code_scenario
 Feature: Admin OES lite portal - para Para_Mobility_Code_scenario
 
-  Scenario: To Verify the "Para Mobility Code" scenarios
+  Scenario: Admin OES lite portal - para Para_Mobility_Code_scenario
     Given Login the admin Application
     And To Verify the Para Mobility Code option page
     And To Verify the Create Para Mobility Code button in the Para Mobility Code option page

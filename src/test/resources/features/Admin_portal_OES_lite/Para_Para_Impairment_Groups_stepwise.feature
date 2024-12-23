@@ -3,7 +3,7 @@
 @Para_Para_Impairment_Groups
 Feature: Admin OES lite portal - para Para_Para_Impairment_Groups scenarios
 
-  Scenario: To Verify the "Para Impairment Groups" scenarios
+  Scenario: Admin OES lite portal - para Para_Para_Impairment_Groups scenarios
     Given Login the admin Application
     And Para Impairment Groups option page
     And Create Para Impairment Groups button in the Para Impairment Groups option page

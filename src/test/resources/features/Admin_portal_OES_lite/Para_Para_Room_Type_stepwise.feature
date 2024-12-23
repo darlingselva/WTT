@@ -3,7 +3,7 @@
 @Para_Para_Room_Type
 Feature: Admin OES lite portal - para Para_Room_Type scenarios
 
-  Scenario: To Verify the "Para Room Type" scenarios
+  Scenario: Admin OES lite portal - para Para_Room_Type scenarios
     Given Login the admin Application
     And Para Room Type option page
     And Create Para Room Type button in the Para Room Type option page

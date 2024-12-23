@@ -4,7 +4,7 @@
 Feature: Admin OES lite portal - para Para_Paralympic_Classes scenarios
 
 
-  Scenario: To Verify the "Paralympic Classes" scenarios
+  Scenario: Admin OES lite portal - para Para_Paralympic_Classes scenarios
     Given Login the admin Application
     And Paralympic Classes option page
     And Create Paralympic Classes button in the Paralympic Classes option page

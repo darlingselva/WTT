@@ -3,7 +3,7 @@
 @Para_Classification_Status
 Feature: Admin OES lite portal - para Para_Classification_Status scenarios
 
-  Scenario: To Verify the "Para Classification Status" scenarios
+  Scenario: Admin OES lite portal - para Para_Classification_Status scenarios
     Given Login the admin Application
     And Para Classification Status option page
     And Create Para Classification Status button in the Para Classification Status option page
