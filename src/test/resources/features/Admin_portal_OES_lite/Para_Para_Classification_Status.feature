@@ -14,7 +14,7 @@ Feature: Admin OES lite portal - para Para_Classification_Status scenarios
   Scenario: To Verify the "Create Para Classification Status" button in the "Para Classification Status" option page
     And Create Para Classification Status button in the Para Classification Status option page
 
-  @WTT_OVR_Lite_Admin_portal_TS008
+  @WTT_OVR_Lite_Admin_portal_TS028
   Scenario: To Verify the "Create Para Classification Status" using positive values
     And Create Para Classification Status using positive values
 

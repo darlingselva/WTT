@@ -690,7 +690,7 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/EventcreationElements/button_event_searchfieldicon");
         base.wait(3);
         click_on_element("AdminPortalElements/EventcreationElements/table_event_tableresultrow");
-        base.wait(3);
+        base.wait(5);
 
         click_on_element("AdminPortalElements/EventcreationElements/tab_event_OESLite");
         base.wait(2);
@@ -20666,6 +20666,435 @@ public class OESLiteAdminportalSnippet {
     }
 
 
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Name option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingNameoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Organization option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingOrganizationoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using OrgCode option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingOrgCodeoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Representing OrgCode option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingRepresentingOrgCodeoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Singles option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingSinglesoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Doubles option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingDoublesoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Mixed Doubles option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingMixedDoublesoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Teams option$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingTeamsoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using all options$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingalloptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the export the excel$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheexporttheexcel()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entries by SubEvent subtab and Verify the export the PDF$")
+    public static void OESLitereporttabforPlayerEntriesbySubEventsubtabandVerifytheexportthePDF()throws Exception{
+
+    }
+
+    @Given("^OES Lite Reports tab for Player Entry Report subtab$")
+    public static void OESLiteReportstabforPlayerEntryReportsubtab()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtaboptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Organization dropdown options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheOrganizationdropdownoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the SubEvent dropdown options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSubEventdropdownoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the EntryDrawName dropdown options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheEntryDrawNamedropdownoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the EntryQuotaType dropdown options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheEntryQuotaTypedropdownoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Clear the filter dropdown functionality$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheClearthefilterdropdownfunctionality()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the order By dropdown functionality$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheorderBydropdownfunctionality()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EntryId option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryIdoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EntryId option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryIdoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EventId option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEventIdoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EventId option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEventIdoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Name option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSubEventNameoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Name option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSubEventNameoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Code option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSubEventCodeoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Code option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSubEventCodeoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the ittfid option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheittfidoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the ittfid option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheittfidoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player GivenName option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePlayerGivenNameoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player GivenName option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePlayerGivenNameoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player FamilyName option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePlayerFamilyNameoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player FamilyName option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePlayerFamilyNameoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the OrgCode option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheOrgCodeoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the OrgCode option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheOrgCodeoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Organization option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheOrganizationoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Organization option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheOrganizationoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Status option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheStatusoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Status option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheStatusoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Seed option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSeedoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Seed option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheSeedoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCurrentRankingoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCurrentRankingoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking Points option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCurrentRankingPointsoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking Points option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCurrentRankingPointsoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Is Double Entry option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheIsDoubleEntryoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Is Double Entry option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheIsDoubleEntryoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Pair Number option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePairNumberoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Pair Number option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePairNumberoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Draw Name option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryDrawNameoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Draw Name option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryDrawNameoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Quota Type option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryQuotaTypeoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Quota Type option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheEntryQuotaTypeoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Cancellation Past Final Deadline option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCancellationPastFinalDeadlineoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Cancellation Past Final Deadline option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCancellationPastFinalDeadlineoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Protected Ranking option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheProtectedRankingoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Protected Ranking option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheProtectedRankingoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Penalized option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePenalizedoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Penalized option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselectthePenalizedoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Zero Point Penalty option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheZeroPointPenaltyoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Zero Point Penalty option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheZeroPointPenaltyoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Created Date Time UTC option and Order By dropdown functionality select the ASC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCreatedDateTimeUTCoptionandOrderBydropdownfunctionalityselecttheASCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Created Date Time UTC option and Order By dropdown functionality select the DESC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSortBydropdownfunctionalityselecttheCreateDateTimeUTCoptionandOrderBydropdownfunctionalityselecttheDESCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Search field functionality given valid data$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSearchfieldfunctionalitygivenvaliddata()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Search field functionality given invalid data$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheSearchfieldfunctionalitygiveninvaliddata()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownoptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using EntryId option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingEntryIdoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using EventId option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingEventIdoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using SubEvent Name option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingSubEventNameoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using SubEvent Code option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingSubEventCodeoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using ittfid option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingittfidoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Player GivenName option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingPlayerGivenNameoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Player FamilyName option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingPlayerFamilyNameoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using OrgCode option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingOrgCodeoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Organization option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingOrganizationoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Status option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingStatusoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Seed option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingSeedoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Current Ranking option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingCurrentRankingoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Current Ranking Points option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingCurrentRankingPointsoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Is Double Entry option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingIsDoubleEntryoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Pair Number option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingPairNumberoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Entry Draw Name option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingEntryDrawNameoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Entry Quota Type option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingEntryQuotaTypeoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Cancellation Past Final Deadline option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingCancellationPastFinalDeadlineoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Protected Ranking option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingProtectedRankingoption()throws Exception{
+
+    }
 
 
 

@@ -18,7 +18,7 @@ Feature: Admin OES lite portal - para Para_Paralympic_Classes scenarios
   Scenario: To Verify the "Create Paralympic Classes" using positive values
     And Create Paralympic Classes using positive values
 
-  @WTT_OVR_Lite_Admin_portal_TS008
+  @WTT_OVR_Lite_Admin_portal_TS078
   Scenario: To Verify the "Create Paralympic Classes" without enter the Paralympic Class Name fields
     And Create Paralympic Classes without enter the Paralympic Class Name fields
 

@@ -731,4 +731,345 @@ Feature: Admin OES lite portal -  OES_Lite_Scenario
     And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown options
 
   @WTT_OVR_Lite_Admin_Portal_TS315
-  Scenario:
+  Scenario:To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Name" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Name option
+
+  @WTT_OVR_Lite_Admin_Portal_TS316
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Organization" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Organization option
+
+  @WTT_OVR_Lite_Admin_Portal_TS317
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "OrgCode" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using OrgCode option
+
+  @WTT_OVR_Lite_Admin_Portal_TS318
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Representing OrgCode" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Representing OrgCode option
+
+  @WTT_OVR_Lite_Admin_Portal_TS319
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Singles" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Singles option
+
+  @WTT_OVR_Lite_Admin_Portal_TS320
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Doubles" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Doubles option
+
+  @WTT_OVR_Lite_Admin_Portal_TS321
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Mixed Doubles" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Mixed Doubles option
+
+  @WTT_OVR_Lite_Admin_Portal_TS322
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using "Teams" option
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using Teams option
+
+  @WTT_OVR_Lite_Admin_Portal_TS323
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the "Visibility column field selection dropdown" using all  options
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the Visibility column field selection dropdown using all options
+
+  @WTT_OVR_Lite_Admin_Portal_TS324
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the export the excel
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the export the excel
+
+  @WTT_OVR_Lite_Admin_Portal_TS325
+  Scenario: To Verify the OES Lite report tab for Player Entries by Sub-Event subtab and Verify the export the PDF
+    And OES Lite report tab for Player Entries by SubEvent subtab and Verify the export the PDF
+
+  @WTT_OVR_Lite_Admin_Portal_TS326
+  Scenario: To Verify the OES Lite Reports tab for Player Entry Report subtab
+    And OES Lite Reports tab for Player Entry Report subtab
+
+  @WTT_OVR_Lite_Admin_Portal_TS327
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab options
+    And OES Lite report tab for Player Entry Report subtab options
+
+  @WTT_OVR_Lite_Admin_Portal_TS328
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Organization" dropdown options
+    And OES Lite report tab for Player Entry Report subtab and Verify the Organization dropdown options
+
+  @WTT_OVR_Lite_Admin_Portal_TS329
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "SubEvent" dropdown options
+    And OES Lite report tab for Player Entry Report subtab and Verify the SubEvent dropdown options
+
+  @WTT_OVR_Lite_Admin_Portal_TS330
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "EntryDrawName" dropdown options
+    And OES Lite report tab for Player Entry Report subtab and Verify the EntryDrawName dropdown options
+
+  @WTT_OVR_Lite_Admin_Portal_TS331
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "EntryQuotaType" dropdown options
+    And OES Lite report tab for Player Entry Report subtab and Verify the EntryQuotaType dropdown options
+
+  @WTT_OVR_Lite_Admin_Portal_TS332
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Clear the filter" dropdown functionality
+    And OES Lite report tab for Player Entry Report subtab and Verify the Clear the filter dropdown functionality
+
+  @WTT_OVR_Lite_Admin_Portal_TS333
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality options
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality options
+
+  @WTT_OVR_Lite_Admin_Portal_TS334
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "order By" dropdown functionality
+    And OES Lite report tab for Player Entry Report subtab and Verify the order By dropdown functionality
+
+  @WTT_OVR_Lite_Admin_Portal_TS335
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "EntryId" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EntryId option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS336
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "EntryId" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EntryId option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS337
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "EventId" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EventId option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS338
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "EventId" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the EventId option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS339
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "SubEvent Name" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Name option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS340
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "SubEvent Name" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Name option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS341
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "SubEvent Code" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Code option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS342
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "SubEvent Code" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the SubEvent Code option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS343
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "ittfid" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the ittfid option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS344
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "ittfid" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the ittfid option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS345
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Player GivenName" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player GivenName option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS346
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Player GivenName" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player GivenName option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS347
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Player FamilyName" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player FamilyName option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS348
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Player FamilyName" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Player FamilyName option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS349
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "OrgCode" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the OrgCode option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS350
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "OrgCode" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the OrgCode option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS351
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Organization" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Organization option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS352
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Organization" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Organization option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS353
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Status" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Status option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS354
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Status" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Status option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS355
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Seed" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Seed option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS356
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Seed" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Seed option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS357
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Current Ranking" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS358
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Current Ranking" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_portal_TS359
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Current Ranking Points" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking Points option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS360
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Current Ranking Points" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Current Ranking Points option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS361
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Is Double Entry" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Is Double Entry option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS362
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Is Double Entry option and Order By dropdown functionality select the DESC option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Is Double Entry option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS363
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Pair Number" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Pair Number option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS364
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Pair Number" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Pair Number option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS365
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Entry Draw Name" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Draw Name option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS366
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Entry Draw Name" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Draw Name option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS367
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Entry Quota Type" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Quota Type option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS368
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Entry Quota Type" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Entry Quota Type option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS369
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Cancellation Past Final Deadline" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Cancellation Past Final Deadline option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS370
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Cancellation Past Final Deadline" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Cancellation Past Final Deadline option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS371
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Protected Ranking" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Protected Ranking option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS372
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Protected Ranking" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Protected Ranking option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS_373
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Penalized" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Penalized option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS_374
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Penalized" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Penalized option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS_375
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Zero Point Penalty" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Zero Point Penalty option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS376
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Zero Point Penalty" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Zero Point Penalty option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS377
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Created Date & Time (UTC)" option and "Order By" dropdown functionality select the "ASC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Created Date Time UTC option and Order By dropdown functionality select the ASC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS378
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Sort By" dropdown functionality select the "Created Date & Time (UTC)" option and "Order By" dropdown functionality select the "DESC" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Sort By dropdown functionality select the Created Date Time UTC option and Order By dropdown functionality select the DESC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS379
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Search field" functionality - given valid data
+    And OES Lite report tab for Player Entry Report subtab and Verify the Search field functionality given valid data
+
+  @WTT_OVR_Lite_Admin_Portal_TS380
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Search field" functionality  - given invalid data
+    And OES Lite report tab for Player Entry Report subtab and Verify the Search field functionality given invalid data
+
+  @WTT_OVR_Lite_Admin_Portal_TS381
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" options
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown options
+
+  @WTT_OVR_Lite_Admin_Portal_TS382
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "EntryId" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using EntryId option
+
+  @WTT_OVR_Lite_Admin_Portal_TS383
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "EventId" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using EventId option
+
+  @WTT_OVR_Lite_Admin_Portal_TS384
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "SubEvent Name" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using SubEvent Name option
+
+  @WTT_OVR_Lite_Admin_Portal_TS385
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "SubEvent Code" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using SubEvent Code option
+
+  @WTT_OVR_Lite_Admin_Portal_TS386
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "ittfid" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using ittfid option
+
+  @WTT_OVR_Lite_Admin_Portal_TS387
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Player GivenName" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Player GivenName option
+
+  @WTT_OVR_Lite_Admin_Portal_TS388
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Player FamilyName" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Player FamilyName option
+
+  @WTT_OVR_Lite_Admin_Portal_TS389
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "OrgCode" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using OrgCode option
+
+  @WTT_OVR_Lite_Admin_Portal_TS390
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Organization" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Organization option
+
+  @WTT_OVR_Lite_Admin_Portal_TS391
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Status" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Status option
+
+  @WTT_OVR_Lite_Admin_Portal_TS392
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Seed" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Seed option
+
+  @WTT_OVR_Lite_Admin_Portal_TS393
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Current Ranking" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Current Ranking option
+
+  @WTT_OVR_Lite_Admin_Portal_TS394
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Current Ranking Points" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Current Ranking Points option
+
+  @WTT_OVR_Lite_Admin_Portal_TS395
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Is Double Entry" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Is Double Entry option
+
+  @WTT_OVR_Lite_Admin_Portal_TS396
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Pair Number" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Pair Number option
+
+  @WTT_OVR_Lite_Admin_Portal_TS397
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Entry Draw Name" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Entry Draw Name option
+
+  @WTT_OVR_Lite_Admin_Portal_TS398
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Entry Quota Type" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Entry Quota Type option
+
+  @WTT_OVR_Lite_Admin_Portal_TS399
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Cancellation Past Final Deadline" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Cancellation Past Final Deadline option
+
+  @WTT_OVR_Lite_Admin_Portal_TS400
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Protected Ranking" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Protected Ranking option

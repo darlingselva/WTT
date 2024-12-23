@@ -14,12 +14,12 @@ import io.cucumber.junit.CucumberOptions.SnippetType;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/Admin_portal_OES_lite/OES_Lite_Scenario.feature"}
+		,features= {"classpath:features/Admin_portal_OES_lite"}
 		,glue = {"StepDefinition" , "PreDefinedstepdefinitions"}
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@WTT_OVR_Lite_Admin_Portal_TS312"
+		,tags = "@WTT_OVR_Lite_Admin_Portal_TS148"
 		//,publish = true
 		)
 //@SpringBootTest

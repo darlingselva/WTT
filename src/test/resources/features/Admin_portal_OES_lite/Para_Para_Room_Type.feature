@@ -14,7 +14,7 @@ Feature: Admin OES lite portal - para Para_Room_Type scenarios
   Scenario: To Verify the "Create Para Room Type" button in the "Para Room Type" option page
     And Create Para Room Type button in the Para Room Type option page
 
-  @WTT_OVR_Lite_Admin_portal_TS008
+  @WTT_OVR_Lite_Admin_portal_TS064
   Scenario: To Verify the "Create Para Room Type" using positive values
     And Create Para Room Type using positive values
 

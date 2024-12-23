@@ -14,7 +14,7 @@ Feature: Admin OES lite portal - para Para_Para_Impairment_Groups scenarios
   Scenario: To Verify the "Create Para Impairment Groups" button in the "Para Impairment Groups" option page
     And Create Para Impairment Groups button in the Para Impairment Groups option page
 
-  @WTT_OVR_Lite_Admin_portal_TS008
+  @WTT_OVR_Lite_Admin_portal_TS046
   Scenario: To Verify the "Create Para Impairment Groups" using positive values
     And Create Para Impairment Groups using positive values
 
