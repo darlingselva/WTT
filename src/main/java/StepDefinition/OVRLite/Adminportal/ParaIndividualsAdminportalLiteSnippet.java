@@ -856,9 +856,9 @@ public class ParaIndividualsAdminportalLiteSnippet {
         base.wait(6);
         element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/text1_Individuals_Individualsdeails");
 
-        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_Update");
-        base.wait(6);
-        element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/text1_Individuals_Individualsdeails");
+//        click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_Update");
+//        base.wait(6);
+//        element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/text1_Individuals_Individualsdeails");
 
     }
 

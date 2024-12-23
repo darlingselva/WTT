@@ -924,9 +924,19 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         Commonmethods base = new Commonmethods(driver, wait1);
         checkboxname = "\"" + checkboxname + "\"";
         base.wait(2);
-      WebElement tempwebelement=webElement.findElement(By.xpath("parent::div//span[contains(text(),"+checkboxname+")]//ancestor::mat-option//mat-pseudo-checkbox"));
-        base.wait(1);
-        tempwebelement.click();
+        WebElement tempwebelement=webElement.findElement(By.xpath("parent::div//span[contains(text(),"+checkboxname+")]//ancestor::mat-option//mat-pseudo-checkbox"));
+
+        try {
+            base.wait(1);
+            tempwebelement.click();
+        }
+        catch (ElementClickInterceptedException e){
+            base.wait(1);
+            base.scrollToView(tempwebelement);
+            base.wait(2);
+            tempwebelement.click();
+        }
+
     }
 
     @Given("^check the header value '(.*)' from webtable '(.*)'$")

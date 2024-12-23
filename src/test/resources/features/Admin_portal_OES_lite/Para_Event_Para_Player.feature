@@ -6,6 +6,7 @@ Feature: Admin OES lite portal - para Para_Event_Para_Player scenarios
   Background: login the application
     Given Login the admin Application
 
+
   @WTT_OVR_Lite_Admin_portal_pre_creation_Event
   Scenario: OVR Lite Admin portal pre creation Event
     And Admin portal event creation
