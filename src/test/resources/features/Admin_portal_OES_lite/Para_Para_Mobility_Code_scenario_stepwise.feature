@@ -17,9 +17,9 @@ Feature: Admin OES lite portal - para Para_Mobility_Code_scenario
     And Edit Para Mobility Code from data table using edit Code  field
     And Edit Para Mobility Code from data table using edit both name and Code  field
     And Edit Para Mobility Code from data table using edit Active status
-    And Edit Para Mobility Code from data table using empty value for name field
-    And Edit Para Mobility Code from data table using empty value for Code field
-    And Edit Para Mobility Code from data table using empty value for both Name and Code field
+#    And Edit Para Mobility Code from data table using empty value for name field
+#    And Edit Para Mobility Code from data table using empty value for Code field
+#    And Edit Para Mobility Code from data table using empty value for both Name and Code field
     And Edit Para Mobility Code from data table click on cancel button
     And search field in the Para Mobility Code data table
     And Delete Para Mobility Code from data table

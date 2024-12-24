@@ -169,7 +169,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         WebDriverWait wait1 = new WebDriverWait(driver,60);
         Commonmethods base=new Commonmethods(driver,wait1);
        // base.scrollToView(webElement);
-        base.wait(2);
+        base.wait(1);
         webElement.click();
     }
 
@@ -193,7 +193,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver,60);
         Commonmethods base=new Commonmethods(driver,wait1);
-        base.wait(2);
+        base.wait(1);
         base.checkelementvisibility(webElement);
         //webElement.isDisplayed();
     }
@@ -224,7 +224,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver,60);
         Commonmethods base=new Commonmethods(driver,wait1);
-        base.wait(2);
+        base.wait(1);
         base.jclick(webElement);
 
     }
@@ -234,7 +234,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver,60);
         Commonmethods base=new Commonmethods(driver,wait1);
-        base.wait(2);
+        base.wait(1);
         webElement.sendKeys(value);
     }
 
@@ -243,9 +243,9 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver,60);
         Commonmethods base=new Commonmethods(driver,wait1);
-        base.wait(2);
+        base.wait(1);
         String execepted_value=webElement.getText().toString();
-        base.wait(2);
+        base.wait(1);
         Assert.assertEquals(execepted_value,value);
     }
 
@@ -270,12 +270,15 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
+    public static Multimap<Integer, String> tablevaluehashmap;
+
+
     @Given("^Admin portal Search the value '(.*)' into the table '(.*)'$")
     public static void AdminportalSearchthevalueintothetable(String Expectedvalue,String Webelement_name)throws Exception {
         getthefield(Webelement_name);
         WebDriverWait wait1 = new WebDriverWait(driver, 60);
         Commonmethods base = new Commonmethods(driver, wait1);
-        base.wait(2);
+        base.wait(1);
 
         int numberofrow = 0;
 
@@ -284,7 +287,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
         tableRows = webElement.findElements(By.tagName("tr"));
         // List<WebElement> tableRows = webElement.findElements(By.xpath("//tr"));
         driver.navigate().refresh();
-        base.wait(5);
+        base.wait(2);
         tableRows = webElement.findElements(By.tagName("tr"));
         numberofrow = tableRows.size();
         System.out.println("number of row=" + numberofrow);
@@ -299,7 +302,7 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
         //HashMap<Integer, String> tablevaluehashmap = new HashMap<>();
 
-        Multimap<Integer, String> tablevaluehashmap = ArrayListMultimap.create();
+        tablevaluehashmap = ArrayListMultimap.create();
         WebElement temp_webelement;
         String Actualvalue = null;
 
@@ -345,10 +348,11 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
                 for (Map.Entry<Integer, String> e : tablevaluehashmap.entries())
                 {
                 String value1 = e.getValue();
-                if (value1.equals(Expectedvalue)) {
+                 if (value1.equals(Expectedvalue))
+                 {
                     System.out.println("value founded");
                     search_valued_table_key = e.getKey();
-                }
+                  }
                }
             }
             else {
@@ -372,6 +376,30 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
         //System.out.println("Key="+search_valued_table_key);
     }
+
+    @Given("^Admin portal Search the value into the table from map value '(.*)'$")
+    public static void AdminportalSearchthevalueintothetablefrommapvalue(String Expectedvalue)throws Exception {
+
+        System.out.println(tablevaluehashmap);
+        System.out.println(Expectedvalue);
+        if(tablevaluehashmap.containsValue(Expectedvalue))
+        {
+            for (Map.Entry<Integer, String> e : tablevaluehashmap.entries())
+            {
+                String value1 = e.getValue();
+                if (value1.equals(Expectedvalue))
+                {
+                    System.out.println("value founded");
+                    search_valued_table_key = e.getKey();
+                }
+            }
+        }
+        else {
+            Assert.fail("value not founded");
+        }
+    }
+
+
 
     @Given("^Admin portal action option '(.*)' into the table '(.*)'$")
     public static void Adminportaloptionontable(String action_option,String Webelement_name)throws Exception{
