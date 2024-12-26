@@ -1,0 +1,59 @@
+pipeline {
+    agent any
+
+    environment {
+        // Set any environment variables needed for your build
+        MAVEN_HOME = '/usr/local/maven'
+    }
+
+    stages {
+        stage('Checkout') {
+            steps {
+                // Checkout the repository
+                git 'https://github.com/your-username/your-repository.git'
+            }
+        }
+
+        stage('Build') {
+            steps {
+                // Run Maven clean install to build the project
+                script {
+                    sh "'${MAVEN_HOME}/bin/mvn' clean install"
+                }
+            }
+        }
+
+        stage('Test') {
+            steps {
+                // Run Cucumber tests using Maven
+                script {
+                    sh "'${MAVEN_HOME}/bin/mvn' test"
+                }
+            }
+        }
+
+        stage('Cucumber Report') {
+            steps {
+                // Generate Cucumber HTML report (optional)
+                script {
+                    sh "'${MAVEN_HOME}/bin/mvn' cucumber:report"
+                }
+            }
+        }
+
+        stage('Publish Test Results') {
+            steps {
+                // Publish test results and Cucumber reports in Jenkins
+                junit '**/target/test-classes/cucumber-report/*.xml'  // Path to your Cucumber report
+                cucumber '**/target/cucumber-report/*.json'          // Cucumber JSON results (if using Cucumber report plugin)
+            }
+        }
+    }
+
+    post {
+        always {
+            // Cleanup or post actions, e.g., archiving the build artifacts
+            echo 'Cleaning up workspace'
+        }
+    }
+}
