@@ -1,7 +1,7 @@
 package pages.AdminPortalElements;
 
 import base.Webelementname;
-import groovy.transform.Field;
+
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;

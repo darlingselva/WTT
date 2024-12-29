@@ -19,8 +19,8 @@ public class LoginSnippet extends DriverInitialisation {
 
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
 
-		//Commonmethods.properties_file="Adminportal";
-		Commonmethods.properties_file=Admin_Prop;
+		Commonmethods.properties_file="Adminportal_lite";
+		//Commonmethods.properties_file=Admin_Prop;
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		driver.get(url);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -46,8 +46,8 @@ public class LoginSnippet extends DriverInitialisation {
 	@Given("^launch the Admin Application$")
 	public static void lanuch_login() throws Exception {
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
-		//Commonmethods.properties_file="OVR";
-		Commonmethods.properties_file=Admin_Prop;
+		Commonmethods.properties_file="Adminportal_lite";
+		//Commonmethods.properties_file=Admin_Prop;
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		driver.get(url);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
@@ -58,7 +58,8 @@ public class LoginSnippet extends DriverInitialisation {
 	@Given("^enter the Admin username '(.*)'$")
 	public static void Admin_login_enter_username(String username) throws Exception {
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
-		Commonmethods.properties_file=Admin_Prop;
+		Commonmethods.properties_file="Adminportal_lite";
+		//Commonmethods.properties_file=Admin_Prop;
 		String username1=base.Commonmethods.getvaluefrompropertiesfile(username);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
 		Commonmethods base=new Commonmethods(driver,wait1);
@@ -70,7 +71,8 @@ public class LoginSnippet extends DriverInitialisation {
 	@Given("^enter the Admin password '(.*)'$")
 	public static void Admin_login_enter_password(String password) throws Exception {
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
-		Commonmethods.properties_file=Admin_Prop;
+		Commonmethods.properties_file="Adminportal_lite";
+		//Commonmethods.properties_file=Admin_Prop;
 		String password1=base.Commonmethods.getvaluefrompropertiesfile(password);
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
 		Commonmethods base=new Commonmethods(driver,wait1);
@@ -90,7 +92,8 @@ public class LoginSnippet extends DriverInitialisation {
 	public static void Admin_login_positive_scenarios() throws Exception {
 		Admin_login_page_Elements admin =  PageFactory.initElements(driver,Admin_login_page_Elements.class);
 		//Commonmethods.properties_file="Admin_Prop";
-		Commonmethods.properties_file=Admin_Prop;
+		//Commonmethods.properties_file=Admin_Prop;
+		Commonmethods.properties_file="Adminportal_lite";
 		String url=base.Commonmethods.getvaluefrompropertiesfile("url");
 		WebDriverWait wait1 = new WebDriverWait(driver,60);
 		Commonmethods base=new Commonmethods(driver,wait1);
