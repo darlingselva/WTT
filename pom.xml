@@ -313,52 +313,13 @@
 
 		<plugins>
 
-<!--			<plugin>-->
-<!--				<groupId>org.apache.maven.plugins</groupId>-->
-<!--				<artifactId>maven-compiler-plugin</artifactId>-->
-<!--				<version>3.7.0</version>-->
-<!--				<configuration>-->
-<!--					<source>1.8</source>-->
-<!--					<target>1.8</target>-->
-<!--					<encoding>UTF-8</encoding>-->
-<!--				</configuration>-->
-<!--			</plugin>-->
-
-
-
-
 			            <plugin>
 			                <groupId>org.apache.maven.plugins</groupId>
-			                <artifactId>maven-failsafe-plugin</artifactId>
-			                <version>3.2.5</version>
-<!--							<version>2.22.2</version>-->
-			                <executions>
-			                    <execution>
-			                        <goals>
-			                            <goal> integration-test</goal>
-			                        </goals>
+			                <artifactId>maven-surefire-plugin</artifactId>
+			                <version>3.1.2</version>
 			                        <configuration>
-<!--			                            <includes>-->
-<!--			                                <include>**/TestRunner.java</include>-->
-<!--			                            </includes>-->
-<!--			                            <parallel>methods</parallel>-->
-<!--			                            <threadCount>4</threadCount>-->
-<!--			                            <perCoreThreadCount>true</perCoreThreadCount>-->
-										<systemProperties>
-											<property>
-												<name>cucumber.api</name>
-												<value>--glue src/main/java/StepDefinition,src/main/java/PreDefinedstepdefinitions --features src/test/resources/features</value>
-											</property>
-										</systemProperties>
-
-<!--										<systemPropertyVariables>-->
-<!--											&lt;!&ndash; Set system property to allow cucumber options to be passed at runtime &ndash;&gt;-->
-<!--											<cucumber.options>${cucumber.options}</cucumber.options>-->
-<!--										</systemPropertyVariables>-->
-<!--										<argLine>-Dcucumber.options=${cucumber.options}</argLine>-->
+										<test>testrunner.TestRunner</test>>
 			                        </configuration>
-			                    </execution>
-			                </executions>
 			            </plugin>
 		</plugins>
 	</build>

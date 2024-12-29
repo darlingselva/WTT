@@ -21,7 +21,7 @@ import org.springframework.test.context.ContextConfiguration;
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@WTT_OVR_Lite_Admin_portal_TS001 or @WTT_OVR_Lite_Admin_portal_TS010 or @WTT_OVR_Lite_Admin_portal_TS028 or @WTT_OVR_Lite_Admin_portal_TS046 or @WTT_OVR_Lite_Admin_portal_TS064 or @WTT_OVR_Lite_Admin_portal_TS077 or @WTT_OVR_Lite_Admin_Portal_TS113 or @WTT_OVR_Lite_Admin_Portal_TS130 or @WTT_OVR_Lite_Admin_Portal_TS148 or @WTT_OVR_Lite_Admin_Portal_TS169"
+		,tags = ""
 
 		//,publish = true
 		)
