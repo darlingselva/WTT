@@ -144,6 +144,7 @@ public class EventCreationSnippet extends DriverInitialisation
 
 				DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyy, HH:mm:ss");
 				if(a[a.length-1].contains("Start")) {
+					System.out.println("inside");
 					b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
 					base.checkelementvisibility(b);
 					LocalDateTime now = LocalDateTime.now(); 
@@ -151,6 +152,7 @@ public class EventCreationSnippet extends DriverInitialisation
 					b.sendKeys(date_var);
 				}
 				else if(a[a.length-1].contains("End")) {
+					System.out.println("inside");
 					b=(WebElement) EventcreationElements.class.getField(TestDataReader.TestheaderArray[i].toString()).get(event);
 					base.checkelementvisibility(b);
 					LocalDateTime now = LocalDateTime.now().plusDays(1); 
@@ -249,6 +251,12 @@ public class EventCreationSnippet extends DriverInitialisation
 
 	}
 
+	public static void main(String[] args){
+		DateTimeFormatter dtf = DateTimeFormatter.ofPattern("MM/dd/yyy, HH:mm:ss");
+		LocalDateTime now = LocalDateTime.now();
+		String date_var=dtf.format(now).toString();
+		System.out.println(date_var);
+	}
 
 
 }

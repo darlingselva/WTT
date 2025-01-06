@@ -455,6 +455,12 @@ public class EventcreationElements {
 	@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
 	public WebElement date_event_creation_Draws_StartDateTime;
 
+	@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
+	public WebElement button_event_creation_Draws_StartDateTime;
+
+	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']")
+	public WebElement button_event_creation_Draws_StartDateTimepicker;
+
 	@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']")
 	public WebElement button_event_creation_Draws_TimeZone;
 
@@ -469,6 +475,17 @@ public class EventcreationElements {
 
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
 	public WebElement date_event_creation_Draws_EndDate;
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	public WebElement button_event_creation_Draws_EndDate;
+
+	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']//following-sibling::td")
+	public WebElement button_event_creation_Draws_EndDatepicker;
+
+	@FindBy(xpath = "//button//span[text()='Set']")
+	public WebElement button_event_creation_Draws_Datepickerset;
+
+
 
 	@FindBy(xpath = "//mat-dialog-container//button[text()='Add New']")
 	public WebElement button_event_creation_Draws_DrawNames_AddNew;
@@ -909,7 +926,7 @@ public class EventcreationElements {
 
 	//Event creation - 12: Payment Options
 
-	@FindBy(xpath = "//div[text()='12: Payment Options']")
+	@FindBy(xpath = "//div[contains(text(),'Payment Options')]")
 	public WebElement tab_event_creation_PaymentOptions;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -971,7 +988,7 @@ public class EventcreationElements {
 
 	//Event creation - 13: Tournament Fee
 
-	@FindBy(xpath = "//div[text()='13: Tournament Fee']")
+	@FindBy(xpath = "//div[contains(text(),'Tournament Fee')]")
 	public WebElement tab_event_creation_TournamentFee;
 
 	@FindBy(xpath = "//div[contains(text(),'Fee Deposit (%)')]//parent::div//parent::div//input")
@@ -1070,7 +1087,7 @@ public class EventcreationElements {
 
 	//Event creation - 14: Non-MA Tournament Fee
 
-	@FindBy(xpath = "//div[text()='14: Non-MA Tournament Fee']")
+	@FindBy(xpath = "//div[contains(text(),'Non-MA Tournament Fee')]")
 	public WebElement tab_event_creation_NonMATournamentFee;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1285,7 +1302,7 @@ public class EventcreationElements {
 
 	//Event creation - 16: Non-MA Hospitality
 
-	@FindBy(xpath = "//div[text()='16: Non-MA Hospitality']")
+	@FindBy(xpath = "//div[contains(text(),'Non-MA Hospitality')]")
 	public WebElement tab_event_creation_NonMAHospitality;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1372,7 +1389,7 @@ public class EventcreationElements {
 
 	//Event creation - 17: Miscellaneous
 
-	@FindBy(xpath = "//div[text()='17: Miscellaneous']")
+	@FindBy(xpath = "//div[contains(text(),'Miscellaneous')]")
 	public WebElement tab_event_creation_Miscellaneous;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1407,7 +1424,7 @@ public class EventcreationElements {
 
 	//Event creation - 18: Travel
 
-	@FindBy(xpath = "//div[text()='18: Travel']")
+	@FindBy(xpath = "//div[contains(text(),'Travel')]")
 	public WebElement tab_event_creation_Travel;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1436,7 +1453,7 @@ public class EventcreationElements {
 
 	//Event creation - 19: Transportation
 
-	@FindBy(xpath = "//div[text()='19: Transportation']")
+	@FindBy(xpath = "//div[contains(text(),'Transportation')]")
 	public WebElement tab_event_creation_Transportation;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1492,7 +1509,7 @@ public class EventcreationElements {
 
 	//Event creation - 20: Sponsors
 
-	@FindBy(xpath = "//div[text()='20: Sponsors']")
+	@FindBy(xpath = "//div[contains(text(),'Sponsors')]")
 	public WebElement tab_event_creation_Sponsors;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1567,7 +1584,7 @@ public class EventcreationElements {
 
 	//Event creation - 21: Documents
 
-	@FindBy(xpath = "//div[text()='21: Documents']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Documents')])[1]")
 	public WebElement tab_event_creation_Documents;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1639,7 +1656,7 @@ public class EventcreationElements {
 
 	//Event creation - 22: Accreditation
 
-	@FindBy(xpath = "//div[text()='22: Accreditation']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Accreditation')])[1]")
 	public WebElement tab_event_creation_Accreditation;
 
 	@FindBy(xpath = "//button[text()='Add New']")
@@ -1651,8 +1668,25 @@ public class EventcreationElements {
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
 	public WebElement date_event_creation_Accreditation_AddAccreditationInformation_StartDate;
 
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
+	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_StartDate;
+
+	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']")
+	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_StartDatepicker;
+
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
 	public WebElement date_event_creation_Accreditation_AddAccreditationInformation_EndDate;
+
+	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
+	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_EndDate;
+
+
+	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']//following-sibling::td")
+	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_EndDatepicker;
+
+	@FindBy(xpath = "//button//span[text()='Set']")
+	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_Dateset;
+
 
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Location')]//parent::div//parent::div//input")
 	public WebElement text_event_creation_Accreditation_AddAccreditationInformation_Location;
@@ -1675,7 +1709,7 @@ public class EventcreationElements {
 
 	//Event creation - 23: Visa
 
-	@FindBy(xpath = "//div[text()='23: Visa']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Visa')])[1]")
 	public WebElement tab_event_creation_Visa;
 
 	@FindBy(xpath = "//div[contains(text(),'Visa Information')]//parent::div//parent::div//p")
@@ -1683,7 +1717,7 @@ public class EventcreationElements {
 
 	//Event creation - 24: Comments
 
-	@FindBy(xpath = "//div[text()='24: Comments']")
+	@FindBy(xpath = "(//app-create-events//mat-tab-header//div[contains(text(),'Comments')])[1]")
 	public WebElement tab_event_creation_Comments;
 
 	@FindBy(xpath = "//div[contains(text(),'Comments')]//parent::div//parent::div//p")
