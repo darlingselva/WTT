@@ -1,18 +1,106 @@
-@Admin_OES_lite_para
-@Admin_OES_lite
-Feature: Admin OES lite portal -  OES_Lite_Scenario
+
+#user  nobody;
+worker_processes  1;
+
+#error_log  logs/error.log;
+#error_log  logs/error.log  notice;
+#error_log  logs/error.log  info;
+
+#pid        logs/nginx.pid;
 
 
-  @WTT_OVR_Lite_Admin_portal_TS134
-  Scenario: para test scenerio
-    And Login the admin Application
-    And Create Para Mobility Code without enter the code fields
+events {
+worker_connections  1024;
+}
 
 
+# Main HTTP block
+http {
+    # Other general HTTP settings (optional)
+
+server {
+listen 80;  # The port Nginx listens on
+server_name localhost;  # The domain or IP of the server
+
+        # Location block for reverse proxy
+location / {
+proxy_pass http://192.168.31.145:8080;  # Replace with your backend server's address
+proxy_set_header Host $host;
+proxy_set_header X-Real-IP $remote_addr;
+proxy_set_header X-Forwarded-For $proxy_add_x_forwarded_for;
+proxy_set_header X-Forwarded-Proto $scheme;
+}
+}
+}
 
 
+        #error_page  404              /404.html;
+
+        # redirect server error pages to the static page /50x.html
+        #
+error_page   500 502 503 504  /50x.html;
+location = /50x.html {
+root   html;
+}
+
+        # proxy the PHP scripts to Apache listening on 127.0.0.1:80
+        #
+        #location ~ \.php$ {
+        #    proxy_pass   http://127.0.0.1;
+        #}
+
+        # pass the PHP scripts to FastCGI server listening on 127.0.0.1:9000
+        #
+        #location ~ \.php$ {
+        #    root           html;
+        #    fastcgi_pass   127.0.0.1:9000;
+        #    fastcgi_index  index.php;
+        #    fastcgi_param  SCRIPT_FILENAME  /scripts$fastcgi_script_name;
+        #    include        fastcgi_params;
+        #}
+
+        # deny access to .htaccess files, if Apache's document root
+        # concurs with nginx's one
+        #
+        #location ~ /\.ht {
+        #    deny  all;
+        #}
+}
 
 
+    # another virtual host using mix of IP-, name-, and port-based configuration
+    #
+    #server {
+    #    listen       8000;
+    #    listen       somename:8080;
+    #    server_name  somename  alias  another.alias;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
 
 
+    # HTTPS server
+    #
+    #server {
+    #    listen       443 ssl;
+    #    server_name  localhost;
 
+    #    ssl_certificate      cert.pem;
+    #    ssl_certificate_key  cert.key;
+
+    #    ssl_session_cache    shared:SSL:1m;
+    #    ssl_session_timeout  5m;
+
+    #    ssl_ciphers  HIGH:!aNULL:!MD5;
+    #    ssl_prefer_server_ciphers  on;
+
+    #    location / {
+    #        root   html;
+    #        index  index.html index.htm;
+    #    }
+    #}
+
+}

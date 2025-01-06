@@ -1073,3 +1073,67 @@ Feature: Admin OES lite portal -  OES_Lite_Scenario
   @WTT_OVR_Lite_Admin_Portal_TS400
   Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Protected Ranking" option
     And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Protected Ranking option
+
+  @WTT_OVR_Lite_Admin_Portal_TS401
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Penalized" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Penalized option
+
+  @WTT_OVR_Lite_Admin_Portal_TS402
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Zero Point Penalty" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Zero Point Penalty option
+
+  @WTT_OVR_Lite_Admin_Portal_TS403
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using "Created Date & Time (UTC)" option
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Created Date Time UTC option
+
+  @WTT_OVR_Lite_Admin_Portal_TS404
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the "Visibility column field selection dropdown" using All options
+    And OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using All options
+
+  @WTT_OVR_Lite_Admin_Portal_TS405
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the export the excel
+    And OES Lite report tab for Player Entry Report subtab and Verify the export the excel
+
+  @WTT_OVR_Lite_Admin_Portal_TS406
+  Scenario: To Verify the OES Lite report tab for Player Entry Report subtab and Verify the export the PDF
+    And OES Lite report tab for Player Entry Report subtab and Verify the export the PDF
+
+  @WTT_OVR_Lite_Admin_Portal_TS407
+  Scenario: To Verify the "OVR Lite - Event action button options
+    And OVR Lite Event action button options
+
+  @WTT_OVR_Lite_Admin_Portal_TS408
+  Scenario: To Verify the " Update CDC" action
+    And the Update CDC action
+
+  @WTT_OVR_Lite_Admin_Portal_TS409
+  Scenario: To Verify the "Set Status as Cancelled" action
+    And the Set Status as Cancelled action
+
+  @WTT_OVR_Lite_Admin_Portal_TS410
+  Scenario: To Verify the "Rollback to Draft (Keep Review)" action
+    And the Rollback to Draft Keep Review action
+
+  @WTT_OVR_Lite_Admin_Portal_TS411
+  Scenario: To Verify the "Rollback to Draft (Remove Review)" action
+    And the Rollback to Draft Remove Review action
+
+  @WTT_OVR_Lite_Admin_Portal_TS412
+  Scenario: To Verify the "OVR Lite - Publish Event" action
+    And the OVR Lite Publish Event action
+
+  @WTT_OVR_Lite_Admin_Portal_TS413
+  Scenario: To Verify the "OVR Lite - Publish Entries" action
+    And the OVR Lite Publish Entries action
+
+  @WTT_OVR_Lite_Admin_Portal_TS414
+  Scenario: To Verify the "Cleanup ODF Storage Logs" action
+    And the Cleanup ODF Storage Logs action
+
+  @WTT_OVR_Lite_Admin_Portal_TS415
+  Scenario: To Verify the "Clone" the event
+    And the Clone the event
+
+  @WTT_OVR_Lite_Admin_Portal_TS416
+  Scenario: To Verify the "Edit" the event
+    And the Edit the event

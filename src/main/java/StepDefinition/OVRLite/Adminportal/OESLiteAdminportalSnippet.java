@@ -21382,6 +21382,87 @@ public class OESLiteAdminportalSnippet {
 
     }
 
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Penalized option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingPenalizedoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Zero Point Penalty option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingZeroPointPenaltyoption()throws Exception{
+
+    }
+
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using Created Date Time UTC option$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingCreatedDateTimeUTCoption()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using All options$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingAlloptions()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the export the excel$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheexporttheexcel()throws Exception{
+
+    }
+
+    @Given("^OES Lite report tab for Player Entry Report subtab and Verify the export the PDF$")
+    public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheexportthePDF()throws Exception{
+
+    }
+
+    @Given("^OVR Lite Event action button options$")
+    public static void OVRLiteEventactionbuttonoptions()throws Exception{
+
+    }
+
+    @Given("^the Update CDC action$")
+    public static void theUpdateCDCaction()throws Exception{
+
+    }
+
+    @Given("^the Set Status as Cancelled action$")
+    public static void theSetStatusasCancelledaction()throws Exception{
+
+    }
+
+    @Given("^the Rollback to Draft Keep Review action$")
+    public static void theRollbacktoDraftKeepReviewaction()throws Exception{
+
+    }
+
+    @Given("^the Rollback to Draft Remove Review action$")
+    public static void theRollbacktoDraftRemoveReviewaction()throws Exception{
+
+    }
+
+    @Given("^the OVR Lite Publish Event action$")
+    public static void theOVRLitePublishEventaction()throws Exception{
+
+    }
+
+    @Given("^the OVR Lite Publish Entries action$")
+    public static void theOVRLitePublishEntriesaction()throws Exception{
+
+    }
+
+    @Given("^the Cleanup ODF Storage Logs action$")
+    public static void theCleanupODFStorageLogsaction()throws Exception{
+
+    }
+
+    @Given("^the Clone the event$")
+    public static void theClonetheevent()throws Exception{
+
+    }
+
+    @Given("^the Edit the event$")
+    public static void theEdittheevent()throws Exception{
+
+    }
+
 
 
 

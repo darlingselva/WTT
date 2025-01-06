@@ -16,7 +16,7 @@ import org.springframework.test.context.ContextConfiguration;
 				"html:target/cucumber/report",
 				"json:target/cucumber/cucumber.json",
 				"util.MyTestListener"}
-		,features= {"classpath:features/Admin_portal_OES_lite"}
+		,features= {"classpath:features/Admin_portal_OES_lite/Login_page_scenario.feature"}
 		,glue = {"StepDefinition" , "PreDefinedstepdefinitions"}
 		//,dryRun = true
 		,monochrome = true
