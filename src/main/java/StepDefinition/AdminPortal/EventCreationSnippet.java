@@ -222,7 +222,7 @@ public class EventCreationSnippet extends DriverInitialisation
 
 				eventid=tempsubeventid1[1].toString();
 
-				System.out.println("event id="+eventid);
+				System.out.println("new event id="+eventid);
 				base.takescreenshoot("eventcreation");
 			}
 			else {
