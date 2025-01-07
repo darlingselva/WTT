@@ -458,7 +458,7 @@ public class EventcreationElements {
 	@FindBy(xpath = "//div[contains(text(),'Start Date Time')]//parent::div//parent::div//input")
 	public WebElement button_event_creation_Draws_StartDateTime;
 
-	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']")
+	@FindBy(xpath = "//owl-date-time-calendar//td//span[contains(@class,'today')]")
 	public WebElement button_event_creation_Draws_StartDateTimepicker;
 
 	@FindBy(xpath = "//div[contains(text(),'Time Zone')]/../parent::div//div[@class='cuppa-dropdown']")
@@ -479,7 +479,7 @@ public class EventcreationElements {
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
 	public WebElement button_event_creation_Draws_EndDate;
 
-	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']//following-sibling::td")
+	@FindBy(xpath = "//owl-date-time-calendar//td//span[contains(@class,'today')]//parent::td//following-sibling::td")
 	public WebElement button_event_creation_Draws_EndDatepicker;
 
 	@FindBy(xpath = "//button//span[text()='Set']")
@@ -1671,7 +1671,7 @@ public class EventcreationElements {
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'Start Date')]//parent::div//parent::div//input")
 	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_StartDate;
 
-	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']")
+	@FindBy(xpath = "//owl-date-time-calendar//td//span[contains(@class,'today')]")
 	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_StartDatepicker;
 
 	@FindBy(xpath = "//mat-dialog-container//div[contains(text(),'End Date')]//parent::div//parent::div//input")
@@ -1681,7 +1681,7 @@ public class EventcreationElements {
 	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_EndDate;
 
 
-	@FindBy(xpath = "//owl-date-time-calendar//td[@class='owl-dt-calendar-cell owl-dt-day-1 owl-dt-calendar-cell-active ng-star-inserted']//following-sibling::td")
+	@FindBy(xpath = "//owl-date-time-calendar//td//span[contains(@class,'today')]//parent::td//following-sibling::td")
 	public WebElement button_event_creation_Accreditation_AddAccreditationInformation_EndDatepicker;
 
 	@FindBy(xpath = "//button//span[text()='Set']")
@@ -2222,10 +2222,82 @@ public class EventcreationElements {
 	@Webelementname(name = "tab_event_ODFLogs")
 	public WebElement tab_event_ODFLogs;
 
+	@FindBy(xpath = "//app-events-preview//button//span[contains(text(),'Actions')]")
+	@ElementName("button_event_action")
+	@Webelementname(name = "button_event_action")
+	public WebElement button_event_action;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Mark as Host Reviewed']")
+	@ElementName("button_event_action_MarkasHostReviewed")
+	@Webelementname(name = "button_event_action_MarkasHostReviewed")
+	public WebElement button_event_action_MarkasHostReviewed;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Mark as Supervisor Reviewed']")
+	@ElementName("button_event_action_MarkasSupervisorReviewed")
+	@Webelementname(name = "button_event_action_MarkasSupervisorReviewed")
+	public WebElement button_event_action_MarkasSupervisorReviewed;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Set Status as Published']")
+	@ElementName("button_event_action_SetStatusasPublished")
+	@Webelementname(name = "button_event_action_SetStatusasPublished")
+	public WebElement button_event_action_SetStatusasPublished;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Update CDC']")
+	@ElementName("button_event_action_UpdateCDC")
+	@Webelementname(name = "button_event_action_UpdateCDC")
+	public WebElement button_event_action_UpdateCDC;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Set Status as Cancelled']")
+	@ElementName("button_event_action_SetStatusasCancelled")
+	@Webelementname(name = "button_event_action_SetStatusasCancelled")
+	public WebElement button_event_action_SetStatusasCancelled;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Cleanup ODF Storage Logs']")
+	@ElementName("button_event_action_CleanupODFStorageLogs")
+	@Webelementname(name = "button_event_action_CleanupODFStorageLogs")
+	public WebElement button_event_action_CleanupODFStorageLogs;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Download ODF Messages']")
+	@ElementName("button_event_action_DownloadODFMessages")
+	@Webelementname(name = "button_event_action_DownloadODFMessages")
+	public WebElement button_event_action_DownloadODFMessages;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Rollback to Draft (Keep Review)']")
+	@ElementName("button_event_action_RollbacktoDraftKeepReview")
+	@Webelementname(name = "button_event_action_RollbacktoDraftKeepReview")
+	public WebElement button_event_action_RollbacktoDraftKeepReview;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='Rollback to Draft (Remove Review)']")
+	@ElementName("button_event_action_RollbacktoDraftRemoveReview")
+	@Webelementname(name = "button_event_action_RollbacktoDraftRemoveReview")
+	public WebElement button_event_action_RollbacktoDraftRemoveReview;
+
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='OVR Lite - Publish Event']")
+	@ElementName("button_event_action_OVRLitePublishEvent")
+	@Webelementname(name = "button_event_action_OVRLitePublishEvent")
+	public WebElement button_event_action_OVRLitePublishEvent;
+
+	@FindBy(xpath = "//div[@class='mat-menu-content']//button[text()='OVR Lite - Publish Entries']")
+	@ElementName("button_event_action_OVRLitePublishEntries")
+	@Webelementname(name = "button_event_action_OVRLitePublishEntries")
+	public WebElement button_event_action_OVRLitePublishEntries;
+
 	@FindBy(xpath = "//app-events-preview//app-list//table//tbody")
 	@ElementName("table_event_common_table")
 	@Webelementname(name = "table_event_common_table")
 	public WebElement table_event_common_table;
+
+
+	@FindBy(xpath = "//app-events-preview//button[contains(text(),'Edit')]")
+	@ElementName("button_event_preview_edit")
+	@Webelementname(name = "button_event_preview_edit")
+	public WebElement button_event_preview_edit;
+
+	@FindBy(xpath = "//app-events-preview//button[contains(text(),'Clone')]")
+	@ElementName("button_event_preview_Clone")
+	@Webelementname(name = "button_event_preview_Clone")
+	public WebElement button_event_preview_Clone;
 
 
 

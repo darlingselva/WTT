@@ -22,7 +22,7 @@ public class EventCreationSnippet extends DriverInitialisation
 //public class EventCreationSnippet
 {
 
-	public static String eventid="3661";
+	public static String eventid="3722";
 	public static String eventname;
 
 	@Given("^Admin portal event creation$")
@@ -209,7 +209,7 @@ public class EventCreationSnippet extends DriverInitialisation
 
 		base.wait(5);
 		base.jclick(event.button_event_creation_cCreate);
-		base.wait(30);
+		base.wait(80);
 		//      String eventsuccesspopmessage=event.text1_event_successpopupmessage.getText();
 		//		
 		//		Assert.assertEquals(eventsuccesspopmessage, "Event Added Successfully");

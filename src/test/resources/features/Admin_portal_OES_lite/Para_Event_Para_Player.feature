@@ -8,9 +8,9 @@ Feature: Admin OES lite portal - para Para_Event_Para_Player scenarios
     Given Login the admin Application
 
 
-  @WTT_OVR_Lite_Admin_portal_pre_creation_Event
-  Scenario: OVR Lite Admin portal pre creation Event
-    And Admin portal event creation
+#  @WTT_OVR_Lite_Admin_portal_pre_creation_Event
+#  Scenario: OVR Lite Admin portal pre creation Event
+#    And Admin portal event creation
 
   @WTT_OVR_Lite_Admin_portal_TS126
   Scenario: To Verify the enable "Is Para Event" toggle button in the Core step page Event creation process

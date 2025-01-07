@@ -395,6 +395,11 @@ public class OESLiteElements {
     @Webelementname(name = "container_OESlite_reports_commonpopupwindow")
     public WebElement container_OESlite_reports_commonpopupwindow;
 
+    @FindBy(xpath = "//ngx-mat-select-search//input[@type='text']")
+    @ElementName("text_OESlite_reports_commonpopupwindowsearchfield")
+    @Webelementname(name = "text_OESlite_reports_commonpopupwindowsearchfield")
+    public WebElement text_OESlite_reports_commonpopupwindowsearchfield;
+
     @FindBy(xpath = "//div[@class='cdk-overlay-pane']/div//div")
     @ElementName("container_OESlite_reports_commonpopupwindow1")
     @Webelementname(name = "container_OESlite_reports_commonpopupwindow1")
