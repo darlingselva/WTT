@@ -777,6 +777,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -844,6 +847,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -914,6 +920,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -981,6 +990,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -1050,6 +1062,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -1118,6 +1133,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -1184,6 +1202,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -1253,6 +1274,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -1320,6 +1344,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -1389,6 +1416,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -1457,6 +1487,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -1524,6 +1557,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2098,6 +2134,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2168,6 +2207,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2240,6 +2282,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2310,6 +2355,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2382,6 +2430,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2452,6 +2503,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2524,6 +2578,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2594,6 +2651,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2666,6 +2726,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2736,6 +2799,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -2808,6 +2874,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -2878,6 +2947,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -3466,6 +3538,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -3525,6 +3600,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -3586,6 +3664,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -3645,6 +3726,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -3706,6 +3790,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -3765,6 +3852,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -3826,6 +3916,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -3885,6 +3978,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -3946,6 +4042,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -4005,6 +4104,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -4066,6 +4168,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -4125,6 +4230,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -4691,6 +4799,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_DrawSize");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -4750,6 +4861,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_AER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -4811,6 +4925,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -4870,6 +4987,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WC");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -4931,6 +5051,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WTT");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -4990,6 +5113,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_WYN");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -5051,6 +5177,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_QUAL");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -5110,6 +5239,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_CWR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -5171,6 +5303,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_PDR");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -5230,6 +5365,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
@@ -5291,6 +5429,9 @@ public class OESLiteAdminportalSnippet {
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
 
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
+
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_TotalPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(3);
@@ -5350,6 +5491,9 @@ public class OESLiteAdminportalSnippet {
         click_on_element("AdminPortalElements/OESLiteElements/file_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step2uploadfile");
         Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
         base.wait(4);
+
+        clickonenableordisablecheckboxbutton("Disable","AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_SkipAll");
+        base.wait(2);
 
         click_on_element("AdminPortalElements/OESLiteElements/checkbox_OESlite_common_subeventsrounds_action_ImportRecordspopwindow_step3_HOST_NER_MIXPairs");
         // Fileuploadrobotclass.fileuploadmethod("PLE_Singles_Template.xlsx");
