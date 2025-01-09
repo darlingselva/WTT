@@ -47,6 +47,9 @@ public class ParaeventAdminportalLiteSnippet {
         base.wait(3);
         clickonenableordisablebutton("Enable","AdminPortalElements/EventcreationElements/toggle_event_creation_core_IsParaEvent");
         base.wait(2);
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
+        base.scrollToView(webElement);
+        base.wait(2);
         click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
         base.wait(1);
         click_on_element("AdminPortalElements/EventcreationElements/button_event_creation_Hospitality_AddNew");
@@ -78,6 +81,11 @@ public class ParaeventAdminportalLiteSnippet {
         base.wait(3);
         clickonenableordisablebutton("Enable","AdminPortalElements/EventcreationElements/toggle_event_creation_core_IsParaEvent");
         base.wait(2);
+
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
+        base.scrollToView(webElement);
+        base.wait(2);
+
         click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
         base.wait(1);
         click_on_element("AdminPortalElements/EventcreationElements/button_event_creation_Hospitality_AddNew");
@@ -87,7 +95,13 @@ public class ParaeventAdminportalLiteSnippet {
         checklistvalues(type,"AdminPortalElements/EventcreationElements/text_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomTypelist");
         click_on_element("AdminPortalElements/EventcreationElements/button_event_creation_common_popupwindow_Cancel");
 
+
+
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
         clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
         enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
         click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
@@ -267,6 +281,9 @@ public class ParaeventAdminportalLiteSnippet {
         base.wait(3);
         clickonenableordisablebutton("Enable","AdminPortalElements/EventcreationElements/toggle_event_creation_core_IsParaEvent");
         base.wait(2);
+        getthefield("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
+        base.scrollToView(webElement);
+        base.wait(2);
         click_on_element("AdminPortalElements/EventcreationElements/tab_event_creation_Hospitality");
         base.wait(1);
         click_on_element("AdminPortalElements/EventcreationElements/button_event_creation_Hospitality_AddNew");
@@ -277,6 +294,9 @@ public class ParaeventAdminportalLiteSnippet {
         click_on_element("AdminPortalElements/EventcreationElements/button_event_creation_common_popupwindow_Cancel");
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
+        driver.switchTo().alert().accept();
+        base.wait(2);
+
         clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
         enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");
         click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Searchicon");
@@ -353,6 +373,7 @@ public class ParaeventAdminportalLiteSnippet {
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
         driver.switchTo().alert().accept();
+        base.wait(2);
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
         clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_common_popupwindow_Searchbar");

@@ -268,7 +268,9 @@ public class ParaIndividualsAdminportalLiteSnippet {
     @Given("^Para Player toggle button in the Individuals module$")
     public static void ParaPlayertogglebuttonintheIndividualsmodule() throws Exception {
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_Individuals_Individuals");
+        base.wait(4);
         click_on_element("AdminPortalElements/Admin_Individuals_page_Elements/button_Individuals_Individual_CreateIndividual");
+        base.wait(4);
         element_visiability("AdminPortalElements/Admin_Individuals_page_Elements/toggle_Individuals_Individual_Basics_IsParaPlayer");
     }
 

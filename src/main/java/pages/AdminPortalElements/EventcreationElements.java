@@ -2165,7 +2165,7 @@ public class EventcreationElements {
 	@Webelementname(name = "checkbox_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType")
 	public WebElement checkbox_event_creation_Hospitality_AddHospitalityInformation_ParaAccessibilityRoomType;
 
-	@FindBy(xpath = "(//td[@data-label='Para Accessibility Room Type'])[2]//app-fetcher-value//span")
+	@FindBy(xpath = "(//td[@data-label='Para Accessibility Room Type'])//app-fetcher-value//span")
 	@ElementName("text_event_creation_review_ParaAccessibilityRoomType")
 	@Webelementname(name = "text_event_creation_review_ParaAccessibilityRoomType")
 	public WebElement text_event_creation_review_ParaAccessibilityRoomType;

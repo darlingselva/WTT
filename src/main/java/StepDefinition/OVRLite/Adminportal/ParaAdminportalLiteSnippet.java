@@ -1401,7 +1401,6 @@ public class ParaAdminportalLiteSnippet {
 
         Adminportaloptionontable("Edit","AdminPortalElements/Admin_para_page_Elements/table_admin_para_ParaImpairmentGroups");
 
-        click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup");
         element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup_Name");
         element_visiability("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup_Code");
         element_visiability("AdminPortalElements/Admin_para_page_Elements/toggle_admin_para_ParaImpairmentGroups_create_ParaImpairmentGroup_Active");
@@ -1964,6 +1963,8 @@ public class ParaAdminportalLiteSnippet {
 
         type=type+"E"+base.randomvalue(100);
 
+
+        clearthevalueintotheelement("AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
         enterthevalueintotheelement(type,"AdminPortalElements/Admin_para_page_Elements/text_admin_para_ParaRoomType_createParaRoomType_Type");
         click_on_element("AdminPortalElements/Admin_para_page_Elements/button_admin_para_common_popupwindow_Save");
 
