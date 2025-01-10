@@ -3,7 +3,11 @@ package StepDefinition.OVRLite.Adminportal;
 import StepDefinition.AdminPortal.EventCreationSnippet;
 import base.Commonmethods;
 import io.cucumber.java.en.Given;
+import org.openqa.selenium.By;
+import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.WebDriverWait;
+
+import java.util.List;
 
 import static PreDefinedstepdefinitions.Predefinedstepdefinitions.*;
 import static PreDefinedstepdefinitions.Predefinedstepdefinitions.click_on_element;
@@ -173,7 +177,15 @@ public class ParaeventAdminportalLiteSnippet {
 
         getthefield("AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
         base.scrollToView(webElement);
-        Verifytheactualandexceptedvalueswithoutcasesensitive(type,"AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
+        getthefield("AdminPortalElements/EventcreationElements/table_event_creation_review_Hospitality");
+        List<WebElement> rowsNumber=webElement.findElements(By.tagName("tr"));
+        int rowcount=rowsNumber.size();
+        System.out.println("row_count="+rowcount);
+
+        String value=driver.findElement(By.xpath("(//td[@data-label='Para Accessibility Room Type'])["+rowcount+"]//app-fetcher-value//span")).getText();
+
+        Verifytheactualandexceptedvalueswithoutcasesensitivewithstringvalue(type,value);
+        //Verifytheactualandexceptedvalueswithoutcasesensitive(type,"AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
 
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
@@ -368,7 +380,16 @@ public class ParaeventAdminportalLiteSnippet {
 
         getthefield("AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
         base.scrollToView(webElement);
-        Verifytheactualandexceptedvalueswithoutcasesensitive(type,"AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
+
+        getthefield("AdminPortalElements/EventcreationElements/table_event_creation_review_Hospitality");
+        List<WebElement> rowsNumber=webElement.findElements(By.tagName("tr"));
+        int rowcount=rowsNumber.size();
+        System.out.println("row_count="+rowcount);
+
+        String value=driver.findElement(By.xpath("(//td[@data-label='Para Accessibility Room Type'])["+rowcount+"]//app-fetcher-value//span")).getText();
+
+        Verifytheactualandexceptedvalueswithoutcasesensitivewithstringvalue(type,value);
+        //Verifytheactualandexceptedvalueswithoutcasesensitive(type,"AdminPortalElements/EventcreationElements/text_event_creation_review_ParaAccessibilityRoomType");
 
 
         click_on_element("AdminPortalElements/Admin_menu_page_Elements/button_admin_para_ParaRoomType");
@@ -454,5 +475,8 @@ public class ParaeventAdminportalLiteSnippet {
         base.wait(2);
 
     }
+
+
+
 
 }

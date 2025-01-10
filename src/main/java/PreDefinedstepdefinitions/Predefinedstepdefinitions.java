@@ -270,6 +270,27 @@ public class Predefinedstepdefinitions extends DriverInitialisation {
 
     }
 
+    @Given("^Verify the actual value '(.*)' into excepted value without case sensitive with string value of '(.*)'$")
+    public static void Verifytheactualandexceptedvalueswithoutcasesensitivewithstringvalue(String value,String execepted_value)throws Exception{
+        //getthefield(Webelement_name);
+        WebDriverWait wait1 = new WebDriverWait(driver,60);
+        Commonmethods base=new Commonmethods(driver,wait1);
+        base.wait(2);
+        //String execepted_value=webElement.getText().toString();
+
+        System.out.println("value="+execepted_value);
+
+        if (execepted_value.equalsIgnoreCase(value)) {
+            System.out.println("matched");
+        } else {
+            Assert.fail();
+        }
+
+        base.wait(2);
+        // Assert.assertEquals(execepted_value,value);
+
+    }
+
     public static Multimap<Integer, String> tablevaluehashmap;
 
 

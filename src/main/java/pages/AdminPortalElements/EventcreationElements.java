@@ -2170,6 +2170,11 @@ public class EventcreationElements {
 	@Webelementname(name = "text_event_creation_review_ParaAccessibilityRoomType")
 	public WebElement text_event_creation_review_ParaAccessibilityRoomType;
 
+	@FindBy(xpath = "//td[@data-label='Para Accessibility Room Type']//ancestor::table//tbody")
+	@ElementName("table_event_creation_review_Hospitality")
+	@Webelementname(name = "table_event_creation_review_Hospitality")
+	public WebElement table_event_creation_review_Hospitality;
+
 
 	@FindBy(xpath = "//app-events-preview//table")
 	@ElementName("table_event_table1")
