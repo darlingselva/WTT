@@ -49,7 +49,7 @@ public class Fileuploadrobotclass {
 		Toolkit.getDefaultToolkit().getSystemClipboard().setContents(stringSelection, null);
 
 		Robot robot = new Robot();
-		robot.delay(1000);
+		robot.delay(2000);
 
 		// Simulate Ctrl + V (paste the file path)
 		robot.keyPress(KeyEvent.VK_CONTROL);
@@ -57,22 +57,27 @@ public class Fileuploadrobotclass {
 		robot.keyRelease(KeyEvent.VK_V);
 		robot.keyRelease(KeyEvent.VK_CONTROL);
 
-		robot.delay(1000);
+		robot.delay(2000);
 
 		// Simulate Enter (press the "Open" button in the dialog)
 		robot.keyPress(KeyEvent.VK_ENTER);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
-		robot.delay(1000);
+		robot.delay(2000);
 
 	}
 
 	public static void main(String[] args){
-        try {
-            fileuploadmethod("PLE_Singles_Template.xlsx");
-        } catch (AWTException e) {
-            throw new RuntimeException(e);
-        }
+
+		StringBuffer str=new StringBuffer("welcome");
+		for(int i=0;i<str.length();i++){
+			if(str.charAt(i)=='e'){
+				str=str.deleteCharAt(i);
+			}
+		}
+		System.out.println(str);
+
+
     }
 
 }
