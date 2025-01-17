@@ -67,17 +67,21 @@ public class Fileuploadrobotclass {
 
 	}
 
-	public static void main(String[] args){
+	public static void main(String[] args) {
 
-		StringBuffer str=new StringBuffer("welcome");
-		for(int i=0;i<str.length();i++){
-			if(str.charAt(i)=='e'){
-				str=str.deleteCharAt(i);
-			}
-		}
-		System.out.println(str);
+		String str1 = "welcome";
+		String str2 = "invite";
 
+		str1=str1+str2;
 
-    }
+		str2=str1.substring(0,(str1.length()-str2.length()));
+
+		str1=str1.substring(str2.length());
+
+		System.out.println(str1);
+		System.out.println(str2);
+
+	}
+
 
 }

@@ -21,7 +21,7 @@ import org.springframework.test.context.ContextConfiguration;
 		//,dryRun = true
 		,monochrome = true
 		,snippets = SnippetType.CAMELCASE
-		,tags = "@WTT_OVR_Lite_Admin_Portal_TS146"
+		,tags = ""
 
 		//,publish = true
 		)
