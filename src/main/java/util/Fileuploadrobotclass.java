@@ -61,6 +61,7 @@ public class Fileuploadrobotclass {
 
 		// Simulate Enter (press the "Open" button in the dialog)
 		robot.keyPress(KeyEvent.VK_ENTER);
+		robot.delay(4000);
 		robot.keyRelease(KeyEvent.VK_ENTER);
 
 		robot.delay(2000);
