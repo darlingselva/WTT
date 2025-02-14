@@ -9,6 +9,7 @@ import java.util.Properties;
 import java.util.ResourceBundle;
 import java.util.concurrent.TimeUnit;
 
+import io.github.bonigarcia.wdm.WebDriverManager;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
 import org.openqa.selenium.firefox.FirefoxDriver;
@@ -56,14 +57,31 @@ public class DriverInitialisation {
 		if (browserName.equals("chrome")) {
 			//			System.setProperty("webdriver.chrome.driver",
 			//					System.getProperty("user.dir") + "\\driver\\chromedriver.exe");
-			System.setProperty("webdriver.chrome.driver",CommonPaths.driver_path+"chromedriver.exe");
+			//System.setProperty("webdriver.chrome.driver",CommonPaths.driver_path+"chromedriver.exe");
 
-			driver = new ChromeDriver();
-		} else if (browserName.equals("firefox")) {
-			System.getProperty("webdriver.gecko.driver",CommonPaths.driver_path+"geckodriver.exe");
-			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
-			capabilities.setCapability("marionette",true);
-			driver= new FirefoxDriver(capabilities);
+			//driver = new ChromeDriver();
+			driver= WebDriverManager.chromedriver().create();
+		}
+		else if (browserName.equals("firefox")) {
+//			System.getProperty("webdriver.gecko.driver",CommonPaths.driver_path+"geckodriver.exe");
+//			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//			capabilities.setCapability("marionette",true);
+//			driver= new FirefoxDriver(capabilities);
+			driver=WebDriverManager.firefoxdriver().create();
+		}
+		else if (browserName.equals("edge")) {
+//			System.getProperty("webdriver.gecko.driver",CommonPaths.driver_path+"geckodriver.exe");
+//			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//			capabilities.setCapability("marionette",true);
+//			driver= new FirefoxDriver(capabilities);
+			driver=WebDriverManager.edgedriver().create();
+		}
+		else if (browserName.equals("safari")) {
+//			System.getProperty("webdriver.gecko.driver",CommonPaths.driver_path+"geckodriver.exe");
+//			DesiredCapabilities capabilities = DesiredCapabilities.firefox();
+//			capabilities.setCapability("marionette",true);
+//			driver= new FirefoxDriver(capabilities);
+			driver=WebDriverManager.safaridriver().create();
 		}
 
 		driver.manage().window().maximize();
