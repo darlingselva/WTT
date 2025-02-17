@@ -24,6 +24,8 @@ public class OESLiteAdminportalSnippet1 {
     public static WebDriverWait wait1 = new WebDriverWait(driver, 60);
     public static Commonmethods base = new Commonmethods(driver, wait1);
 
+
+
     @Given("^OES Lite report tab for Player Entry Report subtab and Verify the Visibility column field selection dropdown using EntryId option$")
     public static void OESLitereporttabforPlayerEntryReportsubtabandVerifytheVisibilitycolumnfieldselectiondropdownusingEntryIdoption()throws Exception{
 

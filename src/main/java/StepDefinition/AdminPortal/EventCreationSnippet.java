@@ -29,7 +29,9 @@ public class EventCreationSnippet extends DriverInitialisation
 	public static void Adminportal_event_creation() throws Exception {
 		//LoginSnippet.login();
 		EventcreationElements event =  PageFactory.initElements(driver,EventcreationElements.class);
-		Commonmethods base=new Commonmethods(driver,wait);	
+		Commonmethods base=new Commonmethods(driver,wait);
+
+
 
 
 		WebElement b;
